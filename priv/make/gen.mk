@@ -5,6 +5,8 @@ STATIC_ASSETS = priv/assets
 IMAGE_SOURCES = $(STATIC_ASSETS)/images
 ICON_SOURCES = $(STATIC_ASSETS)/icons
 FONT_SOURCES = $(STATIC_ASSETS)/fonts
+CSS_SOURCES = $(STATIC_ASSETS)/css
+JS_SOURCES = $(STATIC_ASSETS)/js
 GULP_DIST = $(THEME_DIR)/dist
 
 GULP_CMD = gulp
@@ -24,8 +26,10 @@ assets: assets-clean css
 	@cp -r $(IMAGE_SOURCES) $(ASSETS_DIR)/
 	@cp -r $(ICON_SOURCES) $(ASSETS_DIR)/
 	@cp -r $(FONT_SOURCES) $(ASSETS_DIR)/
-	@cp $(GULP_DIST)/*.css $(ASSETS_DIR)/css
-	@cp $(GULP_DIST)/*.js $(ASSETS_DIR)/js
+	@cp -r $(CSS_SOURCES)/* $(ASSETS_DIR)/css/
+	@cp -r $(JS_SOURCES)/* $(ASSETS_DIR)/js/
+	@cp $(GULP_DIST)/*.css $(ASSETS_DIR)/css/
+	@cp $(GULP_DIST)/*.js $(ASSETS_DIR)/js/
 
 css:
 	@echo "\nGenerating minimized and regular versions of CSS files ..."

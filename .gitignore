@@ -19,3 +19,6 @@ rebar.lock
 *.bak
 compile_commands.json
 rebar3.crashdump
+priv/sass/dist/
+priv/sass/docs/
+priv/sass/node_modules/
