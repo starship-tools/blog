@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block head %}
+  <head>
+  {% block head_content %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="en-us" />
+    <meta http-equiv="imagetoolbar" content="false" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/icons/favicon.ico">
+
+    <title>{% block page_title %}{% endblock %}{% block page_subtitle %}{% endblock %}</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin+Slab" rel="stylesheet">
+    <link href="/assets/css/toolkit-inverse.css" rel="stylesheet">
+    <link href="/assets/css/application.css" rel="stylesheet">
+
+    <style>
+      /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+      /* this chunk of css is not part of the toolkit :) */
+      body {
+        width: 1px;
+        min-width: 100%;
+        *width: 100%;
+      }
+    </style>
+
+  {% endblock %}
+  </head>
+{% endblock %}
+{% block body %}
+  <body class="with-top-navbar">
+  {% block body_content %}
+    {% block top_nav %}
+    <nav class="navbar navbar-toggleable-sm fixed-top navbar-inverse bg-inverse app-navbar">
+      {% block top_nav_content %}
+      {% endblock %}
+    </nav>
+    {% endblock %}
+    {% block main %}
+    <main>
+      {% block main_header %}
+      {% endblock %}
+      {% block main_content %}
+      {% endblock %}
+    </main>
+    {% endblock %}
+    {% block footer_wrapper %}
+    <div class="container">
+      {% block footer %}
+      <footer class="footer">
+        {% block footer_content %}
+        {% endblock %}
+      </footer>
+      {% endblock %}
+    </div>
+    {% endblock %}
+    {% block pre_end_scripts %}
+    {% endblock %}
+    {% block end_scripts %}
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/tether.min.js"></script>
+    <script src="/assets/js/chart.js"></script>
+    <script src="/assets/js/tablesorter.min.js"></script>
+    <script src="/assets/js/toolkit.js"></script>
+    <script src="/assets/js/application.js"></script>
+    <script>
+      // execute/clear BS loaders for docs
+      $(function(){while(window.BS&&window.BS.loader&&window.BS.loader.length){(window.BS.loader.pop())()}})
+    </script>
+    {% endblock %}
+    {% block post_end_scripts %}
+    {% endblock %}
+  {% endblock %}
+  </body>
+{% endblock %}
+</html>
