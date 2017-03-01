@@ -22,6 +22,12 @@
     <link href="/assets/css/docs.css" rel="stylesheet">
     <link href="/assets/css/application.css" rel="stylesheet">
 
+    {% block pre_head_scripts %}
+    {% endblock %}
+    {% block head_scripts %}
+    {% endblock %}
+    {% block post_head_scripts %}
+    {% endblock %}
     <style>
       /* note: this is a hack for ios iframe for bootstrap themes shopify page */
       /* this chunk of css is not part of the toolkit :) */
@@ -53,13 +59,15 @@
     </main>
     {% endblock %}
     {% block footer_wrapper %}
-    <div class="container">
-      {% block footer %}
-      <footer class="footer">
-        {% block footer_content %}
+    <div class="footer-wrapper">
+      <div class="container">
+        {% block footer %}
+        <footer class="footer">
+          {% block footer_content %}
+          {% endblock %}
+        </footer>
         {% endblock %}
-      </footer>
-      {% endblock %}
+      </div>
     </div>
     {% endblock %}
     {% block pre_end_scripts %}
@@ -69,7 +77,7 @@
     <script src="/assets/js/tether.min.js"></script>
     <script src="/assets/js/chart.js"></script>
     <script src="/assets/js/tablesorter.min.js"></script>
-    <script src="/assets/js/toolkit.js"></script>
+    <script src="/assets/js/toolkit.min.js"></script>
     <script src="/assets/js/application.js"></script>
     <script>
       // execute/clear BS loaders for docs
