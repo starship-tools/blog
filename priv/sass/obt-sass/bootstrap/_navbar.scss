@@ -20,6 +20,9 @@
   display: flex;
   flex-direction: column;
   padding: $navbar-padding-y $navbar-padding-x;
+  background-image: $navbar-background-image;
+  background-size: $navbar-background-size;
+  background-repeat: $navbar-background-repeat;
 }
 
 

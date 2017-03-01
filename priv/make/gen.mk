@@ -50,10 +50,10 @@ blog-header:
 	@echo "\nBuilding blog ..."
 	@echo
 
-blog-html-only: blog-header
+blog-html-only: blog-header clean compile
 	@ERL_LIBS=$(ERL_LIBS) $(LFE) -e '(blog-cli:gen)'
 
-blog: blog-header clean compile assets blog-html-only
+blog: blog-html-only assets
 
 serve-header:
 	@echo "\nRunning blog server on http://$(LOCAL_DOCS_HOST):$(LOCAL_DOCS_PORT) ... (To quit, hit ^c twice)"

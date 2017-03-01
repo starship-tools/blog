@@ -2868,7 +2868,10 @@ tbody.collapse.show {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0.5rem 1rem; }
+  padding: 0.5rem 1rem;
+  background-image: url(/assets/images/navbar-back3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 .navbar-brand {
   display: inline-block;
