@@ -21,14 +21,14 @@
 
 (defun get-page
   (('landing)
-    (clj:-> (blog-data:base)
+    (clj:-> (blog-data:base "Landing Page")
             (landing-tmpl:render)
             (get-content)))
   (('bootstrap-theme)
-    (clj:-> (blog-data:base)
+    (clj:-> (blog-data:base "Design :: Theme Demo")
             (bootstrap-theme-tmpl:render)
             (get-content)))
   (('example-two-column)
-    (clj:-> (blog-data:base)
+    (clj:-> (blog-data:base "Example :: Two-Column Page")
             (example_two_column-tmpl:render)
             (get-content))))

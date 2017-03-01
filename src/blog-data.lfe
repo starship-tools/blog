@@ -1,6 +1,5 @@
 (defmodule blog-data
   (export all))
 
-(defun base ()
-  ;`(#(,key ,val)))
-  '(#()))
+(defun base (title)
+  `(#(page_title ,title)))
