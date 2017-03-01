@@ -9342,7 +9342,7 @@ canvas {
 .btn-pill {
   padding-left: 1.25em;
   padding-right: 1.25em;
-  border-radius: 1000em; }
+  border-radius: 5px; }
 
 .btn-square {
   border-radius: 0; }
