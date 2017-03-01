@@ -22,6 +22,12 @@
     <link href="/assets/css/docs.css" rel="stylesheet">
     <link href="/assets/css/application.css" rel="stylesheet">
 
+    
+    
+    
+    
+    
+    
     <style>
       /* note: this is a hack for ios iframe for bootstrap themes shopify page */
       /* this chunk of css is not part of the toolkit :) */
@@ -54,27 +60,41 @@
 
     <a class="navbar-brand" href="../index.html">
       <span class="icon icon-rocket navbar-brand-icon"></span>
-      Startship Tools
+      Starship Tools
     </a>
 
     <div class="collapse navbar-collapse mr-auto" id="navbarResponsive">
       <ul class="nav navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="../order-history/index.html">Order History</a>
+          <a class="nav-link" href="/categories.html">Categories</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../fluid/index.html">Fluid layout</a>
+          <a class="nav-link" href="/tags.html">Tags</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../icon-nav/index.html">Icon nav</a>
+          <a class="nav-link" href="/authors.html">Authors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/archives.html">Archives</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about.html">About</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="../docs/index.html">Docs</a>
+          <a class="nav-link" href="/design/bootstrap-theme.html">Theme</a>
         </li>
       </ul>
 
-      <form class="form-inline hidden-sm-down ml-auto">
-        <input class="form-control" type="text" data-action="grow" placeholder="Search">
+      <form class="form-inline hidden-sm-down ml-auto" action="/search.html">
+        <input class="form-control"
+               type="text"
+               data-action="grow"
+               placeholder="Search"
+               name="q"
+               id="tipue_search_input"
+               pattern=".{3,}"
+               title="At least 3 characters"
+               required>
       </form>
     </div>
 
@@ -1624,10 +1644,11 @@
     </main>
     
     
-    <div class="container">
-      
-      <footer class="footer">
+    <div class="footer-wrapper">
+      <div class="container">
         
+        <footer class="footer">
+          
         <div class="row">
           <div class="col-lg-12 center-block text-center footer-buffer">
           </div>
@@ -1639,25 +1660,22 @@
         </div>
         <div class="row">
           <div class="col-lg-5 text-center">
-            <ul>
-              <li><a href="/tutorials/">Tutorials</a></li>
-              <li><a href="/presentations/">Presentations</a></li>
-              <li><a href="/history/">History</a></li>
-              <li><a href="http://github.com/lfex">LFEX</a></li>
+            <ul class="nav justify-content-center">
+              <li class="nav-item"><a href="/tutorials/">Tutorials</a></li>
+              <li class="nav-item"><a href="/presentations/">Presentations</a></li>
+              <li class="nav-item"><a href="/history/">History</a></li>
+              <li class="nav-item"><a href="http://github.com/lfex">LFEX</a></li>
             </ul>
           </div>
           <div class="col-lg-2 text-center">
-            <span>
-              <a href="http://lfe.io/">
-                <img src="/images/logos/lfe-tiny-grey-square.png"/></a>
-            </span>
+            <span class="icon icon-rocket"></span>
           </div>
           <div class="col-lg-5 text-center">
-            <ul>
-              <li><a href="/contributing">Contributing</a></li>
-              <li><a href="http://github.com/lfe/docs2/issues">Docs Tickets</a></li>
-              <li><a href="http://blog.lfe.io/">Blog</a></li>
-              <li><a href="http://twitter.com/ErlangLisp">Twitter</a></li>
+            <ul class="nav justify-content-center">
+              <li class="nav-item"><a href="/contributing">Contributing</a></li>
+              <li class="nav-item"><a href="http://github.com/lfe/docs2/issues">Docs Tickets</a></li>
+              <li class="nav-item"><a href="http://blog.lfe.io/">Blog</a></li>
+              <li class="nav-item"><a href="http://twitter.com/ErlangLisp">Twitter</a></li>
             </ul>
           </div>
         </div>
@@ -1672,8 +1690,9 @@
           </div>
         </div>
 
-      </footer>
-      
+        </footer>
+        
+      </div>
     </div>
     
     
@@ -1683,7 +1702,7 @@
     <script src="/assets/js/tether.min.js"></script>
     <script src="/assets/js/chart.js"></script>
     <script src="/assets/js/tablesorter.min.js"></script>
-    <script src="/assets/js/toolkit.js"></script>
+    <script src="/assets/js/toolkit.min.js"></script>
     <script src="/assets/js/application.js"></script>
     <script>
       // execute/clear BS loaders for docs

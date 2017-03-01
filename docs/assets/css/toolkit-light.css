@@ -7211,6 +7211,15 @@ textarea {
     padding-right: 40px;
     padding-left: 40px; } }
 
+div.footer-wrapper {
+  width: 100%;
+  height: 40em;
+  background-image: url(/assets/images/footer-back.jpg);
+  background-size: cover;
+  margin-top: 5em;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black; }
+
 .pos-r {
   position: relative !important; }
 
