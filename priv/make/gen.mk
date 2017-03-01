@@ -1,10 +1,12 @@
 BLOG_BUILD_DIR = $(ROOT_DIR)/docs
 ASSETS_DIR = $(BLOG_BUILD_DIR)/assets
 THEME_DIR = priv/sass
+INDEXER_DIR = priv/indexer
 STATIC_ASSETS = priv/assets
 IMAGE_SOURCES = $(STATIC_ASSETS)/images
 ICON_SOURCES = $(STATIC_ASSETS)/icons
 FONT_SOURCES = $(STATIC_ASSETS)/fonts
+SEARCH_TOOL_SOURCES = $(STATIC_ASSETS)/tipuesearch
 CSS_SOURCES = $(STATIC_ASSETS)/css
 JS_SOURCES = $(STATIC_ASSETS)/js
 GULP_DIST = $(THEME_DIR)/dist
@@ -26,6 +28,7 @@ assets: assets-clean css
 	@cp -r $(IMAGE_SOURCES) $(ASSETS_DIR)/
 	@cp -r $(ICON_SOURCES) $(ASSETS_DIR)/
 	@cp -r $(FONT_SOURCES) $(ASSETS_DIR)/
+	@cp -r $(SEARCH_TOOL_SOURCES) $(ASSETS_DIR)/
 	@cp -r $(CSS_SOURCES)/* $(ASSETS_DIR)/css/
 	@cp -r $(JS_SOURCES)/* $(ASSETS_DIR)/js/
 	@cp $(GULP_DIST)/*.css $(ASSETS_DIR)/css/
@@ -52,6 +55,11 @@ blog-header:
 
 blog-html-only: blog-header clean compile
 	@ERL_LIBS=$(ERL_LIBS) $(LFE) -e '(blog-cli:gen)'
+
+index:
+	cp $(INDEXER_DIR)/indexer.js $(BLOG_BUILD_DIR)
+	cd $(BLOG_BUILD_DIR) && node indexer.js
+	rm $(BLOG_BUILD_DIR)/indexer.js
 
 blog: blog-html-only assets
 

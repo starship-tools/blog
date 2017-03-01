@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block post_head_scripts %}
+{% endblock %}
+
+{% block main_content %}
+    <div id="tipue_search_content"></div>
+{% endblock %}
+
+{% block post_end_scripts %}
+    <script src="/assets/tipuesearch/tipuesearch_content.js"></script>
+    <script src="/assets/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/assets/tipuesearch/tipuesearch.min.js"></script>
+    <script>
+      $(document).ready(function() {
+           $('#tipue_search_input').tipuesearch();
+      });
+    </script>
+{% endblock %}
