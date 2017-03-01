@@ -249,3 +249,12 @@ $container-max-widths: (
   xl: 1100px
 );
 @include _assert-ascending($container-max-widths, "$container-max-widths");
+
+// Footer
+$footer-background-width: 100%;
+$footer-background-height: 40em;
+$footer-background-image: url(/assets/images/footer-back.jpg);
+$footer-background-size: cover;
+$footer-background-repeat: no-repeat;
+$footer-background-margin: 5em;
+$footer-background-border: 1px solid black;

@@ -20,3 +20,13 @@
     padding-left: 40px;
   }
 }
+
+div.footer-wrapper {
+    width: $footer-background-width;
+    height: $footer-background-height;
+    background-image: $footer-background-image;
+    background-size: $footer-background-size;
+    margin-top: $footer-background-margin;
+    border-top: $footer-background-border;
+    border-bottom: $footer-background-border;
+}
