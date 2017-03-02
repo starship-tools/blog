@@ -25,8 +25,21 @@ body {
   margin-bottom: 30px;
   font-size: 20px;
   color: #fff;
-  background-color: $brand-primary;
-  background-image: linear-gradient(to bottom, darken($brand-primary, 15%), $brand-primary);
+  text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
+  background-color: $header-background-color;
+  background-image: $header-background-image;
+  background-size: $header-background-size;
+  background-repeat: $header-background-repeat;
+  border-bottom: $header-border;
+
+// .docs-header-inner {
+//   background-image: $header-inner-background-image;
+//   width: 100%;
+// }
 
   h1 {
     margin-bottom: 5px;
@@ -66,7 +79,7 @@ body {
 #markdown-toc {
   padding-left: 0;
   margin-top: 30px;
-  font-size: 13px;
+  font-size: 16px;
   list-style: none;
 
   a {

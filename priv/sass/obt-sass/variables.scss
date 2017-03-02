@@ -12,7 +12,7 @@ $gray-lighter:           #f5f5f5;
 // special light gray for flourishes like hr's
 $gray-subtle:            #eee;
 
-$brand-primary:          #1997c6;
+$brand-primary:          #464A69;
 $brand-success:          #1BC98E;
 $brand-info:             #9F86FF;
 $brand-warning:          #E4D836;
@@ -181,6 +181,7 @@ $navbar-brand-padding-y: .125rem;
 $navbar-background-image: url(/assets/images/navbar-back3.jpg);
 $navbar-background-size: cover;
 $navbar-background-repeat: no-repeat;
+$navbar-background-border: 1px solid black;
 
 // Thumbnail
 //
@@ -242,6 +243,15 @@ $dashhead-subtitle-color: $nav-header-color;
 
 $navbar-nav-active-font-weight: 500;
 
+// Page Header
+$header-background-color: $brand-primary;
+$header-background-image: url(/assets/images/header-back.jpg);
+$header-background-size: cover;
+$header-background-repeat: no-repeat;
+$header-border: 1px solid black;
+
+$header-inner-background-image: linear-gradient(to bottom, darken($brand-primary, 15%), $brand-primary);
+
 // Container
 $container-max-widths: (
   md: 880px,
@@ -250,7 +260,7 @@ $container-max-widths: (
 );
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
-// Footer
+// Footer & Subfooter
 $footer-background-width: 100%;
 $footer-background-height: 40em;
 $footer-background-image: url(/assets/images/footer-back.jpg);
@@ -258,3 +268,6 @@ $footer-background-size: cover;
 $footer-background-repeat: no-repeat;
 $footer-background-margin: 5em;
 $footer-background-border: 1px solid black;
+
+$subfooter-margin: 3.5em;
+$subfooter-word-spacing: 0.5em;
