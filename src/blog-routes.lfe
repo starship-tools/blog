@@ -4,6 +4,18 @@
 (defun get-routes ()
   `(("index.html"
       ,(lambda () (blog-pages:get-page 'landing)))
+    ("archives.html"
+      ,(lambda () (blog-pages:get-page 'archives)))
+    ("categories.html"
+      ,(lambda () (blog-pages:get-page 'categories)))
+    ("tags.html"
+      ,(lambda () (blog-pages:get-page 'tags)))
+    ("authors.html"
+      ,(lambda () (blog-pages:get-page 'authors)))
+    ("about.html"
+      ,(lambda () (blog-pages:get-page 'about)))
+    ("starship-timeline.html"
+      ,(lambda () (blog-pages:get-page 'timeline)))
     ("search.html"
       ,(lambda () (blog-pages:get-page 'search)))
     ("design/bootstrap-theme.html"
