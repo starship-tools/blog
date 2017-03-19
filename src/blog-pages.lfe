@@ -21,7 +21,7 @@
 
 (defun get-page
   (('landing)
-    (clj:-> (blog-data:base "Landing Page")
+    (clj:-> (blog-data:base "Starship Tools")
             (landing-tmpl:render)
             (get-content)))
   (('search)
