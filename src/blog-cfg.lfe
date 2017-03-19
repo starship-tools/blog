@@ -1,6 +1,12 @@
 (defmodule blog-cfg
   (export all))
 
+(defun site-title ()
+  "")
+
+(defun site-description ()
+  "")
+
 (defun load-config ()
   (let ((cfg (lcfg-file:parse-local)))
     (++ cfg
