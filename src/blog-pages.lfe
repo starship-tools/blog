@@ -7,15 +7,12 @@
   ((`#(ok ,page)) page)
   ((err) err))
 
-(defun get-priv-dir ()
-  (code:priv_dir 'blog))
-
 (defun get-base-page (name)
   'noop)
 
 (defun get-fragment-page (name)
   (file:read_file
-    (filename:join `(,(get-priv-dir)
+    (filename:join `(,(blog-util:get-priv-dir)
                      "html-fragments"
                      ,name))))
 
