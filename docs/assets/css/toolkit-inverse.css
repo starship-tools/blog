@@ -7212,42 +7212,6 @@ textarea {
     padding-right: 40px;
     padding-left: 40px; } }
 
-div.footer-wrapper {
-  width: 100%;
-  height: 40em;
-  background-image: url(/assets/images/footer-back.jpg);
-  background-size: cover;
-  margin-top: 5em;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black; }
-
-div.subfooter-wrapper {
-  margin-top: 3.5em;
-  word-spacing: 0.5em;
-  color: #6f7890; }
-
-footer .card.bg-faded {
-  background-color: rgba(30, 33, 39, 0.8); }
-
-footer .icon-rocket {
-  font-size: 150%; }
-
-footer .card-block {
-  font-size: 140%;
-  color: #898b9b; }
-
-footer .card-block .left-section {
-  padding-right: 1em; }
-
-footer .card-block .right-section {
-  padding-left: 1em; }
-
-footer .card-block a {
-  color: #898b9b; }
-
-footer .nav-item {
-  padding-right: 1em; }
-
 .pos-r {
   position: relative !important; }
 
@@ -9797,12 +9761,8 @@ body {
     margin-top: 5px;
     margin-bottom: 5px; }
 
-.docs-top,
-#markdown-toc a {
-  color: #9198aa; }
-  .docs-top:hover,
-  #markdown-toc a:hover {
-    color: #fff; }
+.docs-header {
+  background-color: #141215; }
 
 .docs-example {
   background-color: transparent;
@@ -9825,6 +9785,53 @@ body {
 
 .docs-content > h1 + h2 {
   margin-top: 10px; }
+
+.docs-content a {
+  color: #7379a2; }
+
+.docs-content a:hover {
+  color: #9296b6;
+  text-decoration: none; }
+
+div.footer-wrapper {
+  width: 100%;
+  height: 40em;
+  background-color: #404654;
+  background-image: url(/assets/images/footer-back.jpg);
+  background-size: cover;
+  margin-top: 5em;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black; }
+
+div.subfooter-wrapper {
+  margin-top: 3.5em;
+  word-spacing: 0.5em;
+  color: #6f7890; }
+
+footer {
+  padding-top: 2em; }
+
+footer .card.bg-faded {
+  background-color: rgba(30, 33, 39, 0.8); }
+
+footer .icon-rocket {
+  font-size: 150%; }
+
+footer .card-block {
+  font-size: 140%;
+  color: #898b9b; }
+
+footer .card-block .left-section {
+  padding-right: 1em; }
+
+footer .card-block .right-section {
+  padding-left: 1em; }
+
+footer .card-block a {
+  color: #898b9b; }
+
+footer .nav-item {
+  padding-right: 1em; }
 
 .custom-select {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEX////////////////1pQ5zAAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC); }

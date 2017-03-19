@@ -15,7 +15,7 @@
     <meta name="author" content="">
     <link rel="icon" href="/icons/favicon.ico">
 
-    <title>{% block page_title %}{{ page_title }}{% endblock %}{% block page_subtitle %}{% endblock %}</title>
+    <title>{{ site_title }}{% if page_title %}{% ifnotequal page_title site_title %} 🚀 {{ page_title }}{% endifnotequal %}{% endif %}</title>
 
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin+Slab" rel="stylesheet">
     <link href="/assets/css/toolkit-inverse.css" rel="stylesheet">

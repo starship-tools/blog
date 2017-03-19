@@ -2,10 +2,13 @@
   (export all))
 
 (defun site-title ()
-  "")
+  "Starship Tools")
 
 (defun site-description ()
-  "")
+  (++ "A blog for sharing the open source code, tools, and ideas that "
+      "will allow us to traverse interstellar distances. Focus is on "
+      "control systems, fault-tolerance, high-concurrency, and soft "
+      "real-time."))
 
 (defun load-config ()
   (let ((cfg (lcfg-file:parse-local)))

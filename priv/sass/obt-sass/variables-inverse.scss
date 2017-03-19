@@ -180,3 +180,17 @@ $iconav-link-active-bg: $body-bg;
 
 $sidebar-brand-color:       $gray-dark;
 $sidebar-brand-hover-color: $gray;
+
+
+// Footer & Subfooter
+$footer-background-width: 100%;
+$footer-background-height: 40em;
+$footer-background-image: url(/assets/images/footer-back.jpg);
+$footer-background-color: #404654;
+$footer-background-size: cover;
+$footer-background-repeat: no-repeat;
+$footer-background-margin: 5em;
+$footer-background-border: 1px solid black;
+
+$subfooter-margin: 3.5em;
+$subfooter-word-spacing: 0.5em;

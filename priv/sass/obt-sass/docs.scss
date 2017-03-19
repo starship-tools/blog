@@ -5,14 +5,8 @@
 @import "./custom/syntax.scss";
 @import "./custom/docs.scss";
 
-// Link colors in the table of contents and back to top button
-.docs-top,
-#markdown-toc a {
-  color: lighten($body-bg, 45%);
-
-  &:hover {
-    color: #fff;
-  }
+.docs-header {
+  background-color: #141215;
 }
 
 .docs-example {
@@ -44,4 +38,67 @@
 }
 .docs-content > h1 + h2 {
   margin-top: 10px;
+}
+
+.docs-content {
+
+  a {
+    color: lighten($brand-primary, 20%);
+  }
+
+  a:hover {
+    color: lighten($brand-primary, 30%);
+    text-decoration: none;
+  }
+
+}
+
+div.footer-wrapper {
+    width: $footer-background-width;
+    height: $footer-background-height;
+    background-color: $footer-background-color;
+    background-image: $footer-background-image;
+    background-size: $footer-background-size;
+    margin-top: $footer-background-margin;
+    border-top: $footer-background-border;
+    border-bottom: $footer-background-border;
+}
+
+div.subfooter-wrapper {
+    margin-top: $subfooter-margin;
+    word-spacing: $subfooter-word-spacing;
+    color: $gray;
+}
+
+footer {
+  padding-top: 2em;
+}
+
+footer .card.bg-faded {
+  background-color: rgba(30,33,39, 0.8);
+}
+
+footer .icon-rocket {
+  font-size: 150%;
+}
+
+footer .card-block {
+  font-size: 140%;
+  color: #898b9b;
+}
+
+footer .card-block .left-section {
+  padding-right: 1em;
+}
+
+footer .card-block .right-section {
+  padding-left: 1em;
+}
+
+footer .card-block a {
+  color: #898b9b;
+}
+
+footer .nav-item {
+  padding-right: 1em;
 }
