@@ -11,30 +11,19 @@
       "real-time operations."))
 
 (defun load-config ()
-  (let ((cfg (lcfg-file:parse-local)))
-    (++ cfg
-        `(#(nav ,(load-nav cfg))))))
+  (lcfg-file:parse-local))
 
-(defun load-nav (cfg)
-  (clj:-> cfg
-          (blog-cfg:get-nav-file)
-          (lcfg-file:read-file)
-          (lcfg-file:parse-config)))
+(defun posts-dir ()
+  (posts-dir (load-config)))
 
-(defun get-nav-file (cfg)
-  (get-in '(site-gen nav-file) cfg))
+(defun posts-dir (cfg)
+  (get-in '(dragon blog posts-dir) cfg))
 
-(defun get-top-nav (cfg)
-  (get-in '(nav top-nav) cfg))
+(defun output-dir ()
+  (output-dir (load-config)))
 
-(defun get-build-dir (cfg)
-  (get-in '(site-gen build-dir) cfg))
-
-(defun get-static-assets (cfg)
-  (get-in '(site-gen static-assets) cfg))
-
-(defun get-httpd-port (cfg)
-  (get-in '(site-gen dev-server port) cfg))
+(defun output-dir (cfg)
+  (get-in '(dragon blog output-dir) cfg))
 
 (defun get-in (keys cfg)
   (lists:foldl #'get/2 cfg keys))
