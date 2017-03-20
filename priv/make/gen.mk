@@ -1,3 +1,4 @@
+POSTS_BASE_DIR = $(ROOT_DIR)/posts
 BLOG_BUILD_DIR = $(ROOT_DIR)/docs
 ASSETS_DIR = $(BLOG_BUILD_DIR)/assets
 THEME_DIR = priv/sass
@@ -16,6 +17,26 @@ GULP = cd $(THEME_DIR) && $(GULP_CMD); cd -
 GULP_WATCH = cd $(THEME_DIR) && $(GULP_CMD) watch &
 GULP_SETUP = cd $(THEME_DIR) && npm install gulp && npm install; cd -
 GULP_DOCS = cd $(THEME_DIR) && $(GULP_CMD) docs; cd -
+
+post: POST_DIR=$(POSTS_BASE_DIR)/$(shell date +%Y-%m/%d-%H%M%S)
+post: FILENAME=$(POST_DIR)/content.rfc822
+post:
+	@echo
+	@echo "Creating blank post: $(FILENAME) ..."
+	@mkdir -p $(POST_DIR)
+	@echo "Subject: REQUIRED (title)" > $(FILENAME)
+	@echo "Subtitle: " >> $(FILENAME)
+	@echo "Excerpt: " >> $(FILENAME)
+	@echo "From: REQUIRED (author)" >> $(FILENAME)
+	@echo "Category: " >> $(FILENAME)
+	@echo "Keywords: " >> $(FILENAME)
+	@echo "Comments: " >> $(FILENAME)
+	@echo "Content-Type: md" >> $(FILENAME)
+	@echo "" >> $(FILENAME)
+	@echo "[content goes here]" >> $(FILENAME)
+	@echo
+	@echo "Done."
+	@echo
 
 gulp-setup:
 	@$(GULP_SETUP)
