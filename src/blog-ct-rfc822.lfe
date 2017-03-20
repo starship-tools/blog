@@ -2,7 +2,6 @@
 ;;;; content (the 'ct' in the module name stands for 'content type'). Note that
 ;;;; the full RFC spec is not supported (e.g., no folding support). This is very
 ;;;; limited in nature.
-
 (defmodule blog-ct-rfc822
   (export all))
 
