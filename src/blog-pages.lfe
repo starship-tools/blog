@@ -11,10 +11,9 @@
   'noop)
 
 (defun get-fragment-page (name)
-  (file:read_file
-    (filename:join `(,(blog-util:get-priv-dir)
-                     "html-fragments"
-                     ,name))))
+  (clj:->> name
+           (io_lib:format "html-fragments/~s")
+           (blog-util:read-priv-file)))
 
 (defun get-page
   (('landing)
