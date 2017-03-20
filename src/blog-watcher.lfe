@@ -28,7 +28,7 @@
 
 (defun start (watch-data)
   (logjam:start)
-  (blog-gen:run-dev)
+  (blog-gen:run)
   (blog-httpd:start)
   (application:ensure_all_started 'inotify)
   (application:ensure_all_started 'blog)
