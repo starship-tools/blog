@@ -1,7 +1,7 @@
 (defmodule blog-routes
   (export all))
 
-(defun get-routes ()
+(defun static-routes ()
   `(("index.html"
       ,(lambda () (blog-pages:get-page 'landing)))
     ("archives.html"
@@ -27,8 +27,14 @@
     ("design/example-2-column.html"
       ,(lambda () (blog-pages:get-page 'example-two-column)))))
 
+(defun posts-routes ()
+  `())
+
+(defun routes ()
+  (lists:append (static-routes) (posts-routes)))
+
 (defun site ()
   "Generate the blog site."
   (poise:site
-    (get-routes)
-    `#m(output-dir "docs")))
+    (routes)
+    `#m(output-dir ,(blog-cfg:output-dir))))
