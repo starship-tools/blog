@@ -13,11 +13,17 @@
 (defun load-config ()
   (lcfg-file:parse-local))
 
-(defun posts-dir ()
-  (posts-dir (load-config)))
+(defun posts-src-dir ()
+  (posts-src-dir (load-config)))
 
-(defun posts-dir (cfg)
-  (get-in '(dragon blog posts-dir) cfg))
+(defun posts-src-dir (cfg)
+  (get-in '(dragon blog posts-src-dir) cfg))
+
+(defun posts-dst-dir ()
+  (posts-dst-dir (load-config)))
+
+(defun posts-dst-dir (cfg)
+  (get-in '(dragon blog posts-dst-dir) cfg))
 
 (defun output-dir ()
   (output-dir (load-config)))
