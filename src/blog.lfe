@@ -1,6 +1,8 @@
 (defmodule blog
   (behaviour gen_server)
   (export
+    ;; blog functions
+    (process 0)
     ;; gen_server implementation
     (start 0)
     (start-gen-server 0)
@@ -22,6 +24,16 @@
 (defun genserver-opts () '())
 (defun register-name () `#(local ,(server-name)))
 (defun unknown-command () #(error "Unknown command."))
+
+;;; blog functions
+
+(defun process ()
+  (lists:map #'blog-post:process/1 (get-files)))
+
+(defun get-files ()
+  (clj:-> (blog-cfg:posts-src-dir)
+          (filename:join  "*/*/*")
+          (filelib:wildcard)))
 
 ;;; gen_server implementation
 
