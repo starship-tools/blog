@@ -2,16 +2,16 @@
   (export all))
 
 (defun site-title ()
-  "Starship Tools")
+  (site-title (load-config)))
+
+(defun site-title (cfg)
+  (get-in '(dragon blog title) cfg))
 
 (defun site-description ()
-  (++ "A blog for sharing the open source code, tools, and ideas that "
-      "will allow us to traverse interstellar distances. Focus is on "
-      "control systems, fault-tolerance, high-concurrency, and soft "
-      "real-time operations."))
+  (site-description (load-config)))
 
-(defun load-config ()
-  (lcfg-file:parse-local))
+(defun site-description (cfg)
+  (get-in '(dragon blog description) cfg))
 
 (defun posts-src-dir ()
   (posts-src-dir (load-config)))
@@ -30,6 +30,9 @@
 
 (defun output-dir (cfg)
   (get-in '(dragon blog output-dir) cfg))
+
+(defun load-config ()
+  (lcfg-file:parse-local))
 
 (defun get-in (keys cfg)
   (lists:foldl #'get/2 cfg keys))
