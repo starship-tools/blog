@@ -53,6 +53,63 @@
 
 }
 
+#sidebar {
+  padding-left: 0;
+  font-size: 16px;
+  list-style: none;
+  float: right;
+  margin: -250px;
+  margin-top: 0;
+
+  a {
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  > li {
+    margin-bottom: 5px;
+  }
+
+  // Hide the first child li because it's always going to be "Contents".
+  > li:first-child {
+    display: none;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 20px;
+
+    // hide more than 2 levels
+    ul {
+      display: none
+    }
+  }
+}
+
+.blog-sidebar .social {
+  font-size: 150%;
+}
+
+.blog-sidebar .social span.icon {
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+.blog-sidebar .social span.icon .first {
+  padding-left: 0;
+}
+
+.blog-sidebar .social span.icon .last {
+  padding-right: 0;
+}
+
+.blog-sidebar .social span.icon.text {
+  font-weight: 900;
+  font-size: 110%;
+}
+
 div.footer-wrapper {
     width: $footer-background-width;
     height: $footer-background-height;

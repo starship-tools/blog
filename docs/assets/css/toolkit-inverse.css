@@ -9793,6 +9793,42 @@ body {
   color: #9296b6;
   text-decoration: none; }
 
+#sidebar {
+  padding-left: 0;
+  font-size: 16px;
+  list-style: none;
+  float: right;
+  margin: -250px;
+  margin-top: 0; }
+  #sidebar a:hover {
+    text-decoration: none; }
+  #sidebar > li {
+    margin-bottom: 5px; }
+  #sidebar > li:first-child {
+    display: none; }
+  #sidebar ul {
+    list-style: none;
+    padding-left: 20px; }
+    #sidebar ul ul {
+      display: none; }
+
+.blog-sidebar .social {
+  font-size: 150%; }
+
+.blog-sidebar .social span.icon {
+  padding-right: 2px;
+  padding-left: 2px; }
+
+.blog-sidebar .social span.icon .first {
+  padding-left: 0; }
+
+.blog-sidebar .social span.icon .last {
+  padding-right: 0; }
+
+.blog-sidebar .social span.icon.text {
+  font-weight: 900;
+  font-size: 110%; }
+
 div.footer-wrapper {
   width: 100%;
   height: 40em;
