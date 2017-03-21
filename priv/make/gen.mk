@@ -62,7 +62,7 @@ css:
 	@echo "Done.\n"
 
 css-watch:
-	@$(GULP_WATCH) \
+	@$(GULP_WATCH)
 
 css-unwatch:
 	@killall sass

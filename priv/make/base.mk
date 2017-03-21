@@ -13,3 +13,4 @@ shell:
 clean:
 	@rebar3 clean
 	@rm -rf ebin/* _build/*/lib/$(PROJECT)
+	-@rm priv/templates/*.erl
