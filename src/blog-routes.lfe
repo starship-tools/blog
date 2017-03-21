@@ -2,32 +2,19 @@
   (export all))
 
 (defun static-routes ()
-  `(("index.html"
-      ,(lambda () (blog-pages:get-page 'landing)))
-    ("archives.html"
-      ,(lambda () (blog-pages:get-page 'archives)))
-    ("categories.html"
-      ,(lambda () (blog-pages:get-page 'categories)))
-    ("tags.html"
-      ,(lambda () (blog-pages:get-page 'tags)))
-    ("authors.html"
-      ,(lambda () (blog-pages:get-page 'authors)))
-    ("pages.html"
-      ,(lambda () (blog-pages:get-page 'pages)))
-    ("about.html"
-      ,(lambda () (blog-pages:get-page 'about)))
-    ("starship-timeline.html"
-      ,(lambda () (blog-pages:get-page 'timeline)))
-    ("search.html"
-      ,(lambda () (blog-pages:get-page 'search)))
-    ("design.html"
-      ,(lambda () (blog-pages:get-page 'design)))
-    ("design/bootstrap-theme.html"
-      ,(lambda () (blog-pages:get-page 'bootstrap-theme)))
-    ("design/example-1-column.html"
-      ,(lambda () (blog-pages:get-page 'example-one-column)))
-    ("design/example-2-column.html"
-      ,(lambda () (blog-pages:get-page 'example-two-column)))))
+  `(("index.html" ,#'blog-pages:landing/0)
+    ("archives.html" ,#'blog-pages:archives/0)
+    ("categories.html" ,#'blog-pages:categories/0)
+    ("tags.html" ,#'blog-pages:tags/0)
+    ("authors.html" ,#'blog-pages:authors/0)
+    ("pages.html" ,#'blog-pages:pages/0)
+    ("about.html" ,#'blog-pages:about/0)
+    ("starship-timeline.html" ,#'blog-pages:timeline/0)
+    ("search.html" ,#'blog-pages:search/0)
+    ("design.html" ,#'blog-pages:design/0)
+    ("design/bootstrap-theme.html" ,#'blog-pages:bootstrap-theme/0)
+    ("design/example-1-column.html" ,#'blog-pages:example-one-column/0)
+    ("design/example-2-column.html" ,#'blog-pages:example-two-column/0)))
 
 (defun posts-routes ()
   `())
