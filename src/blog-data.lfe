@@ -78,6 +78,12 @@
     `(#(page_title "Design | Theme Demo")
       #(active "design"))))
 
+(defun example-one-column ()
+  (lists:append
+    (base)
+    `(#(page_title "Design | Example One-column")
+      #(active "design"))))
+
 (defun example-two-column ()
   (lists:append
     (base)

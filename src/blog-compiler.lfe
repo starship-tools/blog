@@ -61,7 +61,7 @@
         (lists:subtract (filelib:wildcard wildcard) `(,filename)))
       ;; Finally, re-render the pages with the recompiled templates
       (logjam:info "Re-rendering pages ...")
-      (blog-gen:run-dev)
+      (blog-gen:run)
       (inotify:watch template-dir watcher)
       (blog-httpd:restart))))
 

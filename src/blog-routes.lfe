@@ -24,6 +24,8 @@
       ,(lambda () (blog-pages:get-page 'design)))
     ("design/bootstrap-theme.html"
       ,(lambda () (blog-pages:get-page 'bootstrap-theme)))
+    ("design/example-1-column.html"
+      ,(lambda () (blog-pages:get-page 'example-one-column)))
     ("design/example-2-column.html"
       ,(lambda () (blog-pages:get-page 'example-two-column)))))
 
