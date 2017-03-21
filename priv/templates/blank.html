@@ -1,60 +1,10 @@
-{% extends "base.html" %}
+{% extends "column_double.html" %}
 
-{% block main_content %}
-    <div class="container">
-      <div class="page-header" id="banner">
-
-        <div class="row">
-          <div class="col-sm-8 blog-main">
-
-            <div class="row">
-              <div class="col-sm-12">
-                Content forthcoming.
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-
-            <div class="sidebar-module sidebar-module-inset">
-              <p class="social">
-                <a href="/atom.xml">
-                  <i class="fa fa-feed fa-lg first"></i>
-                </a>
-                <a href="http://twitter.com/clojang">
-                  <i class="fa fa-twitter fa-lg"></i>
-                </a>
-                <a href="http://github.com/clojang">
-                  <i class="fa fa-github fa-lg"></i>
-                </a>
-                <a href="http://clojang.slack.com">
-                  <i class="fa fa-slack fa-lg"></i>
-                </a>
-                <a href="https://groups.google.com/forum/#!forum/clojang">
-                  <i class="fa fa-envelope fa-lg last"></i>
-                </a>
-              </p>
-            </div>
-
-            <div class="sidebar-module">
-              <h4>Featured</h4>
-              <p>
-                <a href="/">...</a>
-              </p>
-            </div>
-
-            <div class="sidebar-module">
-              <h4>Tags</h4>
-              <p>
-                {% for tag in tags %}
-                <a href="/tags/#{{tag}}">{{ tag }}</a>
-                {% endfor %}
-              </p>
-            </div>
-
-        </div>
-
-      </div>
-    </div>
+{% block main_column %}
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue urna, fringilla ac mollis sit amet, pulvinar in orci. Phasellus in nunc erat. Nulla euismod leo non elementum finibus. Quisque vitae rutrum purus. Nullam laoreet finibus tortor vitae ullamcorper. Nulla vestibulum ac eros in hendrerit. Suspendisse id mauris posuere, dapibus neque ut, cursus arcu. Integer fringilla sapien ut massa mollis elementum. Proin at dui velit. Nunc non dapibus ipsum. Suspendisse nec diam tellus. Etiam quis lobortis urna. Donec posuere erat nec porttitor tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer ut magna odio.
+</p>
+<p>
+Duis massa tortor, aliquet quis dolor ullamcorper, semper vulputate odio. Etiam non erat in lacus tristique varius. Etiam ut faucibus ante, posuere mollis diam. Ut ornare turpis consequat, viverra orci non, egestas dolor. Phasellus in ex sed leo ornare molestie nec sed sem. Sed consequat molestie gravida. Aliquam vitae augue vitae risus placerat eleifend sit amet eu arcu. Morbi bibendum orci at nisi bibendum suscipit. Phasellus tempus tortor commodo ligula viverra accumsan. Cras sodales dignissim sollicitudin. Cras sit amet sapien a nunc tincidunt rhoncus. Aliquam sit amet ultricies ipsum. Vestibulum id quam leo. Ut vel nulla lobortis nulla hendrerit blandit a sed diam. Cras laoreet velit congue nisl interdum, mattis tincidunt lacus aliquet. Donec ut sodales elit.
+</p>
 {% endblock %}

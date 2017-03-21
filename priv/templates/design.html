@@ -1,63 +1,17 @@
-{% extends "base.html" %}
+{% extends "column_double.html" %}
 
-{% block main_content %}
-    <div class="container">
-      <div class="page-header" id="banner">
-
-        <div class="row">
-          <div class="col-sm-8 blog-main">
-
-            <div class="row">
-              <div class="col-sm-12 content">
-                <ul>
-                  <li><a href="/design/bootstrap-theme.html">Our Bootstrap Theme</a></li>
-                  <li><a href="/design/example-2-column.html">Example 2-Column Page</a></li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-
-            <div class="sidebar-module sidebar-module-inset">
-              <p class="social">
-                <a href="/atom.xml">
-                  <i class="fa fa-feed fa-lg first"></i>
-                </a>
-                <a href="http://twitter.com/clojang">
-                  <i class="fa fa-twitter fa-lg"></i>
-                </a>
-                <a href="http://github.com/clojang">
-                  <i class="fa fa-github fa-lg"></i>
-                </a>
-                <a href="http://clojang.slack.com">
-                  <i class="fa fa-slack fa-lg"></i>
-                </a>
-                <a href="https://groups.google.com/forum/#!forum/clojang">
-                  <i class="fa fa-envelope fa-lg last"></i>
-                </a>
-              </p>
-            </div>
-
-            <div class="sidebar-module">
-              <h4>Featured</h4>
-              <p>
-                <a href="/">...</a>
-              </p>
-            </div>
-
-            <div class="sidebar-module">
-              <h4>Tags</h4>
-              <p>
-                {% for tag in tags %}
-                <a href="/tags/#{{tag}}">{{ tag }}</a>
-                {% endfor %}
-              </p>
-            </div>
-
-        </div>
-
-      </div>
+{% block main_column_wrapper %}
+  <div class="row">
+    <div class="col-sm-12 content">
+      <h2>Styles</h2>
+      <ul>
+        <li><a href="/design/bootstrap-theme.html">Bootstrap Theme</a></li>
+      </ul>
+      <h2>Layout</h2>
+      <ul>
+        <li><a href="/design/example-1-column.html">Example 1-Column Page</a></li>
+        <li><a href="/design/example-2-column.html">Example 2-Column Page</a></li>
+      </ul>
     </div>
+  </div>
 {% endblock %}

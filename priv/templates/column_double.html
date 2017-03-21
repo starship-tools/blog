@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+    <div class="container docs-content">
+
+          {% block sidebar_column_wrapper %}
+          <div id="sidebar" class="blog-sidebar">
+
+            {% block pre_sidebar %}
+            {% endblock %}
+
+            {% block sidebar_column %}
+            {% block sidebar_social %}
+            <div class="sidebar-module">
+              <p class="social">
+                <a href="/atom.xml">
+                  <span class="icon icon-rss first"></span>
+                </a>
+                <a href="https://twitter.com/starshiptools">
+                  <span class="icon icon-twitter"></span>
+                </a>
+                <a href="https://twitter.com/StarshipTools/lists/starship-initiatives">
+                  <span class="icon icon-twitter-with-circle"></span>
+                </a>
+                <a href="http://github.com/starship-hackers">
+                  <span class="icon icon-github"></span>
+                </a>
+                <a href="http://starship-hackers.slack.com">
+                  <span class="icon text">#</span>
+                </a>
+                <a href="https://groups.google.com/forum/#!forum/starship-hackers">
+                  <span class="icon icon-mail last"></span>
+                </a>
+              </p>
+            </div>
+            {% endblock %}
+
+            {% block sidebar_featured %}
+            <div class="sidebar-module">
+              <h4>Featured</h4>
+              <p>
+                <a href="/">Lorem ipsum dolor sit amet</a>
+              </p>
+              <p>
+                <a href="/">Consectetur adipiscing elit</a>
+              </p>
+              <p>
+                <a href="/">Sed augue urna</a>
+              </p>
+            </div>
+            {% endblock %}
+
+            {% block sidebar_tags %}
+            <div class="sidebar-module">
+              <h4>Tags</h4>
+              <p>
+                {% for tag in tags %}
+                <a href="/tags/#{{tag}}">{{ tag }}</a>
+                {% endfor %}
+              </p>
+            </div>
+            {% endblock %}
+
+            {% block post_sidebar %}
+            {% endblock %}
+          {% endblock %}
+
+        </div>
+        {% endblock %}
+
+        {% block main_column_wrapper %}
+        {% block main_column %}
+        {% endblock %}
+        {% endblock %}
+
+  </div>
+{% endblock %}

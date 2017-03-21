@@ -1,26 +1,14 @@
-{% extends "base.html" %}
+{% extends "column_single.html" %}
 
-{% block main_content %}
-    <div class="container">
-      <div class="page-header" id="banner">
+{% block main_column_wrapper %}
+  <h2>General</h1>
 
-        <div class="row">
-          <div class="col-sm-8 blog-main">
-
-            <h2>General</h1>
-
-            <div class="row">
-              <div class="col-sm-12 content">
-                <ul>
-                  <li><a href="/starship-timeline.html">A Timeline of Starship Programs</a></li>
-                  <li><a href="/about.html">About the Site</a></li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
+  <div class="row">
+    <div class="col-sm-12 content">
+      <ul>
+        <li><a href="/starship-timeline.html">A Timeline of Starship Programs</a></li>
+        <li><a href="/about.html">About the Site</a></li>
+      </ul>
     </div>
+  </div>
 {% endblock %}
