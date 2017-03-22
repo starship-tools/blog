@@ -5,6 +5,8 @@
     (watch 0)
     (process 0)
     (get-posts 0)
+    (routes 0)
+    (gen 0)
     ;; gen_server implementation
     (start 0)
     (start-gen-server 0)
@@ -18,7 +20,9 @@
     (terminate 2)
     (code_change 3)))
 
-;;; config functions
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Config Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun server-name () (MODULE))
 (defun callback-module () (MODULE))
@@ -27,22 +31,31 @@
 (defun register-name () `#(local ,(server-name)))
 (defun unknown-command () #(error "Unknown command."))
 
-;;; blog functions
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Blog API   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun watch ()
   (blog-watcher:start))
 
 (defun process ()
-  (clj:->> (get-posts)
-           (lists:map #'blog-post:process/1)
-           (lists:sort #'blog-post:compare-posts-desc/2)))
+  (blog-post:process-all (get-posts)))
 
 (defun get-posts ()
-  (clj:-> (blog-cfg:posts-src-dir)
-          (filename:join  "*/*/*")
-          (filelib:wildcard)))
+  (blog-post:get-posts
+    (blog-cfg:posts-src-dir)))
 
-;;; gen_server implementation
+(defun routes ()
+  (blog-routes:routes))
+
+(defun gen ()
+  (equipoise:generate
+    (routes)
+    (map 'output-dir (blog-cfg:output-dir))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   gen_server Implementation   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun start ()
   (start "Starting blog gen-server ..."))
@@ -84,7 +97,9 @@
   (stop (lambda (x) x) "")
   (start "Restarting blog gen-server ..."))
 
-;;; callback implementation
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Callback Implementation   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun init (initial-state)
   `#(ok ,initial-state))

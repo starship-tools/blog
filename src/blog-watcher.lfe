@@ -1,27 +1,15 @@
+;;;; This module uses the Erlang inotify library which depends upon the
+;;;; Linux inotify library. This will not work on systems that do not
+;;;; support inotify, and in particular, the Erlang inotify NIF.
 (defmodule blog-watcher
-  (export all))
+  (export
+    (start 0) (start 1)
+    (stop 0)
+    (restart 0)))
 
-(defun source-data ()
-  `#("src" ,#'blog-watcher:lfe-watcher/1))
-
-(defun template-data ()
-  `#("priv/templates" ,#'blog-watcher:erlydtl-watcher/1))
-
-(defun default-watch-data ()
-  `(,(source-data)
-    ,(template-data)))
-
-(defun lfe-watcher
-  ((`#(,path file close_write ,fd ,file))
-    (blog-compiler:lfe path file (source-data)))
-  ((args)
-    (logjam:debug "Unhandled LFE watcher event: ~p" `(,args))))
-
-(defun erlydtl-watcher
-  ((`#(,path file close_write ,fd ,file))
-    (blog-compiler:erlydtl path file (template-data)))
-  ((args)
-    (logjam:debug "Unhandled ErlyDTL watcher event: ~p" `(,args))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   API   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun start ()
   (start (default-watch-data)))
@@ -53,3 +41,33 @@
   (stop)
   (timer:sleep 500)
   (start))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Config Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun lfe-data ()
+  `#("src" ,#'blog-watcher:lfe-watcher/1))
+
+(defun template-data ()
+  `#("priv/templates" ,#'blog-watcher:erlydtl-watcher/1))
+
+(defun default-watch-data ()
+  `(,(lfe-data)
+    ,(template-data)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Support Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun lfe-watcher
+  ((`#(,path file close_write ,fd ,file))
+    (blog-compiler:lfe path file (lfe-data)))
+  ((args)
+    (logjam:debug "Unhandled LFE watcher event: ~p" `(,args))))
+
+(defun erlydtl-watcher
+  ((`#(,path file close_write ,fd ,file))
+    (blog-compiler:erlydtl path file (template-data)))
+  ((args)
+    (logjam:debug "Unhandled ErlyDTL watcher event: ~p" `(,args))))

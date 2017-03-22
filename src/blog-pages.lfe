@@ -1,44 +1,13 @@
 (defmodule blog-pages
   (export all))
 
-(defun get-fragment-page (name)
-  (clj:->> name
-           (io_lib:format "html-fragments/~s")
-           (blog-util:read-priv-file)))
-
-(defun landing ()
-  (clj:-> (blog-data:landing)
-          (landing-tmpl:render)
-          (get-content)))
-
-(defun archives ()
-  (clj:-> (blog-data:archives)
-          (blank-tmpl:render)
-          (get-content)))
-
-(defun categories ()
-  (clj:-> (blog-data:categories)
-          (blank-tmpl:render)
-          (get-content)))
-
-(defun tags ()
-  (clj:-> (blog-data:tags)
-          (blank-tmpl:render)
-          (get-content)))
-
-(defun authors ()
-  (clj:-> (blog-data:authors)
-          (blank-tmpl:render)
-          (get-content)))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Static Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun about ()
   (clj:-> (blog-data:about)
           (about-tmpl:render)
-          (get-content)))
-
-(defun pages ()
-  (clj:-> (blog-data:pages)
-          (pages-tmpl:render)
           (get-content)))
 
 (defun timeline ()
@@ -70,6 +39,49 @@
   (clj:-> (blog-data:example-two-column)
           (example-two-column-tmpl:render)
           (get-content)))
+
+(defun pages ()
+  (clj:-> (blog-data:pages)
+          (pages-tmpl:render)
+          (get-content)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Dynamic Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun landing (data)
+  (clj:-> (blog-data:landing data)
+          (landing-tmpl:render)
+          (get-content)))
+
+(defun archives (data)
+  (clj:-> (blog-data:archives data)
+          (blank-tmpl:render)
+          (get-content)))
+
+(defun categories (data)
+  (clj:-> (blog-data:categories data)
+          (blank-tmpl:render)
+          (get-content)))
+
+(defun tags (data)
+  (clj:-> (blog-data:tags data)
+          (blank-tmpl:render)
+          (get-content)))
+
+(defun authors (data)
+  (clj:-> (blog-data:authors data)
+          (blank-tmpl:render)
+          (get-content)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Utility Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun get-fragment-page (name)
+  (clj:->> name
+           (io_lib:format "html-fragments/~s")
+           (blog-util:read-priv-file)))
 
 (defun get-content
   "This is a wrapper function that processes the result of an ErlyDTL template

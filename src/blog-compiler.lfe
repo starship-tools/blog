@@ -1,5 +1,11 @@
 (defmodule blog-compiler
-  (export all))
+  (export
+    (lfe-compile 2)
+    (erlydtl-compile 2)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   API   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun lfe-compile (path file)
   (let ((outdir (get-ebin-dir file))
@@ -15,14 +21,6 @@
           (`#(module ,_) (logjam:debug "Success."))
           (err (logjam:debug "Couldn't reload module: ~p" `(,err)))))
       (err (logjam:error "Couldn't compile file: ~p" `(,err))))))
-
-(defun lfe
-  ((_ "blog.app.src" _)
-    'skipping)
-  ((path file `#(,source-dir ,watcher))
-    (inotify:unwatch source-dir)
-    (lfe-compile path file)
-    (inotify:watch source-dir watcher)))
 
 (defun erlydtl-compile (path file)
   (let* ((opts (get-erlydtl-opts))
@@ -46,6 +44,18 @@
           (err (logjam:debug "Couldn't reload module: ~p" `(,err))))
         (logjam:set-level 'info))
       (err (logjam:error "Couldn't compile file: ~p" `(,err))))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Support Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun lfe
+  ((_ "blog.app.src" _)
+    'skipping)
+  ((path file `#(,source-dir ,watcher))
+    (inotify:unwatch source-dir)
+    (lfe-compile path file)
+    (inotify:watch source-dir watcher)))
 
 (defun erlydtl
   ((path file `#(,template-dir ,watcher))
