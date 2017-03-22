@@ -33,7 +33,9 @@
   (blog-watcher:start))
 
 (defun process ()
-  (lists:map #'blog-post:process/1 (get-posts)))
+  (clj:->> (get-posts)
+           (lists:map #'blog-post:process/1)
+           (lists:sort #'blog-post:compare-posts-desc/2)))
 
 (defun get-posts ()
   (clj:-> (blog-cfg:posts-src-dir)
