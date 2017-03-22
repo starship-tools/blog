@@ -2,8 +2,9 @@
   (behaviour gen_server)
   (export
     ;; blog functions
-    (process 0)
     (watch 0)
+    (process 0)
+    (get-posts 0)
     ;; gen_server implementation
     (start 0)
     (start-gen-server 0)
@@ -32,9 +33,9 @@
   (blog-watcher:start))
 
 (defun process ()
-  (lists:map #'blog-post:process/1 (get-files)))
+  (lists:map #'blog-post:process/1 (get-posts)))
 
-(defun get-files ()
+(defun get-posts ()
   (clj:-> (blog-cfg:posts-src-dir)
           (filename:join  "*/*/*")
           (filelib:wildcard)))

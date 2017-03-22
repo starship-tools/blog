@@ -5,8 +5,27 @@
   (clj:-> filename
           (blog-util:read-file)
           (blog-ct-rfc822:parse)
+          (add-file-data filename)
+          (add-date-data)
           (add-post-data)
           (add-counts)))
+
+(defun add-file-data (data filename)
+  (++ data
+      `(#(filename ,filename)
+        #(datepath ,(blog-util:filename->path filename)))))
+
+(defun add-date-data (data)
+  (let ((`(,y ,m ,d ,H ,M ,S) (->date data)))
+    (++ data
+        `(#(year ,y)
+          #(month ,m)
+          #(day ,d)
+          #(hour ,H)
+          #(minute ,M)
+          #(second ,S)
+          #(date-int ,(->date-int data))))))
+
 
 (defun add-post-data (data)
   (++ data
@@ -22,6 +41,18 @@
   (++ data
       `(#(char-count ,(blog-util:count-chars (clj:get-in data '(body))))
         #(word-count ,(blog-util:count-words (clj:get-in data '(body)))))))
+
+;;; Utility functions
+
+(defun ->date (data)
+  (clj:->> data
+           (proplists:get_value 'datepath)
+           (blog-util:datepath->date)))
+
+(defun ->date-int (data)
+  (clj:->> data
+           (proplists:get_value 'datepath)
+           (blog-util:datepath->date-int)))
 
 (defun parse-tags (field-body)
   (re:split field-body #",\s*"))

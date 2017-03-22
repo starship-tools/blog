@@ -1,7 +1,8 @@
 ;;;; This module provides functions for working with RFC 822 (Internet Message)
 ;;;; content (the 'ct' in the module name stands for 'content type'). Note that
-;;;; the full RFC spec is not supported (e.g., no folding support). This is very
-;;;; limited in nature.
+;;;; nowhere near the full RFC spec is supported (e.g., no folding
+;;;; support, only lf not crlf, etc) and that this module is very limited in
+;;;; nature.
 (defmodule blog-ct-rfc822
   (export all))
 
