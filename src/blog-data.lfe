@@ -9,10 +9,11 @@
   (let ((base-data (base)))
     (lists:append
       `(,base-data
-        ,data
         (#(page_title ,(proplists:get_value 'site_title base-data))
          #(page_description ,(proplists:get_value 'site_description base-data))
-         #(active "index"))))))
+         #(active "index")
+         #(headliner ,(car data))
+         #(headlines (list:sublist 2 5)))))))
 
 (defun archives (data)
   (lists:append
@@ -20,7 +21,6 @@
       ,data
       (#(page_title "Archives")
        #(active "archives")))))
-
 
 (defun categories (data)
   (lists:append
@@ -83,6 +83,17 @@
     (base)
     `(#(page_title "Design | Example Two-column")
       #(active "design"))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Posts   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun post (data)
+  (logjam:debug "Got post data: ~p" `(,data))
+  (lists:append
+    `(,(base)
+      (#(page_title "Article")
+       #(postdata ,data)))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Non-Top-Nav Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -53,21 +53,25 @@
         #(comments ,(clj:get-in data '(headers comments))))))
 
 (defun add-counts (data)
-  (++ data
-      `(#(char-count ,(blog-util:count-chars (clj:get-in data '(body))))
-        #(word-count ,(blog-util:count-words (clj:get-in data '(body)))))))
+  (let ((content (clj:get-in data '(body))))
+    (++ data
+        `(#(charcount ,(blog-util:count-chars content))
+          #(wordcount ,(blog-util:count-words content))
+          #(linecount ,(blog-util:count-lines content))))))
 
 (defun add-content-conversions (data)
   (if (md? data)
-    (++ data `(#(content ,(parse-markdown data))))
+    (++ data
+      `(#(content ,(parse-markdown data))
+        #(contentbuffer ,(->content-buffer data))))
     data))
 
 (defun add-file-data (data filename)
   (let ((title (->safe-title data))
         (datepath (blog-util:filename->path filename)))
     (++ data
-        `(#(src-file ,filename)
-          #(dst-file ,(filename:join
+        `(#(srcfile ,filename)
+          #(dstfile ,(filename:join
                         (list (blog-cfg:posts-dst-dir) datepath title)))
           #(datepath ,datepath)))))
 
@@ -80,8 +84,10 @@
           #(hour ,H)
           #(minute ,M)
           #(second ,S)
-          #(date-int ,(->date-int data))
-          #(month-name ,(blog-util:month-name m))))))
+          #(datestamp ,(->datestamp data))
+          #(timestamp ,(->timestamp data))
+          #(dateint ,(->date-int data))
+          #(monthname ,(blog-util:month-name m))))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Utility Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -98,6 +104,14 @@
     (#"md" 'true)
     (_ 'false)))
 
+(defun ->content-buffer (data)
+  (let ((max-buffer 10)
+        (line-count (clj:get-in data '(linecount))))
+    (lists:seq 1
+      (if (> line-count max-buffer)
+          0
+          (- max-buffer line-count)))))
+
 (defun ->safe-title (data)
   (clj:->> data
            (proplists:get_value 'title)
@@ -107,6 +121,16 @@
   (clj:->> data
            (proplists:get_value 'datepath)
            (blog-util:datepath->date)))
+
+(defun ->datestamp (data)
+  (clj:->> data
+           (proplists:get_value 'datepath)
+           (blog-util:datepath->datestamp)))
+
+(defun ->timestamp (data)
+  (clj:->> data
+           (proplists:get_value 'datepath)
+           (blog-util:datepath->timestamp)))
 
 (defun ->date-int (data)
   (clj:->> data

@@ -7,11 +7,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun routes ()
-  (let ((data (blog:process)))
+  (let ((all-posts (blog:process)))
     (lists:append
       `(,(static-routes)
-        ,(dynamic-routes data)
-        ,(posts-routes data)))))
+        ,(dynamic-routes all-posts)
+        ,(posts-routes all-posts)))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Route Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -27,15 +27,16 @@
     ("design/example-1-column.html" ,(blog-pages:example-one-column))
     ("design/example-2-column.html" ,(blog-pages:example-two-column))))
 
-(defun dynamic-routes (data)
-  `(("index.html"      ,(blog-pages:landing data))
-    ("archives.html"   ,(blog-pages:archives data))
-    ("categories.html" ,(blog-pages:categories data))
-    ("tags.html"       ,(blog-pages:tags data))
-    ("authors.html"    ,(blog-pages:authors data))))
+(defun dynamic-routes (all-posts)
+  `(("index.html"      ,(blog-pages:landing all-posts))
+    ("archives.html"   ,(blog-pages:archives all-posts))
+    ("categories.html" ,(blog-pages:categories all-posts))
+    ("tags.html"       ,(blog-pages:tags all-posts))
+    ("authors.html"    ,(blog-pages:authors all-posts))))
 
-(defun posts-routes (posts)
-  (lists:map #'get-route/1 posts))
+(defun posts-routes (all-posts)
+  (lists:map #'get-route/1 all-posts))
 
 (defun get-route (post-data)
-  `(,(proplists:get_value 'dst-file post-data) ,(blog-pages:about)))
+  `(,(proplists:get_value 'dstfile post-data)
+    ,(blog-pages:post post-data)))
