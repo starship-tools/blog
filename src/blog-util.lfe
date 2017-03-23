@@ -21,6 +21,18 @@
           (string:to_lower)
           (list_to_atom)))
 
+(defun group-by (func data)
+  (clj:->> data
+           (lists:sort (lambda (a b)
+                         (> (funcall func a)
+                            (funcall func b))))
+           (lists:map (lambda (x)
+                        `#(,(funcall func x) ,x)))
+           (lists:foldr (match-lambda ((`#(,k ,v) data)
+                          (orddict:append k v data)))
+                        (orddict:new))
+           (orddict:to_list)))
+
 (defun filename->path (filename)
   (clj:-> filename
           (re:replace "posts/" "" `(#(return list)))
@@ -30,6 +42,18 @@
   (let* ((`(,y ,m ,d ,HMS) (re:split datepath "[^\\d]" `(#(return list))))
          (`(,H ,M ,S) (split-time HMS)))
     `(,y ,m ,d ,H ,M ,S)))
+
+(defun datepath->datestamp (datepath)
+  (clj:-> datepath
+          (datepath->date)
+          (lists:sublist 3)
+          (rev-format "~s-~s-~s")))
+
+(defun datepath->timestamp (datepath)
+  (clj:-> datepath
+          (datepath->date)
+          (lists:sublist 4 6)
+          (rev-format "~s:~s:~s")))
 
 (defun datepath->date-int (datepath)
   (clj:-> datepath
@@ -66,8 +90,14 @@
           (string:to_lower)
           (++ ".html")))
 
+(defun rev-format (data str)
+  (io_lib:format str data))
+
 (defun count-chars (data)
   (length (re:split data #".")))
+
+(defun count-lines (data)
+  (length (re:split data #"\n")))
 
 (defun count-words (data)
   (length (re:split data #"[^\s]+")))
