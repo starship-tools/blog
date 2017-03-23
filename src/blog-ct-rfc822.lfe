@@ -4,7 +4,9 @@
 ;;;; support, only lf not crlf, etc) and that this module is very limited in
 ;;;; nature.
 (defmodule blog-ct-rfc822
-  (export (parse 1)))
+  (export (parse 1)
+          (parse-header 1)
+          (split-header 1)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   API   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -32,5 +34,8 @@
     `#(,(blog-util:bin->atom field-name) ,field-body)))
 
 (defun split-header (header)
-  (let ((results (re:split header #"(\s*)?([^ ]+)(\s*)?:\s*" '(#(parts 2)))))
+  (let ((results (re:split header (header-separator) '(#(parts 2)))))
     `(,(lists:nth 3 results) ,(lists:nth 5 results))))
+
+(defun header-separator ()
+  #"(\s*)?([^ ]+)(\s*)?:\s*")
