@@ -7,7 +7,7 @@
       <div class="headliner well">
 
         <h2>
-          <a href="{{ headliner.url }}">{{ headliner.title }}</a>
+          <a href="/{{ headliner.dstfile }}">{{ headliner.title }}</a>
         </h2>
         {% if headliner.subtitle %}
           <h4>{{ headliner.subtitle }}</h4>
@@ -17,7 +17,7 @@
         {% endif %}
         <div class="row">
           <div class="col-sm-4">
-            <p>Date: {{ headliner.datestamp }}</p>
+            <p>Posted: {{ headliner.datestamp }} at {{ headliner.timestamp }}</p>
           </div>
           <div class="col-sm-4">
             <p>Author: {{ headliner.author }}</p>
@@ -60,7 +60,7 @@
     </div>
   </div>
 
-  {% for row in posts_data %}
+  {% for row in headliness %}
   <div class="row row-full-height subheadliner">
     {% for column in row %}
     <div class="col-sm-6 well subheadliner">
