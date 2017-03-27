@@ -40,6 +40,32 @@
                         (orddict:new))
            (orddict:to_list)))
 
+(defun group-by-years (data)
+  (group-by
+    (lambda (x)
+      (clj:get-in x '(year)))
+    data))
+
+(defun group-by-months (data)
+  (group-by
+    (lambda (x)
+      (clj:get-in x '(month)))
+    data))
+
+(defun group-months-posts (data)
+  (lists:map
+    (match-lambda ((`#(,month ,months))
+      `(#(month ,month)
+        #(posts ,months))))
+    (group-by-months data)))
+
+(defun group-years-months-posts (data)
+  (lists:map
+    (match-lambda ((`#(,year ,data))
+      `(#(year ,year)
+        #(months ,(group-months-posts data)))))
+    (group-by-years data)))
+
 (defun filename->path (filename)
   (clj:-> filename
           (re:replace "posts/" "" `(#(return list)))

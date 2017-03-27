@@ -31,6 +31,25 @@
     (#(year 2002) #(month 6) #(day 30))))
 
 (defun group-by-expected-2 ()
+  '(#(1999
+      ((#(year 1999) #(month 1) #(day 1)) (#(year 1999) #(month 2) #(day 11))))
+    #(2000 ((#(year 2000) #(month 3) #(day 12))))
+    #(2001 ((#(year 2001) #(month 4) #(day 17))))
+    #(2002
+      ((#(year 2002) #(month 5) #(day 22))
+       (#(year 2002) #(month 5) #(day 23))
+       (#(year 2002) #(month 6) #(day 30))))))
+
+(defun group-by-expected-3 ()
+  '(#(1 ((#(year 1999) #(month 1) #(day 1))))
+    #(2 ((#(year 1999) #(month 2) #(day 11))))
+    #(3 ((#(year 2000) #(month 3) #(day 12))))
+    #(4 ((#(year 2001) #(month 4) #(day 17))))
+    #(5
+      ((#(year 2002) #(month 5) #(day 22)) (#(year 2002) #(month 5) #(day 23))))
+    #(6 ((#(year 2002) #(month 6) #(day 30))))))
+
+(defun group-by-expected-4 ()
   '((#(year 1999)
      #(months
        ((#(month 1) #(posts ((#(year 1999) #(month 1) #(day 1)))))
@@ -54,37 +73,20 @@
               (group-by-input-1))
             (group-by-expected-1)))
 
-(deftest group-by-nested
+(deftest group-by-years
   (is-equal
-    (group-years-months-posts (group-by-input-2))
+    (blog-util:group-by-years
+      (group-by-input-2))
     (group-by-expected-2)))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;   Testing Support Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(deftest group-by-months
+  (is-equal
+    (blog-util:group-by-months
+      (group-by-input-2))
+    (group-by-expected-3)))
 
-(defun group-by-years (data)
-  (blog-util:group-by
-    (lambda (x)
-      (clj:get-in x '(year)))
-    (group-by-input-2)))
-
-(defun group-by-months (data)
-  (blog-util:group-by
-    (lambda (x)
-      (clj:get-in x '(month)))
-    data))
-
-(defun group-months-posts (data)
-  (lists:map
-    (match-lambda ((`#(,month ,months))
-      `(#(month ,month)
-        #(posts ,months))))
-    (group-by-months data)))
-
-(defun group-years-months-posts (data)
-  (lists:map
-    (match-lambda ((`#(,year ,data))
-      `(#(year ,year)
-        #(months ,(group-months-posts data)))))
-    (group-by-years data)))
+(deftest group-years-months-posts
+  (is-equal
+    (blog-util:group-years-months-posts
+      (group-by-input-2))
+    (group-by-expected-4)))
