@@ -56,7 +56,7 @@
 
 (defun archives (data)
   (clj:-> (blog-data:archives data)
-          (blank-tmpl:render)
+          (archives-tmpl:render)
           (get-content)))
 
 (defun categories (data)

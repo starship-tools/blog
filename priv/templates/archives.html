@@ -1,0 +1,19 @@
+{% extends "column_single.html" %}
+
+{% block main_column %}
+  <p class="lead">All previous posts are listed here by year and month.</p>
+  {% for yeardata in postsdata %}
+  <h2>{{ yeardata.year }}</h2>
+    {% for monthdata in yeardata.months %}
+    <h3>{{ monthdata.month }}</h3>
+      <ul>
+        {% for postdata in monthdata.posts %}
+        <li>{{ postdata.monthname }}
+            {{ postdata.day }},
+            {{ postdata.year }} -
+            <a href="{{ postdata.dstfile }}">{{ postdata.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  {% endfor %}
+{% endblock %}

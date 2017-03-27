@@ -18,9 +18,9 @@
 (defun archives (data)
   (lists:append
     `(,(base)
-      ,data
       (#(page_title "Archives")
-       #(active "archives")))))
+       #(active "archives")
+       #(postsdata ,(blog-util:group-years-months-posts data))))))
 
 (defun categories (data)
   (lists:append
