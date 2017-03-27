@@ -22,12 +22,19 @@
           (list_to_atom)))
 
 (defun group-by (func data)
+  (group-by
+    func
+    (lambda (x)
+      `#(,(funcall func x) ,x))
+    data))
+
+(defun group-by (by-func key-func data)
   (clj:->> data
            (lists:sort (lambda (a b)
-                         (> (funcall func a)
-                            (funcall func b))))
+                         (> (funcall by-func a)
+                            (funcall by-func b))))
            (lists:map (lambda (x)
-                        `#(,(funcall func x) ,x)))
+                        (funcall key-func x)))
            (lists:foldr (match-lambda ((`#(,k ,v) data)
                           (orddict:append k v data)))
                         (orddict:new))
