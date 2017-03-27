@@ -52,12 +52,25 @@
       (clj:get-in x '(month)))
     data))
 
+(defun group-by-categories (data)
+  (group-by
+    (lambda (x)
+      (clj:get-in x '(category)))
+    data))
+
 (defun group-months-posts (data)
   (lists:map
     (match-lambda ((`#(,month ,months))
       `(#(month ,month)
         #(posts ,months))))
     (group-by-months data)))
+
+(defun group-category-posts (data)
+  (lists:map
+    (match-lambda ((`#(,cat ,posts))
+      `(#(category ,cat)
+        #(posts ,posts))))
+    (group-by-categories data)))
 
 (defun group-years-months-posts (data)
   (lists:map

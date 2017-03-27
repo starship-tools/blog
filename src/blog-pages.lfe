@@ -61,7 +61,7 @@
 
 (defun categories (data)
   (clj:-> (blog-data:categories data)
-          (blank-tmpl:render)
+          (categories-tmpl:render)
           (get-content)))
 
 (defun tags (data)

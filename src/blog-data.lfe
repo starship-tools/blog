@@ -28,7 +28,8 @@
     `(,(base)
       ,data
       (#(page_title "Categories")
-       #(active "categories")))))
+       #(active "categories")
+       #(postsdata ,(blog-util:group-category-posts data))))))
 
 (defun tags (data)
   (lists:append
