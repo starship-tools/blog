@@ -66,6 +66,22 @@
         #(months ,(group-months-posts data)))))
     (group-by-years data)))
 
+(defun partition-rows-cols (rows cols data)
+  (let ((data-len (length data)))
+    (lists:map
+      (lambda (row)
+        (lists:sublist data (+ 1 (* cols (- row 1))) cols))
+      (lists:seq 1 rows))))
+
+(defun group-headlines (data)
+  (group-headlines 2 data))
+
+(defun group-headlines (rows data)
+  (group-headlines 2 2 data))
+
+(defun group-headlines (rows cols data)
+  (partition-rows-cols rows cols data))
+
 (defun filename->path (filename)
   (clj:-> filename
           (re:replace "posts/" "" `(#(return list)))

@@ -13,7 +13,8 @@
          #(page_description ,(proplists:get_value 'site_description base-data))
          #(active "index")
          #(headliner ,(car data))
-         #(headlines (list:sublist 2 5)))))))
+           ;; XXX once there are more posts, we can bump this up to 2 rows
+         #(headlines ,(blog-util:group-headlines 1 (cdr data))))))))
 
 (defun archives (data)
   (lists:append
