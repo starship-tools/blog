@@ -9802,14 +9802,14 @@ body {
 .card.bg-faded {
   background-color: rgba(30, 33, 39, 0.8); }
 
-.headliner h2, .subheadliner h2 {
-  font-weight: bold; }
+.headliner h2, .subheadliner h2, h2.blog-post-title {
+  font-family: Georgia, "Times New Roman", Times, serif; }
 
 .headliner h2 {
-  font-size: 175%; }
+  font-size: 200%; }
 
 .subheadliner h2 {
-  font-size: 150%; }
+  font-size: 175%; }
 
 .headliner {
   font-size: 120%;
