@@ -4,55 +4,63 @@
   <div class="row">
     <div class="col-sm-12">
 
-      <div class="headliner well">
+      <div class="headliner card bg-faded">
+        <div class="card-block">
 
-        <h2>
-          <a href="/{{ headliner.dstfile }}">{{ headliner.title }}</a>
-        </h2>
-        {% if headliner.subtitle %}
-          <h4>{{ headliner.subtitle }}</h4>
-        {% endif %}
-        {% if headliner.excerpt %}
-          <h3>{{ headliner.excerpt|safe }}</h3>
-        {% endif %}
-        <div class="row">
-          <div class="col-sm-4">
-            <p>Posted: {{ headliner.datestamp }} at {{ headliner.timestamp }}</p>
+          <h2>
+            <a href="/{{ headliner.dstfile }}">{{ headliner.title }}</a>
+          </h2>
+          {% if headliner.subtitle %}
+            <h4>{{ headliner.subtitle }}</h4>
+          {% endif %}
+          {% if headliner.excerpt %}
+            <h3>{{ headliner.excerpt|safe }}</h3>
+          {% endif %}
+          <div class="row">
+            <div class="col-sm-4">
+              <p>Posted: {{ headliner.datestamp }} at {{ headliner.timestamp }}</p>
+            </div>
+            <div class="col-sm-4">
+              <p>Author: {{ headliner.author }}</p>
+            </div>
+            <div class="col-sm-4">
+              <p>Category: {{ headliner.category }}</p>
+            </div>
           </div>
-          <div class="col-sm-4">
-            <p>Author: {{ headliner.author }}</p>
-          </div>
-          <div class="col-sm-4">
-            <p>Category: {{ headliner.category }}</p>
-          </div>
+
         </div>
+      </div>
 
         {% for row in headlines %}
-        <div class="row row-full-height subheadliner">
-          {% for column in row %}
-          <div class="col-sm-6 well subheadliner">
+        <div class="row row-full-height">
 
-              <h2>
-                <a href="{{ column.url }}">{{ column.title }}</a>
-              </h2>
-              {% if column.subtitle %}
-                <h4>{{ column.subtitle }}</h4>
-              {% endif %}
-              {% if column.excerpt %}
-                <h3>{{ column.excerpt|safe }}</h3>
-              {% endif %}
-              <p>Date: {{ column.datestamp }}</p>
-              <p>Author: {{ column.author }}</p>
-              <p>Category: {{ column.category }}</p>
+          {% for column in row %}
+          <div class="col-sm-6">
+
+            <div class="card bg-faded subheadliner">
+              <div class="card-block">
+
+                <h2>
+                  <a href="{{ column.url }}">{{ column.title }}</a>
+                </h2>
+                {% if column.subtitle %}
+                  <h4>{{ column.subtitle }}</h4>
+                {% endif %}
+                {% if column.excerpt %}
+                  <h3>{{ column.excerpt|safe }}</h3>
+                {% endif %}
+                <p>Date: {{ column.datestamp }}</p>
+                <p>Author: {{ column.author }}</p>
+                <p>Category: {{ column.category }}</p>
+
+              </div>
+            </div>
 
           </div>
           {% endfor %}
 
         </div>
         {% endfor %}
-
-
-      </div>
 
     </div>
   </div>
