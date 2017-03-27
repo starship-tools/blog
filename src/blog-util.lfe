@@ -40,44 +40,51 @@
                         (orddict:new))
            (orddict:to_list)))
 
-(defun group-by-years (data)
+(defun group-by-key (data key)
   (group-by
     (lambda (x)
-      (clj:get-in x '(year)))
+      (clj:get-in x `(,key)))
     data))
 
-(defun group-by-months (data)
-  (group-by
-    (lambda (x)
-      (clj:get-in x '(month)))
-    data))
+(defun group-by-year (data)
+  (group-by-key data 'year))
 
-(defun group-by-categories (data)
-  (group-by
-    (lambda (x)
-      (clj:get-in x '(category)))
-    data))
+(defun group-by-month (data)
+  (group-by-key data 'month))
 
-(defun group-months-posts (data)
+(defun group-by-category (data)
+  (group-by-key data 'category))
+
+(defun group-by-author (data)
+  (group-by-key data 'author))
+
+(defun group-month-posts (data)
   (lists:map
     (match-lambda ((`#(,month ,months))
       `(#(month ,month)
         #(posts ,months))))
-    (group-by-months data)))
+    (group-by-month data)))
 
 (defun group-category-posts (data)
   (lists:map
     (match-lambda ((`#(,cat ,posts))
       `(#(category ,cat)
         #(posts ,posts))))
-    (group-by-categories data)))
+    (group-by-category data)))
+
+(defun group-author-posts (data)
+  (lists:map
+    (match-lambda ((`#(,author ,posts))
+      `(#(author ,author)
+        #(posts ,posts))))
+    (group-by-author data)))
 
 (defun group-years-months-posts (data)
   (lists:map
     (match-lambda ((`#(,year ,data))
       `(#(year ,year)
-        #(months ,(group-months-posts data)))))
-    (group-by-years data)))
+        #(months ,(group-month-posts data)))))
+    (group-by-year data)))
 
 (defun partition-rows-cols (rows cols data)
   (let ((data-len (length data)))

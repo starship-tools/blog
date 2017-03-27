@@ -13,15 +13,15 @@
               (group-by-input-1))
             (group-by-expected-1)))
 
-(deftest group-by-years
+(deftest group-by-year
   (is-equal
-    (blog-util:group-by-years
+    (blog-util:group-by-year
       (group-by-input-2))
     (group-by-expected-2)))
 
-(deftest group-by-months
+(deftest group-by-month
   (is-equal
-    (blog-util:group-by-months
+    (blog-util:group-by-month
       (group-by-input-2))
     (group-by-expected-3)))
 

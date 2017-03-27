@@ -43,7 +43,8 @@
     `(,(base)
       ,data
       (#(page_title "Authors")
-       #(active "authors")))))
+       #(active "authors")
+       #(postsdata ,(blog-util:group-author-posts data))))))
 
 (defun about ()
   (lists:append

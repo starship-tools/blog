@@ -71,7 +71,7 @@
 
 (defun authors (data)
   (clj:-> (blog-data:authors data)
-          (blank-tmpl:render)
+          (authors-tmpl:render)
           (get-content)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
