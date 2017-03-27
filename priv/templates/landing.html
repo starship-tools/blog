@@ -18,13 +18,13 @@
           {% endif %}
           <div class="row">
             <div class="col-sm-4">
-              <p>Posted: {{ headliner.datestamp }} at {{ headliner.timestamp }}</p>
+              <p>Posted: <em>{{ headliner.datestamp }}</em></p>
             </div>
             <div class="col-sm-4">
-              <p>Author: {{ headliner.author }}</p>
+              <p>Author: <em>{{ headliner.author }}</em></p>
             </div>
             <div class="col-sm-4">
-              <p>Category: {{ headliner.category }}</p>
+              <p>Category: <em>{{ headliner.category }}</em></p>
             </div>
           </div>
 
@@ -49,9 +49,9 @@
                 {% if column.excerpt %}
                   <h3>{{ column.excerpt|safe }}</h3>
                 {% endif %}
-                <p>Date: {{ column.datestamp }}</p>
-                <p>Author: {{ column.author }}</p>
-                <p>Category: {{ column.category }}</p>
+                <p>Date: <em>{{ column.datestamp }}</em></p>
+                <p>Author: <em>{{ column.author }}</em></p>
+                <p>Category: <em>{{ column.category }}</em></p>
 
               </div>
             </div>

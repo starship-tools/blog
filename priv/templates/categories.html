@@ -4,13 +4,15 @@
   <p class="lead">All previous posts are listed here by primary topic.</p>
   {% for catdata in postsdata %}
   <h2>{{ catdata.category }}</h2>
-  <ul>
-  {% for postdata in catdata.posts %}
-    <li>{{ postdata.monthname }}
-        {{ postdata.day }},
-        {{ postdata.year }} -
-        <a href="{{ postdata.dstfile }}">{{ postdata.title }}</a></li>
-  {% endfor %}
-  </ul>
+  <p>
+    <ul>
+    {% for postdata in catdata.posts %}
+      <li>{{ postdata.monthname }}
+          {{ postdata.day }},
+          {{ postdata.year }} -
+          <a href="{{ postdata.dstfile }}">{{ postdata.title }}</a></li>
+    {% endfor %}
+    </ul>
+  </p>
   {% endfor %}
 {% endblock %}
