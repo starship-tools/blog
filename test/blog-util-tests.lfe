@@ -2,6 +2,39 @@
 
 (include-lib "ltest/include/ltest-macros.lfe")
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Tests   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(deftest group-by
+  (is-equal (blog-util:group-by
+              (lambda (x)
+                (proplists:get_value 'a x))
+              (group-by-input-1))
+            (group-by-expected-1)))
+
+(deftest group-by-years
+  (is-equal
+    (blog-util:group-by-years
+      (group-by-input-2))
+    (group-by-expected-2)))
+
+(deftest group-by-months
+  (is-equal
+    (blog-util:group-by-months
+      (group-by-input-2))
+    (group-by-expected-3)))
+
+(deftest group-years-months-posts
+  (is-equal
+    (blog-util:group-years-months-posts
+      (group-by-input-2))
+    (group-by-expected-4)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Test Data   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (defun group-by-input-1 ()
   '((#(a 1) #(b 2) #(c 3))
     (#(a 1) #(b 22) #(c 33))
@@ -9,6 +42,19 @@
     (#(a 11) #(b 22) #(c 33))
     (#(a 111) #(b 22) #(c 33))
     (#(a 111) #(b 222) #(c 333))))
+
+(defun group-by-input-2 ()
+  '((#(year 1999) #(month 1) #(day 1))
+    (#(year 1999) #(month 2) #(day 11))
+    (#(year 2000) #(month 3) #(day 12))
+    (#(year 2001) #(month 4) #(day 17))
+    (#(year 2002) #(month 5) #(day 22))
+    (#(year 2002) #(month 5) #(day 23))
+    (#(year 2002) #(month 6) #(day 30))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;   Results Data   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun group-by-expected-1 ()
   '(#(1
@@ -20,15 +66,6 @@
     #(111
       ((#(a 111) #(b 22) #(c 33))
        (#(a 111) #(b 222) #(c 333))))))
-
-(defun group-by-input-2 ()
-  '((#(year 1999) #(month 1) #(day 1))
-    (#(year 1999) #(month 2) #(day 11))
-    (#(year 2000) #(month 3) #(day 12))
-    (#(year 2001) #(month 4) #(day 17))
-    (#(year 2002) #(month 5) #(day 22))
-    (#(year 2002) #(month 5) #(day 23))
-    (#(year 2002) #(month 6) #(day 30))))
 
 (defun group-by-expected-2 ()
   '(#(1999
@@ -65,28 +102,3 @@
            ((#(year 2002) #(month 5) #(day 22))
             (#(year 2002) #(month 5) #(day 23)))))
         (#(month 6) #(posts ((#(year 2002) #(month 6) #(day 30))))))))))
-
-(deftest group-by
-  (is-equal (blog-util:group-by
-              (lambda (x)
-                (proplists:get_value 'a x))
-              (group-by-input-1))
-            (group-by-expected-1)))
-
-(deftest group-by-years
-  (is-equal
-    (blog-util:group-by-years
-      (group-by-input-2))
-    (group-by-expected-2)))
-
-(deftest group-by-months
-  (is-equal
-    (blog-util:group-by-months
-      (group-by-input-2))
-    (group-by-expected-3)))
-
-(deftest group-years-months-posts
-  (is-equal
-    (blog-util:group-years-months-posts
-      (group-by-input-2))
-    (group-by-expected-4)))
