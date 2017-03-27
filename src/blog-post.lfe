@@ -30,16 +30,6 @@
           (add-file-data filename)
           (add-date-data)))
 
-(defun get-categories (posts)
-  (get posts 'category))
-
-(defun get-tags (posts)
-  (clj:->> (get posts 'tags)
-           (lists:foldl #'++/2 '())
-           (sets:from_list)
-           (sets:to_list)
-           (lists:sort)))
-
 (defun compare-posts-asc (post-a post-b)
   (< (proplists:get_value 'date-int post-a)
      (proplists:get_value 'date-int post-b)))
@@ -102,15 +92,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Utility Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(defun get (posts key)
-  (clj:->> posts
-           (lists:map
-             (lambda (x)
-               (clj:get-in x `(,key))))
-           (sets:from_list)
-           (sets:to_list)
-           (lists:sort)))
 
 (defun parse-markdown (data)
   (clj:-> data

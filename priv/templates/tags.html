@@ -1,0 +1,16 @@
+{% extends "column_single.html" %}
+
+{% block main_column %}
+  <p class="lead">All previous posts are listed here under all the tags they have.</p>
+  {% for tagdata in postsdata %}
+  <h2>{{ tagdata.tag }}</h2>
+  <ul>
+  {% for postdata in tagdata.posts %}
+    <li>{{ postdata.monthname }}
+        {{ postdata.day }},
+        {{ postdata.year }} -
+        <a href="{{ postdata.dstfile }}">{{ postdata.title }}</a></li>
+  {% endfor %}
+  </ul>
+  {% endfor %}
+{% endblock %}

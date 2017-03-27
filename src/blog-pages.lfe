@@ -66,7 +66,7 @@
 
 (defun tags (data)
   (clj:-> (blog-data:tags data)
-          (blank-tmpl:render)
+          (tags-tmpl:render)
           (get-content)))
 
 (defun authors (data)

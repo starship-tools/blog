@@ -26,7 +26,6 @@
 (defun categories (data)
   (lists:append
     `(,(base)
-      ,data
       (#(page_title "Categories")
        #(active "categories")
        #(postsdata ,(blog-util:group-category-posts data))))))
@@ -34,14 +33,13 @@
 (defun tags (data)
   (lists:append
     `(,(base)
-      ,data
       (#(page_title "Tags")
-       #(active "tags")))))
+       #(active "tags")
+       #(postsdata ,(blog-util:group-tag-posts data))))))
 
 (defun authors (data)
   (lists:append
     `(,(base)
-      ,data
       (#(page_title "Authors")
        #(active "authors")
        #(postsdata ,(blog-util:group-author-posts data))))))
