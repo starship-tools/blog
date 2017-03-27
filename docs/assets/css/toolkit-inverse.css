@@ -9793,6 +9793,31 @@ body {
   color: #9296b6;
   text-decoration: none; }
 
+.row-full-height {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex; }
+
+.card.bg-faded {
+  background-color: rgba(30, 33, 39, 0.8); }
+
+.headliner h2, .subheadliner h2 {
+  font-weight: bold; }
+
+.headliner h2 {
+  font-size: 175%; }
+
+.subheadliner h2 {
+  font-size: 150%; }
+
+.headliner {
+  font-size: 120%;
+  margin-bottom: 1.5em; }
+
+.subheadliner {
+  font-size: 110%; }
+
 #sidebar {
   padding-left: 0;
   font-size: 16px;
@@ -9846,9 +9871,6 @@ div.subfooter-wrapper {
 
 footer {
   padding-top: 2em; }
-
-footer .card.bg-faded {
-  background-color: rgba(30, 33, 39, 0.8); }
 
 footer .icon-rocket {
   font-size: 150%; }
