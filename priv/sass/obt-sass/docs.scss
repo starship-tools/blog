@@ -154,6 +154,17 @@
   h3 {
     color: lighten($brand-primary, 10%);
   }
+
+}
+
+.blog-post {
+
+  .blog-post-subtitle {
+    font-style: italic;
+    font-size: 120%;
+    font-family: $font-family-serif;
+  }
+
 }
 
 div.footer-wrapper {
