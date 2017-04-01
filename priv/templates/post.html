@@ -1,66 +1,60 @@
 {% extends "column_double.html" %}
 
 {% block main_column %}
-  <div class="row">
-    <div class="col-sm-8 blog-main">
-
-      <div class="blog-post">
-        <div class="page-header">
-          <h2 class="blog-post-title">{{ postdata.title }}</h2>
-          {% if postdata.subtitle %}
-          <p class="blog-post-subtitle">{{ postdata.subtitle }}</p>
-          {% endif %}
-          <div class="blog-post-meta">
-            <p class="date">{{ postdata.monthname }}
-                            {{ postdata.day }},
-                            {{ postdata.year }}</p>
-            <p class="author">by <a href="#">{{ postdata.author }}</a></p>
-            {% if postdata.excerpt %}
-            <p class="lead well">
-              {{ postdata.excerpt|safe }}
-            </p>
-            {% endif %}
-          </div>
-        </div>
-        {{ postdata.content|safe }}
-      </div>
-
-      {% if postdata.charcount > 2500 %}
-      <div class="row">
-        <div class="col-xs-6">
-          {% if postdata.prevpost %}
-          <a href="{{ postdata.prevpost }}">
-            <i class="fa fa-arrow-circle-o-left fa-2x"
-               aria-hidden="true"></i>
-          </a>
-          {% else %}
-            <i class="fa fa-arrow-circle-o-left fa-2x nav-arrow-disabled"
-               aria-hidden="true"></i>
-          {% endif %}
-        </div>
-        <div class="col-xs-6 text-right">
-          {% if postdata.nextpost %}
-          <a href="{{ postdata.nextpost }}">
-            <i class="fa fa-arrow-circle-o-right fa-2x"
-               aria-hidden="true"></i>
-          </a>
-          {% else %}
-            <i class="fa fa-arrow-circle-o-right fa-2x nav-arrow-disabled"
-               aria-hidden="true"></i>
-          {% endif %}
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-6">Previous Post</div>
-        <div class="col-xs-6 text-right">Next Post</div>
-      </div>
+  <div class="blog-post">
+    <div class="page-header">
+      <h2 class="blog-post-title">{{ postdata.title }}</h2>
+      {% if postdata.subtitle %}
+      <p class="blog-post-subtitle">{{ postdata.subtitle }}</p>
       {% endif %}
-      {% for line in postdata.contentbuffer %}
-      <p><br/></p>
-      {% endfor %}
+      <div class="blog-post-meta">
+        <p class="date">{{ postdata.monthname }}
+                        {{ postdata.day }},
+                        {{ postdata.year }}</p>
+        <p class="author">by <a href="#">{{ postdata.author }}</a></p>
+        {% if postdata.excerpt %}
+        <p class="lead well">
+          {{ postdata.excerpt|safe }}
+        </p>
+        {% endif %}
+      </div>
+    </div>
+    {{ postdata.content|safe }}
+  </div>
 
+  {% if postdata.charcount > 2500 %}
+  <div class="row">
+    <div class="col-xs-6">
+      {% if postdata.prevpost %}
+      <a href="{{ postdata.prevpost }}">
+        <i class="fa fa-arrow-circle-o-left fa-2x"
+           aria-hidden="true"></i>
+      </a>
+      {% else %}
+        <i class="fa fa-arrow-circle-o-left fa-2x nav-arrow-disabled"
+           aria-hidden="true"></i>
+      {% endif %}
+    </div>
+    <div class="col-xs-6 text-right">
+      {% if postdata.nextpost %}
+      <a href="{{ postdata.nextpost }}">
+        <i class="fa fa-arrow-circle-o-right fa-2x"
+           aria-hidden="true"></i>
+      </a>
+      {% else %}
+        <i class="fa fa-arrow-circle-o-right fa-2x nav-arrow-disabled"
+           aria-hidden="true"></i>
+      {% endif %}
     </div>
   </div>
+  <div class="row">
+    <div class="col-xs-6">Previous Post</div>
+    <div class="col-xs-6 text-right">Next Post</div>
+  </div>
+  {% endif %}
+  {% for line in postdata.contentbuffer %}
+  <p><br/></p>
+  {% endfor %}
 {% endblock %}
 
 {% block sidebar_featured %}
@@ -73,7 +67,7 @@
       <div class="sidebar-module">
         <h4>Category</h4>
         <p>
-          <a href="/categories/#{{postdata.category}}">{{ postdata.category }}</a>
+          <a href="/categories.html#{{postdata.category}}">{{ postdata.category }}</a>
         </p>
       </div>
 
@@ -81,7 +75,7 @@
         <h4>Tags</h4>
         <p>
           {% for tag in tags %}
-          <a href="/tags/#{{tag}}">{{ tag }}</a>
+          <a href="/tags.html#{{tag}}">{{ tag }}</a>
           {% endfor %}
         </p>
       </div>
