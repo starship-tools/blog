@@ -1,5 +1,9 @@
 {% extends "column_single.html" %}
 
+{% block page_theme %}
+<link href="/assets/css/theme-archives.css" rel="stylesheet">
+{% endblock %}
+
 {% block main_column %}
   <p class="lead">All previous posts are listed here by year and month.</p>
   {% for yeardata in postsdata %}

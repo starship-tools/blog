@@ -1,5 +1,9 @@
 {% extends "column_single.html" %}
 
+{% block page_theme %}
+<link href="/assets/css/theme-tags.css" rel="stylesheet">
+{% endblock %}
+
 {% block main_column %}
   <p class="lead">All previous posts are listed here under all the tags they have.</p>
   {% for tagdata in postsdata %}
