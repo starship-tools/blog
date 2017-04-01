@@ -138,5 +138,8 @@
            (blog-util:datepath->date-int)))
 
 (defun parse-tags (field-body)
-  (re:split field-body #",\s*"))
-
+  (clj:-> field-body
+          (re:split #",\s*")
+          (sets:from_list)
+          (sets:to_list)
+          (lists:sort)))
