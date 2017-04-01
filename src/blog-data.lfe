@@ -14,7 +14,8 @@
          #(active "index")
          #(headliner ,(car data))
            ;; XXX once there are more posts, we can bump this up to 2 rows
-         #(headlines ,(blog-util:group-headlines 1 (cdr data))))))))
+         #(headlines ,(blog-util:group-headlines 1 (cdr data)))
+         #(tags ,(blog-util:get-tags data)))))))
 
 (defun archives (data)
   (lists:append
