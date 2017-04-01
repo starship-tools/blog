@@ -1,0 +1,10 @@
+@import "../variables-inverse.scss";
+@import "../bootstrap/_mixins.scss";
+
+// Page Header
+$header-background-color: #2a292f;
+$header-background-size: cover;
+$header-background-repeat: no-repeat;
+$header-border: 1px solid black;
+
+$header-inner-background-image: linear-gradient(to bottom, darken($header-background-color, 15%), $header-background-color);

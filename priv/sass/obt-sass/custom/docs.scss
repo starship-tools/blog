@@ -16,59 +16,6 @@ body {
 
 
 //
-// Header
-//
-
-.docs-header {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  margin-bottom: 30px;
-  font-size: 20px;
-  color: #fff;
-  text-shadow:
-    -2px -2px 0 #000,
-     2px -2px 0 #000,
-    -2px  2px 0 #000,
-     2px  2px 0 #000;
-  background-color: $header-background-color;
-  background-image: $header-background-image;
-  background-size: $header-background-size;
-  background-repeat: $header-background-repeat;
-  border-bottom: $header-border;
-
-// .docs-header-inner {
-//   background-image: $header-inner-background-image;
-//   width: 100%;
-// }
-
-  h1 {
-    margin-bottom: 5px;
-    font-size: 40px;
-    line-height: 1;
-  }
-
-  p {
-    font-weight: 300;
-    line-height: 1.4;
-    color: lighten($brand-primary, 30%);
-  }
-
-  @include media-breakpoint-up(sm) {
-    font-size: 24px;
-    h1 {
-      font-size: 60px;
-    }
-  }
-  @include media-breakpoint-up(lg) {
-    h1,
-    p {
-      max-width: 75%;
-    }
-  }
-}
-
-
-//
 // Markdown generated ToC
 //
 

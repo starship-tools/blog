@@ -19,6 +19,7 @@ var Paths = {
   DIST                 : 'dist',
   DIST_TOOLKIT_JS      : 'dist/toolkit.js',
   SCSS_TOOLKIT_SOURCES : './obt-sass/toolkit*',
+  SCSS_THEME_SOURCES   : './obt-sass/theme*',
   SCSS                 : './obt-sass/**/**',
   JS                   : [
 
@@ -52,10 +53,10 @@ var jqueryVersionCheck = '+function ($) {\n' +
   '  }\n' +
   '}(jQuery);\n\n'
 
-gulp.task('default', ['scss-min', 'js-min'])
+gulp.task('default', ['scss-min', 'theme-min', 'js-min'])
 
 gulp.task('watch', function () {
-  gulp.watch(Paths.SCSS, ['scss-min']);
+  gulp.watch(Paths.SCSS, ['scss-min', 'theme-min']);
   gulp.watch(Paths.JS,   ['js-min']);
 })
 
@@ -83,6 +84,28 @@ gulp.task('scss', function () {
 
 gulp.task('scss-min', ['scss'], function () {
   return gulp.src(Paths.SCSS_TOOLKIT_SOURCES)
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(cleanCSS({compatibility: 'ie9'}))
+    .pipe(autoprefixer())
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(sourcemaps.write(Paths.HERE))
+    .pipe(gulp.dest(Paths.DIST))
+})
+
+gulp.task('theme', function () {
+  return gulp.src(Paths.SCSS_THEME_SOURCES)
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write(Paths.HERE))
+    .pipe(gulp.dest(Paths.DIST))
+})
+
+gulp.task('theme-min', ['theme'], function () {
+  return gulp.src(Paths.SCSS_THEME_SOURCES)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(cleanCSS({compatibility: 'ie9'}))
