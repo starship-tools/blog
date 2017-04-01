@@ -7,6 +7,8 @@
 {% block main_column %}
   <p class="lead">All previous posts are listed here by primary topic.</p>
   {% for catdata in postsdata %}
+  <a name="{{ catdata.category }}" />
+  <br />
   <h2>{{ catdata.category }}</h2>
   <p>
     <ul>
