@@ -43,11 +43,11 @@
 .docs-content {
 
   a {
-    color: lighten($brand-primary, 20%);
+    color: lighten($brand-primary, 30%);
   }
 
   a:hover {
-    color: lighten($brand-primary, 30%);
+    color: lighten($brand-primary, 40%);
     text-decoration: none;
   }
 
@@ -142,6 +142,20 @@
   font-size: 110%;
 }
 
+.blog-main {
+  h1 {
+    color: lighten($brand-primary, 40%);
+  }
+
+  h2 {
+    color: lighten($brand-primary, 25%);
+  }
+
+  h3 {
+    color: lighten($brand-primary, 10%);
+  }
+}
+
 div.footer-wrapper {
     width: $footer-background-width;
     height: $footer-background-height;
@@ -161,6 +175,25 @@ div.subfooter-wrapper {
 
 footer {
   padding-top: 2em;
+  color: $footer-text-color;
+
+  .nav > li > a {
+    color: $footer-text-color;
+  }
+
+  .nav > li > a:hover {
+    color: lighten($footer-text-color, 10%);
+  }
+
+  a {
+    color: $footer-text-color;
+  }
+
+  a:hover {
+    color: lighten($footer-text-color, 10%);
+    text-decoration: none;
+  }
+
 }
 
 footer .icon-rocket {
@@ -169,7 +202,6 @@ footer .icon-rocket {
 
 footer .card-block {
   font-size: 140%;
-  color: #898b9b;
 }
 
 footer .card-block .left-section {
@@ -180,9 +212,6 @@ footer .card-block .right-section {
   padding-left: 1em;
 }
 
-footer .card-block a {
-  color: #898b9b;
-}
 
 footer .nav-item {
   padding-right: 1em;

@@ -253,3 +253,6 @@ $container-max-widths: (
   xl: 1100px
 );
 @include _assert-ascending($container-max-widths, "$container-max-widths");
+
+// Footer
+$footer-text-color: #898b9b;

@@ -9757,10 +9757,10 @@ body {
   margin-top: 10px; }
 
 .docs-content a {
-  color: #7379a2; }
+  color: #9296b6; }
 
 .docs-content a:hover {
-  color: #9296b6;
+  color: #b0b3cb;
   text-decoration: none; }
 
 .row-full-height {
@@ -9824,6 +9824,15 @@ body {
   font-weight: 900;
   font-size: 110%; }
 
+.blog-main h1 {
+  color: #b0b3cb; }
+
+.blog-main h2 {
+  color: #8387ac; }
+
+.blog-main h3 {
+  color: #5a6088; }
+
 div.footer-wrapper {
   width: 100%;
   height: 40em;
@@ -9840,23 +9849,29 @@ div.subfooter-wrapper {
   color: #6f7890; }
 
 footer {
-  padding-top: 2em; }
+  padding-top: 2em;
+  color: #898b9b; }
+  footer .nav > li > a {
+    color: #898b9b; }
+  footer .nav > li > a:hover {
+    color: #a5a6b2; }
+  footer a {
+    color: #898b9b; }
+  footer a:hover {
+    color: #a5a6b2;
+    text-decoration: none; }
 
 footer .icon-rocket {
   font-size: 150%; }
 
 footer .card-block {
-  font-size: 140%;
-  color: #898b9b; }
+  font-size: 140%; }
 
 footer .card-block .left-section {
   padding-right: 1em; }
 
 footer .card-block .right-section {
   padding-left: 1em; }
-
-footer .card-block a {
-  color: #898b9b; }
 
 footer .nav-item {
   padding-right: 1em; }
