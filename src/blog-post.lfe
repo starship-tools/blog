@@ -105,7 +105,7 @@
     (_ 'false)))
 
 (defun ->content-buffer (data)
-  (let ((max-buffer 10)
+  (let ((max-buffer 12)
         (line-count (clj:get-in data '(linecount))))
     (lists:seq 1
       (if (> line-count max-buffer)
