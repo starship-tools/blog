@@ -9833,6 +9833,11 @@ body {
 .blog-main h3 {
   color: #5a6088; }
 
+.blog-post .blog-post-subtitle {
+  font-style: italic;
+  font-size: 120%;
+  font-family: Georgia, "Times New Roman", Times, serif; }
+
 div.footer-wrapper {
   width: 100%;
   height: 40em;
