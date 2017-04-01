@@ -101,4 +101,8 @@ serve-dev: blog-header clean compile assets serve-header
 serve-dev-watch: blog-header clean compile assets css-watch serve-header
 	@ERL_LIBS=$(ERL_LIBS) $(LFE) -s blog-cli gen-watch
 
+publish:
+	@git commit docs -m "Regenerated site."
+	@git push origin master
+
 .PHONY: docs
