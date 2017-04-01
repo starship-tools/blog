@@ -74,7 +74,7 @@
       <div class="sidebar-module">
         <h4>Tags</h4>
         <p>
-          {% for tag in tags %}
+          {% for tag in postdata.tags %}
           <a href="/tags.html#{{tag}}">{{ tag }}</a>
           {% endfor %}
         </p>
