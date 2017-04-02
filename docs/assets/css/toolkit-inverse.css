@@ -9794,7 +9794,8 @@ body {
   list-style: none;
   float: right;
   margin: -250px;
-  margin-top: 0; }
+  margin-top: 0;
+  max-width: 193px; }
   #sidebar a:hover {
     text-decoration: none; }
   #sidebar > li {
@@ -9823,6 +9824,12 @@ body {
 .blog-sidebar .social span.icon.text {
   font-weight: 900;
   font-size: 110%; }
+
+.sidebar-module .row {
+  margin: 0; }
+
+.sidebar-module p {
+  word-wrap: break-word; }
 
 .blog-main h1 {
   color: #b0b3cb; }
