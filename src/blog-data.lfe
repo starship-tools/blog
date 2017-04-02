@@ -24,28 +24,28 @@
     `(,(base)
       (#(page_title "Archives")
        #(active "archives")
-       #(postsdata ,(blog-util:group-years-months-posts data))))))
+       #(postsdata ,(blog-util:group-years-months-posts-desc data))))))
 
 (defun categories (data)
   (lists:append
     `(,(base)
       (#(page_title "Categories")
        #(active "categories")
-       #(postsdata ,(blog-util:group-category-posts data))))))
+       #(postsdata ,(blog-util:group-category-posts-asc data))))))
 
 (defun tags (data)
   (lists:append
     `(,(base)
       (#(page_title "Tags")
        #(active "tags")
-       #(postsdata ,(blog-util:group-tag-posts data))))))
+       #(postsdata ,(blog-util:group-tag-posts-asc data))))))
 
 (defun authors (data)
   (lists:append
     `(,(base)
       (#(page_title "Authors")
        #(active "authors")
-       #(postsdata ,(blog-util:group-author-posts data))))))
+       #(postsdata ,(blog-util:group-author-posts-asc data))))))
 
 (defun about ()
   (lists:append

@@ -33,17 +33,12 @@
 ;;;   Groups   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defun group-by (func data)
-  (group-by
-    func
-    (lambda (x)
-      `#(,(funcall func x) ,x))
-    data))
-
-(defun group-by (by-func key-func data)
+(defun group-by (by-func key-func comp-func data)
   (clj:->> data
            (lists:sort (lambda (a b)
-                         (> (funcall by-func a)
+                         (funcall
+                            comp-func
+                            (funcall by-func a)
                             (funcall by-func b))))
            (lists:map (lambda (x)
                         (funcall key-func x)))
@@ -52,46 +47,51 @@
                         (orddict:new))
            (orddict:to_list)))
 
-(defun group-by-key (data key)
-  (group-by
+;;; Ascending Order
+
+(defun group-by-asc (func data)
+  (group-by-asc
+    func
+    (lambda (x)
+      `#(,(funcall func x) ,x))
+    data))
+
+(defun group-by-asc (by-func key-func data)
+  (group-by by-func key-func #'>/2 data))
+
+(defun group-by-key-asc (data key)
+  (group-by-asc
     (lambda (x)
       (clj:get-in x `(,key)))
     data))
 
-(defun group-by-year (data)
-  (group-by-key data 'year))
+(defun group-by-year-asc (data)
+  (group-by-key-asc data 'year))
 
-(defun group-by-month (data)
-  (group-by-key data 'month))
+(defun group-by-month-asc (data)
+  (group-by-key-asc data 'month))
 
-(defun group-by-category (data)
-  (group-by-key data 'category))
+(defun group-by-category-asc (data)
+  (group-by-key-asc data 'category))
 
-(defun group-by-author (data)
-  (group-by-key data 'author))
+(defun group-by-author-asc (data)
+  (group-by-key-asc data 'author))
 
-(defun group-month-posts (data)
+(defun group-month-posts-asc (data)
   (lists:map
     (match-lambda ((`#(,month ,months))
       `(#(month ,month)
         #(posts ,months))))
-    (group-by-month data)))
+    (group-by-month-asc data)))
 
-(defun group-category-posts (data)
+(defun group-category-posts-asc (data)
   (lists:map
     (match-lambda ((`#(,cat ,posts))
       `(#(category ,cat)
         #(posts ,posts))))
-    (group-by-category data)))
+    (group-by-category-asc data)))
 
-(defun group-author-posts (data)
-  (lists:map
-    (match-lambda ((`#(,author ,posts))
-      `(#(author ,author)
-        #(posts ,posts))))
-    (group-by-author data)))
-
-(defun group-tag-posts (data)
+(defun group-tag-posts-asc (data)
   (lists:map
     (lambda (tag)
       `(#(tag ,tag)
@@ -101,12 +101,59 @@
                     data))))
     (get-tags data)))
 
-(defun group-years-months-posts (data)
+(defun group-author-posts-asc (data)
+  (lists:map
+    (match-lambda ((`#(,author ,posts))
+      `(#(author ,author)
+        #(posts ,posts))))
+    (group-by-author-asc data)))
+
+(defun group-years-months-posts-asc (data)
   (lists:map
     (match-lambda ((`#(,year ,data))
       `(#(year ,year)
-        #(months ,(group-month-posts data)))))
-    (group-by-year data)))
+        #(months ,(group-month-posts-asc data)))))
+    (group-by-year-asc data)))
+
+;;; Descending Order
+
+(defun group-by-desc (func data)
+  (group-by-desc
+    func
+    (lambda (x)
+      `#(,(funcall func x) ,x))
+    data))
+
+(defun group-by-desc (by-func key-func data)
+  (clj:->> data
+           (group-by by-func key-func #'=</2)
+           (lists:reverse)))
+
+(defun group-by-key-desc (data key)
+  (group-by-desc
+    (lambda (x)
+      (clj:get-in x `(,key)))
+    data))
+
+(defun group-by-year-desc (data)
+  (group-by-key-desc data 'year))
+
+(defun group-by-month-desc (data)
+  (group-by-key-desc data 'month))
+
+(defun group-month-posts-desc (data)
+  (lists:map
+    (match-lambda ((`#(,month ,months))
+      `(#(month ,month)
+        #(posts ,months))))
+    (group-by-month-desc data)))
+
+(defun group-years-months-posts-desc (data)
+  (lists:map
+    (match-lambda ((`#(,year ,data))
+      `(#(year ,year)
+        #(months ,(group-month-posts-desc data)))))
+    (group-by-year-desc data)))
 
 (defun partition-rows-cols (rows cols data)
   (let ((data-len (length data)))

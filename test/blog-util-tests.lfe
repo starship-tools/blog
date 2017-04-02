@@ -6,28 +6,28 @@
 ;;;   Tests   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(deftest group-by
-  (is-equal (blog-util:group-by
+(deftest group-by-asc
+  (is-equal (blog-util:group-by-asc
               (lambda (x)
                 (proplists:get_value 'a x))
               (group-by-input-1))
             (group-by-expected-1)))
 
-(deftest group-by-year
+(deftest group-by-year-asc
   (is-equal
-    (blog-util:group-by-year
+    (blog-util:group-by-year-asc
       (group-by-input-2))
     (group-by-expected-2)))
 
-(deftest group-by-month
+(deftest group-by-month-asc
   (is-equal
-    (blog-util:group-by-month
+    (blog-util:group-by-month-asc
       (group-by-input-2))
     (group-by-expected-3)))
 
-(deftest group-years-months-posts
+(deftest group-years-months-posts-asc
   (is-equal
-    (blog-util:group-years-months-posts
+    (blog-util:group-years-months-posts-asc
       (group-by-input-2))
     (group-by-expected-4)))
 
@@ -56,6 +56,9 @@
   '((#(year 1999) #(month 1) #(day 1) #(tags ("a" "b" "c")))
     (#(year 1999) #(month 2) #(day 11) #(tags ("b")))
     (#(year 2000) #(month 3) #(day 12) #(tags ("a" "c")))))
+
+(defun group-by-input-4 ()
+  (lists:reverse (group-by-input-1)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Results Data   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
