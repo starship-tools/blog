@@ -50,6 +50,17 @@
             </div>
             {% endblock %}
 
+            {% block sidebar_site_categories %}
+            <div class="sidebar-module">
+              <h4>Categories</h4>
+              <p>
+                {% for cat in cats %}
+                <a href="/categories.html#{{ cat }}">{{ cat }}</a>
+                {% endfor %}
+              </p>
+            </div>
+            {% endblock %}
+
             {% block sidebar_site_tags %}
             <div class="sidebar-module">
               <h4>Tags</h4>
