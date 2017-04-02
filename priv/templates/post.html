@@ -11,7 +11,9 @@
         <p class="date">{{ postdata.monthname }}
                         {{ postdata.day }},
                         {{ postdata.year }}</p>
-        <p class="author">by <a href="#">{{ postdata.author }}</a></p>
+        <p class="author">by
+          <a href="/authors.html#{{ postdata.author }}">{{ postdata.author }}</a>
+        </p>
         {% if postdata.excerpt %}
         <p class="lead well">
           {{ postdata.excerpt|safe }}

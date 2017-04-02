@@ -7,6 +7,8 @@
 {% block main_column %}
   <p class="lead">All previous posts are listed here by author.</p>
   {% for authdata in postsdata %}
+  <a name="{{ authdata.author }}" />
+  <br />
   <h2>{{ authdata.author }}</h2>
   <p>
     <ul>
