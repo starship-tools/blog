@@ -1,0 +1,30 @@
+Subject: Starship Tools Blog Goes Beta
+Subtitle: Ready for use after a month of hacking
+Excerpt:
+From: oubiwann
+Category: Site
+Keywords: updates, news, community
+Comments:
+Content-Type: md
+
+The Starship Tools blog is now live and ready for use :-) The final touches
+have been put upon the following styles:
+
+* Front page (headlines)
+* Custom header images for some sections of the site
+* Posts and post sidebars
+* Archives listing
+
+Additionally, the following functionality was required before beta:
+
+* Posts with context data (in order to support next/previous posts)
+* Site-wide categories and tags listing
+* Anchors for sections on categories, tags, and authors pages
+
+These were the content-related tweaks:
+
+* A few more posts
+* Adding a page for a timeline of starship programs
+* Text on the "About Page"
+* Removing the "Design" pages from the top-nav
+
