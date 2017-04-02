@@ -18,6 +18,8 @@ $brand-info:             #9F86FF;
 $brand-warning:          #E4D836;
 $brand-danger:           #E64759;
 
+$bluegrey-light: #898b9b;
+
 @import "./bootstrap/_variables.scss";
 
 // Local variables
@@ -254,5 +256,8 @@ $container-max-widths: (
 );
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
+// Posts
+$subtitle-text-color: $bluegrey-light;
+
 // Footer
-$footer-text-color: #898b9b;
+$footer-text-color: $bluegrey-light;
