@@ -9814,6 +9814,8 @@ body {
     padding-left: 20px; }
     #sidebar ul ul {
       display: none; }
+  #sidebar .metadata p {
+    line-height: 0.5em; }
 
 .blog-sidebar .social {
   font-size: 150%; }
