@@ -6,7 +6,7 @@
 @import "./custom/docs.scss";
 
 a.navbar-brand {
-  padding-right: 1em;
+  padding-right: 0.5em;
 }
 
 .docs-header {
@@ -225,6 +225,14 @@ a.navbar-brand {
     font-family: $font-family-serif;
   }
 
+}
+
+.offset-anchor:before {
+  content: " ";
+  display: block;
+  height: 100px;
+  margin-top: -50px;
+  visibility: hidden;
 }
 
 div.footer-wrapper {

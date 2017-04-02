@@ -8,8 +8,7 @@
   <p class="lead">All previous posts are listed here under all the tags they have.</p>
   {% for tagdata in postsdata %}
   <a name="{{ tagdata.tag }}" />
-  <br />
-  <h2>{{ tagdata.tag }}</h2>
+  <h2 class="offset-anchor">{{ tagdata.tag }}</h2>
   <p>
     <ul>
     {% for postdata in tagdata.posts %}
