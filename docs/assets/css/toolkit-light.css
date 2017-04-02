@@ -9785,6 +9785,13 @@ body {
   font-size: 120%;
   margin-bottom: 1.5em; }
 
+.headliner h4, .subheadliner h4 {
+  padding-bottom: 1em; }
+
+.headliner .metadata .value, .subheadliner .metadata .value {
+  font-style: italic;
+  color: #7379a2; }
+
 .subheadliner {
   font-size: 110%; }
 
