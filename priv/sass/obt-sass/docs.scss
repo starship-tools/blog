@@ -62,6 +62,7 @@ a.navbar-brand {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
+  margin-bottom: 1.8em;
 }
 
 .card.bg-faded {
@@ -233,6 +234,12 @@ a.navbar-brand {
   height: 100px;
   margin-top: -50px;
   visibility: hidden;
+}
+
+pre {
+  color: #0f0;
+  line-height: 1em;
+  font-size: 100%;
 }
 
 div.footer-wrapper {
