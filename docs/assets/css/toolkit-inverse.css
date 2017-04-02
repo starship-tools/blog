@@ -12103,6 +12103,9 @@ a.navbar-brand {
 .headliner h2, .subheadliner h2, h2.blog-post-title {
   font-family: Georgia, "Times New Roman", Times, serif; }
 
+.headliner h2, .subheadliner h2 {
+  padding-bottom: 0.5em; }
+
 .headliner h2 {
   font-size: 200%; }
 
@@ -12114,7 +12117,11 @@ a.navbar-brand {
   margin-bottom: 1.5em; }
 
 .headliner h4, .subheadliner h4 {
-  padding-bottom: 1em; }
+  padding-bottom: 1em;
+  font-style: italic;
+  font-weight: normal;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #898b9b; }
 
 .headliner .metadata .value, .subheadliner .metadata .value {
   font-style: italic;
