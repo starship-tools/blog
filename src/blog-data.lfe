@@ -6,15 +6,16 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun landing (data)
-  (let ((base-data (base)))
+  (let ((base-data (base))
+        ;; XXX once there are more posts, we can bump this up to 2 rows
+        (row-count 1))
     (lists:append
       `(,base-data
         (#(page_title ,(proplists:get_value 'site_title base-data))
          #(page_description ,(proplists:get_value 'site_description base-data))
          #(active "index")
          #(headliner ,(car data))
-         ;; XXX once there are more posts, we can bump this up to 2 rows
-         #(headlines ,(blog-util:group-headlines 1 (cdr data)))
+         #(headlines ,(blog-util:group-headlines row-count (cdr data)))
          #(cats ,(blog-util:get-categories data))
          #(tags ,(blog-util:get-tags data)))))))
 
