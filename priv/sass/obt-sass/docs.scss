@@ -81,6 +81,19 @@
   margin-bottom: $headliner-buffer;
 }
 
+.headliner, .subheadliner {
+
+  h4 {
+    padding-bottom: 1em;
+  }
+
+  .metadata .value {
+    font-style: italic;
+    color: lighten($brand-primary, 20%);
+  }
+
+}
+
 .subheadliner {
   font-size: 110%;
 }

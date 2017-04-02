@@ -16,15 +16,21 @@
           {% if headliner.excerpt %}
             <h3>{{ headliner.excerpt|safe }}</h3>
           {% endif %}
-          <div class="row">
+          <div class="row metadata">
             <div class="col-sm-4">
-              <p>Posted: <em>{{ headliner.datestamp }}</em></p>
+              <p><span class="key">Posted:</span>
+                 <span class="value">{{ headliner.datestamp }}</span>
+               </p>
             </div>
             <div class="col-sm-4">
-              <p>Author: <em>{{ headliner.author }}</em></p>
+              <p><span class="key">Author:</span>
+                 <span class="value">{{ headliner.author }}</span>
+               </p>
             </div>
             <div class="col-sm-4">
-              <p>Category: <em>{{ headliner.category }}</em></p>
+              <p><span class="key">Category:</span>
+                 <span class="value">{{ headliner.category }}</span>
+               </p>
             </div>
           </div>
 
@@ -49,9 +55,14 @@
                 {% if column.excerpt %}
                   <h3>{{ column.excerpt|safe }}</h3>
                 {% endif %}
-                <p>Date: <em>{{ column.datestamp }}</em></p>
-                <p>Author: <em>{{ column.author }}</em></p>
-                <p>Category: <em>{{ column.category }}</em></p>
+                <div class="metadata">
+                  <p><span class="key">Date:</span>
+                      <span class="value">{{ column.datestamp }}</span></p>
+                  <p><span class="key">Author:</span>
+                      <span class="value">{{ column.author }}</span></p>
+                  <p><span class="key">Category:</span>
+                      <span class="value">{{ column.category }}</span></p>
+                </div>
 
               </div>
             </div>
