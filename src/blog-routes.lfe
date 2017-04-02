@@ -1,17 +1,20 @@
 (defmodule blog-routes
   (export
-    (routes 0)))
+    (routes 0)
+    (routes 1)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   API   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun routes ()
-  (let ((all-posts (blog:process)))
-    (lists:append
-      `(,(static-routes)
-        ,(dynamic-routes all-posts)
-        ,(posts-routes all-posts)))))
+  (routes (blog:process)))
+
+(defun routes (all-posts)
+  (lists:append
+    `(,(static-routes)
+      ,(dynamic-routes all-posts)
+      ,(posts-routes all-posts))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Route Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

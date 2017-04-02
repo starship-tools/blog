@@ -46,7 +46,7 @@
     (blog-cfg:posts-src-dir)))
 
 (defun routes ()
-  (blog-routes:routes))
+  (blog-routes:routes (process)))
 
 (defun gen ()
   (equipoise:generate
