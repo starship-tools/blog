@@ -5,6 +5,10 @@
 @import "./custom/syntax.scss";
 @import "./custom/docs.scss";
 
+a.navbar-brand {
+  padding-right: 1em;
+}
+
 .docs-header {
   background-color: #141215;
 }
@@ -163,12 +167,29 @@
 
 .sidebar-module {
 
+  p {
+    word-wrap: break-word;
+  }
+
   .row {
     margin: 0;
   }
 
-  p {
-    word-wrap: break-word;
+  .post-nav {
+    width: 50%;
+
+    a {
+      color: lighten($brand-primary, 25%);
+    }
+
+    a:hover {
+      color: lighten($brand-primary, 30%);
+    }
+
+    .disabled {
+      color: darken($brand-primary, 10%);
+    }
+
   }
 
 }
