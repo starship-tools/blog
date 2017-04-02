@@ -10,6 +10,7 @@ FONT_SOURCES = $(STATIC_ASSETS)/fonts
 SEARCH_TOOL_SOURCES = $(STATIC_ASSETS)/tipuesearch
 CSS_SOURCES = $(STATIC_ASSETS)/css
 JS_SOURCES = $(STATIC_ASSETS)/js
+FONT_SOURCES = $(STATIC_ASSETS)/fonts
 GULP_DIST = $(THEME_DIR)/dist
 
 GULP_CMD = gulp
@@ -52,6 +53,7 @@ assets: assets-clean css
 	@cp -r $(SEARCH_TOOL_SOURCES) $(ASSETS_DIR)/
 	@cp -r $(CSS_SOURCES)/* $(ASSETS_DIR)/css/
 	@cp -r $(JS_SOURCES)/* $(ASSETS_DIR)/js/
+	@cp -r $(FONT_SOURCES)/* $(ASSETS_DIR)/fonts/
 	@cp $(GULP_DIST)/*.css $(ASSETS_DIR)/css/
 	@cp $(GULP_DIST)/*.js $(ASSETS_DIR)/js/
 
