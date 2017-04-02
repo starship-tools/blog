@@ -72,9 +72,9 @@
                       (proplists:get_value
                         'dstfile
                         (lists:nth next-index all-posts)))))
-    (logjam:info "Current index: ~p" `(,index))
-    (logjam:info "Previous index: ~p" `(,prev-index))
-    (logjam:info "Next index: ~p" `(,next-index))
+    (logjam:debug "Current index: ~p" `(,index))
+    (logjam:debug "Previous index: ~p" `(,prev-index))
+    (logjam:debug "Next index: ~p" `(,next-index))
     (logjam:info "Generating route for /~s ..." `(,url))
     `(,url
       ,(blog-pages:post
