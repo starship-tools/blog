@@ -23,6 +23,7 @@
   (lists:append
     `(,(base)
       (#(page_title "Archives")
+       #(page_description "All previous posts are listed here by year and month.")
        #(active "archives")
        #(postsdata ,(blog-util:group-years-months-posts-desc data))))))
 
@@ -30,6 +31,7 @@
   (lists:append
     `(,(base)
       (#(page_title "Categories")
+       #(page_description "All previous posts are listed here by primary topic.")
        #(active "categories")
        #(postsdata ,(blog-util:group-category-posts-asc data))))))
 
@@ -37,6 +39,7 @@
   (lists:append
     `(,(base)
       (#(page_title "Tags")
+       #(page_description "All previous posts are listed here under all the tags they have.")
        #(active "tags")
        #(postsdata ,(blog-util:group-tag-posts-asc data))))))
 
@@ -44,6 +47,7 @@
   (lists:append
     `(,(base)
       (#(page_title "Authors")
+       #(page_description "All previous posts are listed here by author.")
        #(active "authors")
        #(postsdata ,(blog-util:group-author-posts-asc data))))))
 
