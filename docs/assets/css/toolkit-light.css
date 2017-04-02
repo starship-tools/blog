@@ -12057,7 +12057,7 @@ body {
     margin-bottom: 5px; }
 
 a.navbar-brand {
-  padding-right: 1em; }
+  padding-right: 0.5em; }
 
 .docs-header {
   background-color: #141215; }
@@ -12197,6 +12197,13 @@ a.navbar-brand {
   font-style: italic;
   font-size: 120%;
   font-family: Georgia, "Times New Roman", Times, serif; }
+
+.offset-anchor:before {
+  content: " ";
+  display: block;
+  height: 100px;
+  margin-top: -50px;
+  visibility: hidden; }
 
 div.footer-wrapper {
   width: 100%;
