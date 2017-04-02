@@ -31,6 +31,12 @@
 (defun output-dir (cfg)
   (get-in '(dragon blog output-dir) cfg))
 
+(defun headlines-count ()
+  (headlines-count (load-config)))
+
+(defun headlines-count (cfg)
+  (get-in '(dragon blog headlines-count) cfg))
+
 (defun load-config ()
   (lcfg-file:parse-local))
 
