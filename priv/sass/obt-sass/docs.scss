@@ -92,6 +92,7 @@
   float: right;
   margin: -250px;
   margin-top: 0;
+  max-width: 193px;
 
   a {
 
@@ -120,14 +121,6 @@
   }
 }
 
-.sidebar-module {
-
-  .row {
-    margin: 0;
-  }
-
-}
-
 .blog-sidebar .social {
   font-size: 150%;
 }
@@ -148,6 +141,18 @@
 .blog-sidebar .social span.icon.text {
   font-weight: 900;
   font-size: 110%;
+}
+
+.sidebar-module {
+
+  .row {
+    margin: 0;
+  }
+
+  p {
+    word-wrap: break-word;
+  }
+
 }
 
 .blog-main {
