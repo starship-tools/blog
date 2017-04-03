@@ -23,6 +23,13 @@ a.navbar-brand {
   }
 }
 
+pre {
+  color: #0f0;
+  line-height: 1em;
+  font-size: 100%;
+  overflow: visible;
+}
+
 .highlight {
   background-color: darken($body-bg, 5%);
   border: 0;
@@ -234,12 +241,6 @@ a.navbar-brand {
   height: 100px;
   margin-top: -50px;
   visibility: hidden;
-}
-
-pre {
-  color: #0f0;
-  line-height: 1em;
-  font-size: 100%;
 }
 
 div.footer-wrapper {
