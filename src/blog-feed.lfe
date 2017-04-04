@@ -33,7 +33,7 @@
 
 (defun atom-entry (base-url post)
   (let* ((path (clj:get-in post '(dstfile)))
-         (url (io_lib:format "http://~s/~s" `(,base-url ,path))))
+         (url (io_lib:format "~s/~s" `(,base-url ,path))))
     (logjam:info " * Generating feed data for ~s ..." `(,url))
     `(#(title ,(clj:get-in post '(title)))
       #(url ,url)
