@@ -86,6 +86,7 @@
           #(second ,S)
           #(datestamp ,(->datestamp data))
           #(timestamp ,(->timestamp data))
+          #(datetimestamp ,(->datetimestamp data))
           #(dateint ,(->date-int data))
           #(monthname ,(blog-util:month-name m))))))
 
@@ -131,6 +132,11 @@
   (clj:->> data
            (proplists:get_value 'datepath)
            (blog-util:datepath->timestamp)))
+
+(defun ->datetimestamp (data)
+  (clj:->> data
+           (proplists:get_value 'datepath)
+           (blog-util:datepath->datetimestamp)))
 
 (defun ->date-int (data)
   (clj:->> data
