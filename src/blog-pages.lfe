@@ -7,42 +7,42 @@
 
 (defun about ()
   (clj:-> (blog-data:about)
-          (about-tmpl:render)
+          (about.html:render)
           (get-content)))
 
 (defun timeline ()
   (clj:-> (blog-data:timeline)
-          (starship-timeline-tmpl:render)
+          (starship-timeline.html:render)
           (get-content)))
 
 (defun search ()
   (clj:-> (blog-data:search)
-          (search-tmpl:render)
+          (search.html:render)
           (get-content)))
 
 (defun design ()
   (clj:-> (blog-data:design)
-          (design-tmpl:render)
+          (design.html:render)
           (get-content)))
 
 (defun bootstrap-theme ()
   (clj:-> (blog-data:bootstrap-theme)
-          (bootstrap-theme-tmpl:render)
+          (bootstrap-theme.html:render)
           (get-content)))
 
 (defun example-one-column ()
   (clj:-> (blog-data:example-one-column)
-          (example-one-column-tmpl:render)
+          (example-one-column.html:render)
           (get-content)))
 
 (defun example-two-column ()
   (clj:-> (blog-data:example-two-column)
-          (example-two-column-tmpl:render)
+          (example-two-column.html:render)
           (get-content)))
 
 (defun pages ()
   (clj:-> (blog-data:pages)
-          (pages-tmpl:render)
+          (pages.html:render)
           (get-content)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -51,27 +51,27 @@
 
 (defun landing (data)
   (clj:-> (blog-data:landing data)
-          (landing-tmpl:render)
+          (landing.html:render)
           (get-content)))
 
 (defun archives (data)
   (clj:-> (blog-data:archives data)
-          (archives-tmpl:render)
+          (archives.html:render)
           (get-content)))
 
 (defun categories (data)
   (clj:-> (blog-data:categories data)
-          (categories-tmpl:render)
+          (categories.html:render)
           (get-content)))
 
 (defun tags (data)
   (clj:-> (blog-data:tags data)
-          (tags-tmpl:render)
+          (tags.html:render)
           (get-content)))
 
 (defun authors (data)
   (clj:-> (blog-data:authors data)
-          (authors-tmpl:render)
+          (authors.html:render)
           (get-content)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -80,7 +80,7 @@
 
 (defun post (data)
   (clj:-> (blog-data:post data)
-          (post-tmpl:render)
+          (post.html:render)
           (get-content)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
