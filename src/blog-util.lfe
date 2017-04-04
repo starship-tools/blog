@@ -200,6 +200,10 @@
       (lists:nth index posts))
     (lists:seq 1 (blog-cfg:headlines-count))))
 
+
+(defun first-n (n data)
+  (lists:sublist data n))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Dates   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -225,6 +229,12 @@
           (datepath->date)
           (lists:sublist 4 6)
           (rev-format "~s:~s:~s")))
+
+(defun datepath->datetimestamp (datepath)
+  (clj:-> datepath
+          (datepath->date)
+          (rev-format "~s-~s-~s ~s:~s:~s")))
+
 
 (defun datepath->date-int (datepath)
   (clj:-> datepath
@@ -262,15 +272,23 @@
 ;;;   Misc.   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defun title->file (title)
+(defun sanitize-title (title)
   (clj:-> title
           (re:replace "[^a-zA-Z]" "-" `(global #(return list)))
           (re:replace "-+" "-" `(global #(return list)))
-          (string:to_lower)
+          (string:to_lower)))
+
+(defun title->file (title)
+  (clj:-> title
+          (sanitize-title)
           (++ ".html")))
 
 (defun rev-format (data str)
   (io_lib:format str data))
+
+(defun dots->dashes (text)
+  (re:replace text "\\." "-" `(global #(return list))))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Counts   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
