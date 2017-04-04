@@ -12068,6 +12068,12 @@ a.navbar-brand {
   .docs-example.docs-example-modal, .docs-example.bs-example-popover {
     background-color: rgba(0, 0, 0, 0.1); }
 
+pre {
+  color: #0f0;
+  line-height: 1em;
+  font-size: 100%;
+  overflow: visible; }
+
 .highlight {
   background-color: #1a1c22;
   border: 0; }
@@ -12205,11 +12211,6 @@ a.navbar-brand {
   height: 100px;
   margin-top: -50px;
   visibility: hidden; }
-
-pre {
-  color: #0f0;
-  line-height: 1em;
-  font-size: 100%; }
 
 div.footer-wrapper {
   width: 100%;
