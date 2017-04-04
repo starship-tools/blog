@@ -14,7 +14,8 @@
   (lists:append
     `(,(static-routes)
       ,(dynamic-routes all-posts)
-      ,(indexed-posts-routes all-posts))))
+      ,(indexed-posts-routes all-posts)
+      ,(feed-routes all-posts))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Route Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -82,3 +83,8 @@
            post-data
            `(#(prevpost ,prev-post)
              #(nextpost ,next-post)))))))
+
+(defun feed-routes (data)
+  (let ((route "atom.xml"))
+    (logjam:info "Generating XML for feeds ...")
+    `((,route (,(blog-feed:atom route data))))))

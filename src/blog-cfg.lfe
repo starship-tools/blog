@@ -1,6 +1,18 @@
 (defmodule blog-cfg
   (export all))
 
+(defun domain ()
+  (domain (load-config)))
+
+(defun domain (cfg)
+  (get-in '(dragon blog domain) cfg))
+
+(defun domain-urn ()
+  (domain-urn (load-config)))
+
+(defun domain-urn (cfg)
+  (blog-util:dots->dashes (domain cfg)))
+
 (defun site-title ()
   (site-title (load-config)))
 
@@ -36,6 +48,12 @@
 
 (defun headlines-count (cfg)
   (get-in '(dragon blog headlines-count) cfg))
+
+(defun feed-count ()
+  (feed-count (load-config)))
+
+(defun feed-count (cfg)
+  (get-in '(dragon blog feed-count) cfg))
 
 (defun load-config ()
   (lcfg-file:parse-local))
