@@ -7,19 +7,11 @@
 
 #### Contents
 
-* [Introduction](#introduction-)
-* [Goals](#goals-)
 * [Dependencies](#dependencies-)
 * [Building](#building-)
    * [With make](#with-make-)
    * [In the REPL](#in-the-repl-)
-* [Contributing Content](#contributing-content-)
 * [License](#license-)
-
-
-## Introduction [&#x219F;](#contents)
-
-TBD
 
 
 ## Dependencies [&#x219F;](#contents)
@@ -59,10 +51,10 @@ To only build the HTML:
 $ make blog-html-only
 ```
 
-To only build the CSS:
+To only build the CSS, JS, etc.:
 
 ```bash
-$ make blog-css-only
+$ make assets
 ```
 
 Additionally, a `make` target is provided which compiles everything fresh,
@@ -105,24 +97,15 @@ lfe> (blog:start)
 ok
 ```
 
-To generate the blog to dev:
-
-```cl
-lfe> (blog:gen-dev)
-Created blog/dev/index.html.
-...
-ok
-```
-
-Or to generate the static files to prod (the `current` directory; this is
-only done when promoting dev to stable):
+To generate the blog:
 
 ```cl
 lfe> (blog:gen)
-Created docs/current/index.html.
+Created docs/index.html.
 ...
 ok
 ```
+
 
 To run a local copy of the development server and view your work at
 [http://localhost:8080](http://localhost:8080), run the following:
@@ -137,76 +120,8 @@ values in the `priv/sass/lfe*.scss` files or in the
 `priv/sass/lfe-sass/` subdirectories, you'll need to rebuild:
 
 ```bash
-$ make css
+$ make assets
 ```
-
-
-## Contributing Content [&#x219F;](#contents)
-
-This part of the documentation (and code, for that matter) is under very active
-development and is changing regularly, but as it stands right now, the
-following steps outline how to add new content to the LFE Documentation site.
-
-**Preparation**
-
-1. Fork this repository.
-1. `git clone` your fork to your local machine and `cd` to the working
-   directory of your clone. If you will be making CSS changes, you'll need the
-   `bootstrap-sass` submodule. In that case, you'll want to use
-   `git clone --recursive`.
-1. If you plan on making content additions, you'll want to select the
-   template you want to base your page on (e.g., `priv/templates/base.html`).
-
-**Content Creation**
-
-1. Create a new template that extends your selected template, overriding the
-   block with content in your new template (see the other templates for
-   examples of this).
-1. Update the `blog-pages:get-page` function with a clause that will match your
-   page
-   1. If you need a custom data function that sets variables that need to be
-      substituted in your template, be sure to call it here in the `get-page`
-      function (after you add it to `blog-data`).
-   1. Also, in the `get-page` function is where you will call your template's
-      `render` function.
-   1. Make sure your `get-page` code extracts the results of the `render`
-      function (e.g., using the provided `get-content` function in the same
-      module).
-
-**CSS Updates**
-
-1. Make sure that your clone of `lfe/blog` has the submodule populated (check
-   the `priv/sass/bootstrap-sass/` directory).
-1. Make updates to the file `priv/sass/lfe-sass/bootstrap/_theme.scss`.
-1. If you need to create some new variables, you'll want to edit
-   `priv/sass/lfe-sass/bootstrap/_variables.scss`.
-1. Commit your changes to the sass files.
-1. Regenerate the dev CSS with `make css-dev`.
-
-**Generation & Testing**
-
-1. Start up the LFE REPL (e.g., `make repl`).
-1. Generate the static content with `(blog:gen-dev)`.
-1. Serve the newly generated content with `(blog:httpd)`.
-1. Or do all of those with one target: `make serve-dev`.
-1. Visit
-   [http://localhost:8080/dev/index.html](http://localhost:8080/dev/index.html)
-   and any other pages you need to test.
-1. Once you are sure it's good, commit the changes.
-
-*Caution*: Do not run `(blog:gen)`, as that will generate an updated stable
-version of the blog (the contents of the `current`) directory. That is only
-done prior to a new release of LFE and/or the documentation site. Any PRs that
-update `current` will not be approved until those changes are removed (modulo
-typo fixes and the like).
-
-If you have called `(blog:gen)` by accident, simply do a `git checkout` of the
-`current` dir to undo the blog regen.
-
-**Submission**
-
-1. Push to your fork on Github.
-1. Open a PR.
 
 
 ## License [&#x219F;](#contents)
