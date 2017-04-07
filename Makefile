@@ -12,3 +12,4 @@ LOCAL_DOCS_PORT = $(subst $(RIGHT_PAREN),,$(strip $(lastword $(shell grep port l
 include priv/make/base.mk
 include priv/make/gen.mk
 include priv/make/git.mk
+include priv/make/admin.mk
