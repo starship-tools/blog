@@ -212,7 +212,7 @@ If you have called `(blog:gen)` by accident, simply do a `git checkout` of the
 ## License [&#x219F;](#contents)
 
 ```
-Copyright © 2013-2017 LFE Community
+Copyright © 2017 Starship Hackers
 
 Distributed under the Apache License, Version 2.0.
 ```
