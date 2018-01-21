@@ -21,12 +21,9 @@
 
 (defn get-category-theme
   [opts]
-  (let [cat-key (:category-key opts)]
-    (case cat-key
-      :about "default"
-      :home "default"
-      nil "default"
-      (name cat-key))))
+  (if-let [cat-key (:category-key opts)]
+    (name cat-key)
+    "default"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Base Data Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -175,7 +172,7 @@
                                         "code, tools, and ideas that will "
                                         "allow us to traverse interstellar "
                                         "distances. Focus is on control "
-                                        "systems, fault-tolerance, "
+                                        "systems, distributed fault-tolerance, "
                                         "high-concurrency, and soft "
                                         "real-time operations.")
              :tags (blog-tags/get-stats all-posts)
