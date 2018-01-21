@@ -123,6 +123,12 @@
       ["shell" "dev-resources/scripts/regen-css"]
     "gen-assets"
       ["shell" "dev-resources/scripts/copy-assets"]
+    "gen-all"
+      ["do"
+        ["gen-assets"]
+        ["gen-css"]
+        ;["gen-blog"]
+        ]
     "check-deps"
       ^{:doc "Check if any deps have out-of-date versions"}
       ["with-profile" "+test" "ancient" "check" ":all"]

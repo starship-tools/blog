@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
-cd resources/sass && gulp
+cd resources/sass && \
+    gulp && \
+    cd -
+cp -v resources/sass/dist/*.css docs/assets/css/
+cp -v resources/sass/dist/*.js docs/assets/js/
