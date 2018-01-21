@@ -1,7 +1,6 @@
 {% extends "templates/base-1-col.html" %}
 
-{% block content-body %}
-  <p class="lead">All posts presented by their major classification.</p>
+{% block main-column %}
   {% for cat-data in posts-data %}
   <a name="{{ cat-data.category }}"></a><br />
   <h2>{{ cat-data.category }}</h2>

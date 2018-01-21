@@ -1,7 +1,6 @@
 {% extends "templates/base-1-col.html" %}
 
-{% block content-body %}
-  <p class="lead">Posts presented by author, and then by year and month.</p>
+{% block main-column %}
   {% for author-data in posts-data %}
   <h2>{{ author-data.author }}</h2>
   <ul>

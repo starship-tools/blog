@@ -1,4 +1,4 @@
-{% extends "templates/base.html" %}
+{% extends "templates/base-2-col.html" %}
 
 {% block page-metadata %}
 <!-- General Metadata (per-page) -->
@@ -43,55 +43,44 @@
   </script>
 {% endblock %}
 
-{% block contained-main-content %}
-<div class="row">
-  <div class="col-sm-8">
-
-    <!-- <h1>{{ page-data.site-title }}</h1> -->
-    <p class="home-lead">{{ page-data.site-description }}</p>
-
-    <div class="row">
-      <div class="col-sm-12">
-
-        <div class="headliner well">
-
-          {% if headliner.header-image %}
-            <img src="/{{ headliner.header-image }}" />
-          {% endif %}
-          <h2>
-            <a href="{{ headliner.url }}">{{ headliner.title }}</a>
-          </h2>
-          {% if headliner.subtitle %}
-            <h3>{{ headliner.subtitle }}</h3>
-          {% endif %}
-          <div class="row">
-            <div class="col-sm-4 metadata">
-              <p>Date: {{ headliner.datestamp }}</p>
-            </div>
-            <div class="col-sm-4 metadata">
-              <p>Author: <a href="/authors/#{{ headliner.author }}">{{ headliner.author }}</a></p>
-            </div>
-            <div class="col-sm-4 metadata">
-              <p>Category: <a href="/categories/#{{ headliner.category }}">{{ headliner.category }}</a></p>
-            </div>
-          </div>
-          {% if headliner.excerpt-100 %}
-            <p class="excerpt">{{ headliner.excerpt-100|safe }}</p>
-            <div class="clearfix">
-              <a href="{{ headliner.url }}" class="btn btn-tales-one">Read More</a>
-            </div>
-          {% endif %}
-
-        </div>
-
-      </div>
+{% block main-column %}
+<div class="headliner card bg-faded">
+  <div class="card-block">
+  {% if headliner.header-image %}
+    <img src="/{{ headliner.header-image }}" />
+  {% endif %}
+  <h2>
+    <a href="{{ headliner.url }}">{{ headliner.title }}</a>
+  </h2>
+  {% if headliner.subtitle %}
+    <h3>{{ headliner.subtitle }}</h3>
+{% endif %}
+  <div class="row">
+    <div class="col-sm-4 metadata">
+      <p>Date: {{ headliner.datestamp }}</p>
     </div>
+    <div class="col-sm-4 metadata">
+      <p>Author: <a href="/authors/#{{ headliner.author }}">{{ headliner.author }}</a></p>
+    </div>
+    <div class="col-sm-4 metadata">
+      <p>Category: <a href="/categories/#{{ headliner.category }}">{{ headliner.category }}</a></p>
+    </div>
+  </div>
+  {% if headliner.excerpt-100 %}
+    <p class="excerpt">{{ headliner.excerpt-100|safe }}</p>
+    <div class="clearfix">
+      <a href="{{ headliner.url }}" class="btn btn-tales-one">Read More</a>
+    </div>
+  {% endif %}
+  </div>
+</div>
 
-    {% for row in posts-data %}
-    <div class="row row-full-height subheadliner">
-      {% for column in row %}
-      <div class="col-sm-6 well subheadliner">
-
+  {% for row in posts-data %}
+  <div class="row row-full-height">
+    {% for column in row %}
+    <div class="col-sm-6">
+      <div class="subheadliner card bg-faded">
+        <div class="card-block">
           {% if column.header-image %}
             <img src="/{{ column.header-image }}" />
           {% endif %}
@@ -112,87 +101,85 @@
               <a href="{{ column.url }}" class="btn btn-tales-one">Read More</a>
             </div>
           {% endif %}
-
+        </div>
       </div>
-      {% endfor %}
     </div>
     {% endfor %}
+  </div>
+  {% endfor %}
 
-    <div class="below-fold">
-      {% for post in below-fold-data %}
-      <div class="article">
-        <div class="title"><h2><a href="{{ post.url }}">{{ post.title }}</a>{% if post.subtitle %} - {{ post.subtitle }}{% endif %}</h2></div>
-        {% if post.excerpt-25 %}
-        <div class="excerpt"><p>{{ post.excerpt-50|safe }}</p></div>
-        {% endif %}
-        <div class="author"><p>By <a href="/authors/#{{ post.author }}">{{ post.author }}</a></p></div>
-      </div>
-      {% endfor %}
+  <div class="below-fold">
+    {% for post in below-fold-data %}
+    <div class="article">
+      <div class="title"><h2><a href="{{ post.url }}">{{ post.title }}</a>{% if post.subtitle %} - {{ post.subtitle }}{% endif %}</h2></div>
+      {% if post.excerpt-25 %}
+      <div class="excerpt"><p>{{ post.excerpt-50|safe }}</p></div>
+      {% endif %}
+      <div class="author"><p>By <a href="/authors/#{{ post.author }}">{{ post.author }}</a></p></div>
     </div>
-
-    <div>
-      <a href="/archives/" class="btn btn-tales-one">View older posts</a>
-    </div>
-
+    {% endfor %}
   </div>
 
-  <aside class="col-md-4 blog-aside">
+  <div>
+    <a href="/archives/" class="btn btn-tales-one">View older posts</a>
+  </div>
+{% endblock %}
 
-    <div class="aside-widget">
-      <header>
-        <h3>Featured Excursionists</h3>
-      </header>
-      <div class="body">
-        <ul class="tales-list">
-          <li><a href="/archives/2017-06/16-170908/the-lower-48-challenge.html">The Lower-48 Challenge</a></li>
-          <li><a href="/archives/2016-07/31-114941/knucklehead-at-sturgis.html">Knucklehead at Sturgis</a></li>
-        </ul>
-      </div>
-    </div>
+{% block sidebar-site-subscribe %}
+<div class="sidebar-module subscribe-module">
+  <header>
+    <h3>Subscribe</h3>
+  </header>
+  <div class="body">
+    Receive notifications when new posts are published: <a href="https://groups.google.com/forum/#!forum/frmx-new-posts">subscribe</a>.
+  </div>
+</div>
+{% endblock %}
 
-    <div class="aside-widget">
-      <header>
-        <h3>Most Read</h3>
-      </header>
-      <div class="body">
-        <ul class="tales-list">
-          <li><a href="/">TBD</a></li>
-        </ul>
-      </div>
-    </div>
+{% block sidebar-featured-articles %}
+<div class="sidebar-module">
+  <h4>Featured</h4>
+  <p>
+    <a href="/archives/2017-03/19-230216/blog-infrastructure-update.html">Blog Infrastructure Update</a>
+  </p>
+</div>
+{% endblock %}
 
-    <div class="aside-widget subscribe-widget">
-      <header>
-        <h3>Subscribe</h3>
-      </header>
-      <div class="body">
-        Receive notifications when there are new Forgotten Roads blog posts published by signing up <a href="https://groups.google.com/forum/#!forum/frmx-new-posts">here</a>.
-      </div>
-    </div>
+{% block sidebar-site-categories %}
+<div class="sidebar-module">
+  <h4>Categories</h4>
+  <p>
+    {% for cat in cats %}
+    <a href="/categories.html#{{ cat }}">{{ cat }}</a>
+    {% endfor %}
+  </p>
+</div>
+{% endblock %}
 
-    <div class="aside-widget tags-widget">
-      <header>
-        <h3>Tags</h3>
-      </header>
-      <div class="body">
-        <ul>
-          {% for tag in tags %}
-          <li>
-            <a href="/tags/#{{tag.name}}" class="tag-5star-{{ tag.five-star }}">{{ tag.name }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
+{% block sidebar-site-tags %}
+<div class="sidebar-module tags-module">
+  <header>
+    <h3>Tags</h3>
+  </header>
+  <div class="body">
+    <ul>
+      {% for tag in tags %}
+      <li>
+        <a href="/tags/#{{tag.name}}" class="tag-5star-{{ tag.five-star }}">{{ tag.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}
 
-    <div class="aside-widget">
-      <header>
-        <h3>FRMX on Twitter</h3>
-      </header>
-      <p>
-        <a class="twitter-timeline" data-lang="en" data-width="350" data-height="600" data-link-color="#c68533" href="https://twitter.com/ForgottenRdsMX">FRMX on Twitter</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-      </p>
-    </div>
-
+{% block sidebar-recent-tweets %}
+<div class="sidebar-module">
+  <header>
+    <h3>Starship Tools on Twitter</h3>
+  </header>
+  <p>
+    <a class="twitter-timeline" data-theme="dark" data-width="350" data-height="600" data-link-color="#c68533" href="https://twitter.com/StarshipTools">Starship Tools on Twitter</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </p>
 </div>
 {% endblock %}

@@ -1,14 +1,90 @@
 {% extends "templates/base.html" %}
 
 {% block main-content %}
-    <div class="container docs-content">
-      <div class="page-header" id="banner">
-        <div class="row">
-          <div class="col-lg-10 col-md-10 col-sm-10 {{ page-data.active }}">
-            {% block content-body %}
-            {% endblock %}
+<div class="container docs-content">
+
+      {% block sidebar-column-wrapper %}
+      <div id="sidebar" class="blog-sidebar">
+
+        {% block pre-sidebar %}
+        {% endblock %}
+
+        {% block sidebar-column %}
+
+          {% block sidebar-social %}
+          <div class="sidebar-module">
+            <p class="social">
+              <a href="/atom.xml">
+                <span class="icon icon-rss first"></span>
+              </a>
+              <a href="https://twitter.com/starshiptools">
+                <span class="icon icon-twitter"></span>
+              </a>
+              <a href="https://twitter.com/StarshipTools/lists/starship-initiatives">
+                <span class="icon icon-twitter-with-circle"></span>
+              </a>
+              <a href="http://github.com/starship-hackers">
+                <span class="icon icon-github"></span>
+              </a>
+              <a href="http://starship-hackers.slack.com">
+                <span class="icon text">#</span>
+              </a>
+              <a href="https://groups.google.com/forum/#!forum/starship-hackers">
+                <span class="icon icon-mail last"></span>
+              </a>
+            </p>
           </div>
-        </div>
-      </div>
+          {% endblock %}
+
+          {% block site-sidebar %}
+
+            {% block sidebar-site-subscribe %}
+            {% endblock %}
+
+            {% block sidebar-featured-articles %}
+            {% endblock %}
+
+            {% block sidebar-site-categories %}
+            {% endblock %}
+
+            {% block sidebar-site-tags %}
+            {% endblock %}
+
+            {% block sidebar-recent-tweets %}
+            {% endblock %}
+
+          {% endblock %}
+
+          {% block post-sidebar %}
+
+            {% block sidebar-post-categories %}
+            {% endblock %}
+
+            {% block sidebar-post-tags %}
+            {% endblock %}
+
+            {% block sidebar-post-comments %}
+            {% endblock %}
+
+            {% block sidebar-post-data %}
+            {% endblock %}
+
+            {% block sidebar-post-nav %}
+            {% endblock %}
+
+          {% endblock %}
+
+      {% endblock %}
+
     </div>
+    {% endblock %}
+
+    <div class="content">
+    {% block main-column-wrapper %}
+      {% block main-column %}
+      {% endblock %}
+    {% endblock %}
+    </div>
+
+</div>
 {% endblock %}

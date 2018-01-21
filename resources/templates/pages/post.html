@@ -1,4 +1,4 @@
-{% extends "templates/base.html" %}
+{% extends "templates/base-2-col.html" %}
 
 {% block page-title %}
   {{ post-data.title }}
@@ -75,165 +75,165 @@
   {% block post-post-scripts %}{{ blocks.post-post-scripts|safe }}{% endblock %}
 </folding-group>
 
-{% block main-content %}
-    <div class="container docs-content">
-
-      <div id="sidebar" class="blog-sidebar">
-
-        <div class="sidebar-module">
-          <header>
-            <h3>Category</h3>
-          </header>
-          <div class="body">
-            <p>
-              <a href="/categories/#{{post-data.category}}">{{ post-data.category }}</a>
-            </p>
-          </div>
-        </div>
-
-        <div class="sidebar-module tags-widget">
-          <header>
-            <h3>Tags</h3>
-          </header>
-          <div class="body">
-            <ul>
-              {% for tag in tags %}
-              <li>
-                <a href="/tags/#{{tag}}">{{ tag }}</a>
-              </li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
-
-        {% if blocks.article-sidebar-comments-links %}
-        <div class="sidebar-module comments-widget">
-          <header>
-            <h3>Comments</h3>
-          </header>
-          <div class="body">
-            Post comments can be made for this article on:
-            <ul class="tales-list">
-              {% block article-sidebar-comments-links %}
-                {{ blocks.article-sidebar-comments-links|safe }}
-              {% endblock %}
-            </ul>
-          </div>
-        </div>
-        {% endif %}
-
-
-        <div class="sidebar-module">
-          <header>
-            <h3>Neighboring Posts</h3>
-          </header>
-          <div class="body">
-            <div class="row">
-              <div class="col-xs-6">Previous</div>
-              <div class="col-xs-6">Next</div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6">
-                {% if post-data.prev-post %}
-                <a href="{{ post-data.prev-post }}">
-                  <i class="fa fa-arrow-circle-o-left fa-2x"
-                     aria-hidden="true"></i>
-                </a>
-                {% else %}
-                  <i class="fa fa-arrow-circle-o-left fa-2x nav-arrow-disabled"
-                     aria-hidden="true"></i>
-                {% endif %}
-              </div>
-              <div class="col-xs-6">
-                {% if post-data.next-post %}
-                <a href="{{ post-data.next-post }}">
-                  <i class="fa fa-arrow-circle-o-right fa-2x"
-                     aria-hidden="true"></i>
-                </a>
-                {% else %}
-                  <i class="fa fa-arrow-circle-o-right fa-2x nav-arrow-disabled"
-                     aria-hidden="true"></i>
-                {% endif %}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="sidebar-module">
-          <header>
-            <h3>Post Data</h3>
-          </header>
-          <div class="body">
-            <p>Lines: {{ post-data.line-count }}</p>
-            <p>Words: {{ post-data.word-count }}</p>
-            <p>Characters: {{ post-data.char-count }}</p>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="content">
-
-        <div class="blog-post">
-          <div class="page-header">
-            {% if post-data.header-image %}
-              <img src="/{{ post-data.header-image }}" />
-            {% endif %}
-            <h2 class="blog-post-title">{{ post-data.title }}</h2>
-            {% if post-data.subtitle %}
-            <h3 class="blog-post-subtitle">{{ post-data.subtitle }}</h3>
-            {% endif %}
-            <div class="blog-post-meta">
-              <p class="date">{{ post-data.month }}
-                              {{ post-data.date.day }},
-                              {{ post-data.date.year }}</p>
-              <p class="author">by <a href="/authors/#{{ post-data.author }}">{{ post-data.author }}</a></p>
-              {% if post-data.excerpt %}
-              <p class="lead well">
-                {{ post-data.excerpt|safe }}
-              </p>
-              {% endif %}
-            </div>
-          </div>
-          {{ post-data.body|safe }}
-          {% block article-body-ads %}{{ blocks.article-body-ads|safe }}{% endblock %}
-          {% if blocks.article-body-ads %}
-          <p>(Purchases from the links above help support Forgotten Roads -- if you buy something, thanks :-) Regardless, thanks for reading!)</p>
-          {% endif %}
-        </div>
-
-        {% if post-data.char-count > 2500 %}
-        <div class="row">
-          <div class="col-xs-6">
-            {% if post-data.prev-post %}
-            <a href="{{ post-data.prev-post }}">
-              <i class="fa fa-arrow-circle-o-left fa-2x"
-                 aria-hidden="true"></i>
-            </a>
-            {% else %}
-              <i class="fa fa-arrow-circle-o-left fa-2x nav-arrow-disabled"
-                 aria-hidden="true"></i>
-            {% endif %}
-          </div>
-
-          <div class="col-xs-6 text-right">
-            {% if post-data.next-post %}
-            <a href="{{ post-data.next-post }}">
-              <i class="fa fa-arrow-circle-o-right fa-2x"
-                 aria-hidden="true"></i>
-            </a>
-            {% else %}
-              <i class="fa fa-arrow-circle-o-right fa-2x nav-arrow-disabled"
-                 aria-hidden="true"></i>
-            {% endif %}
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-6">Previous Post</div>
-          <div class="col-xs-6 text-right">Next Post</div>
-        </div>
-        {% endif %}
-      </div>
-
+{% block main-column %}
+<div class="blog-post">
+  <div class="page-header">
+    {% if post-data.header-image %}
+      <img src="/{{ post-data.header-image }}" />
+    {% endif %}
+    <h2 class="blog-post-title">{{ post-data.title }}</h2>
+    {% if post-data.subtitle %}
+    <h3 class="blog-post-subtitle">{{ post-data.subtitle }}</h3>
+    {% endif %}
+    <div class="blog-post-meta">
+      <p class="date">{{ post-data.month }}
+                      {{ post-data.date.day }},
+                      {{ post-data.date.year }}</p>
+      <p class="author">by <a href="/authors/#{{ post-data.author }}">{{ post-data.author }}</a></p>
+      {% if post-data.excerpt %}
+      <p class="lead well">
+        {{ post-data.excerpt|safe }}
+      </p>
+      {% endif %}
     </div>
+  </div>
+  {{ post-data.body|safe }}
+  {% block article-body-ads %}{{ blocks.article-body-ads|safe }}{% endblock %}
+  {% if blocks.article-body-ads %}
+  <p>(Purchases from the links above help support Forgotten Roads -- if you buy something, thanks :-) Regardless, thanks for reading!)</p>
+  {% endif %}
+</div>
+
+{% if post-data.char-count > 2500 %}
+<div class="row">
+  <div class="col-xs-6">
+    {% if post-data.prev-post %}
+    <a href="{{ post-data.prev-post }}">
+      <i class="fa fa-arrow-circle-o-left fa-2x"
+         aria-hidden="true"></i>
+    </a>
+    {% else %}
+      <i class="fa fa-arrow-circle-o-left fa-2x nav-arrow-disabled"
+         aria-hidden="true"></i>
+    {% endif %}
+  </div>
+
+  <div class="col-xs-6 text-right">
+    {% if post-data.next-post %}
+    <a href="{{ post-data.next-post }}">
+      <i class="fa fa-arrow-circle-o-right fa-2x"
+         aria-hidden="true"></i>
+    </a>
+    {% else %}
+      <i class="fa fa-arrow-circle-o-right fa-2x nav-arrow-disabled"
+         aria-hidden="true"></i>
+    {% endif %}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6">Previous Post</div>
+  <div class="col-xs-6 text-right">Next Post</div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block sidebar-post-categories %}
+<div class="sidebar-module">
+  <header>
+    <h3>Category</h3>
+  </header>
+  <div class="body">
+    <p>
+      <a href="/categories/#{{post-data.category}}">{{ post-data.category }}</a>
+    </p>
+  </div>
+</div>
+{% endblock %}
+
+{% block sidebar-post-tags %}
+<div class="sidebar-module tags-widget">
+  <header>
+    <h3>Tags</h3>
+  </header>
+  <div class="body">
+    <ul>
+      {% for tag in tags %}
+      <li>
+        <a href="/tags/#{{tag}}">{{ tag }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}
+
+{% block sidebar-post-comments %}
+{% if blocks.article-sidebar-comments-links %}
+<div class="sidebar-module comments-widget">
+  <header>
+    <h3>Comments</h3>
+  </header>
+  <div class="body">
+    Post comments can be made for this article on:
+    <ul class="tales-list">
+      {% block article-sidebar-comments-links %}
+        {{ blocks.article-sidebar-comments-links|safe }}
+      {% endblock %}
+    </ul>
+  </div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block sidebar-post-data %}
+<div class="sidebar-module">
+  <header>
+    <h3>Post Data</h3>
+  </header>
+  <div class="body">
+    <p>Lines: {{ post-data.line-count }}</p>
+    <p>Words: {{ post-data.word-count }}</p>
+    <p>Characters: {{ post-data.char-count }}</p>
+    </p>
+  </div>
+</div>
+{% endblock %}
+
+{% block sidebar-post-nav %}
+<div class="sidebar-module">
+  <header>
+    <h3>Neighboring Posts</h3>
+  </header>
+  <div class="body">
+    <div class="row">
+      <div class="col-xs-6">Previous</div>
+      <div class="col-xs-6">Next</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6">
+        {% if post-data.prev-post %}
+        <a href="{{ post-data.prev-post }}">
+          <i class="fa fa-arrow-circle-o-left fa-2x"
+             aria-hidden="true"></i>
+        </a>
+        {% else %}
+          <i class="fa fa-arrow-circle-o-left fa-2x nav-arrow-disabled"
+             aria-hidden="true"></i>
+        {% endif %}
+      </div>
+      <div class="col-xs-6">
+        {% if post-data.next-post %}
+        <a href="{{ post-data.next-post }}">
+          <i class="fa fa-arrow-circle-o-right fa-2x"
+             aria-hidden="true"></i>
+        </a>
+        {% else %}
+          <i class="fa fa-arrow-circle-o-right fa-2x nav-arrow-disabled"
+             aria-hidden="true"></i>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
