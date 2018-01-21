@@ -1,0 +1,18 @@
+{% extends "templates/base-1-col.html" %}
+
+{% block content-body %}
+  <p class="lead">Tags are listed below, alphabetically, with any posts labeled as such.</p>
+  {% for tags-data in posts-data %}
+  <a name="{{ tags-data.tag }}"></a><br />
+  <h2>{{ tags-data.tag }}</h2>
+  <ul>
+    {% for post-data in tags-data.posts %}
+    <li>{{ post-data.month }}
+        {{ post-data.date.day }},
+        {{ post-data.date.year }} -
+        {{ post-data.link|safe }}{% if post-data.subtitle %}:
+        {{ post-data.subtitle|safe }}{% endif %}</li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+{% endblock %}

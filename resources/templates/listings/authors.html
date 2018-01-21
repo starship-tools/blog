@@ -1,0 +1,17 @@
+{% extends "templates/base-1-col.html" %}
+
+{% block content-body %}
+  <p class="lead">Posts presented by author, and then by year and month.</p>
+  {% for author-data in posts-data %}
+  <h2>{{ author-data.author }}</h2>
+  <ul>
+    {% for post-data in author-data.posts %}
+    <li>{{ post-data.month }}
+        {{ post-data.date.day }},
+        {{ post-data.date.year }} -
+        {{ post-data.link|safe }}{% if post-data.subtitle %}:
+        {{ post-data.subtitle|safe }}{% endif %}</li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+{% endblock %}

@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
   
+  
+  
+  <head profile="http://dublincore.org/documents/dcq-html/">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>
+    
+    Starship Tools Blog
+    
+    </title>
+
+    <meta name="description" content="A Blog to Explore Really, Really Cool Stuff. Code Suff. In Space.">
+    <meta name="generator" content="Dragon (Clojure) 0.5.0-SNAPSHOT">
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="Content-Language" content="en-us" />
     <meta http-equiv="imagetoolbar" content="false" />
@@ -15,7 +26,15 @@
     <meta name="author" content="">
     <link rel="icon" href="/assets/icons/favicon.ico?" type="image/x-icon">
 
-    <title>Starship Tools</title>
+    <!-- Dublic Core Metadata (site-wide) -->
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+    <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/">
+    <meta name="DC.format" scheme="DCTERMS.IMT" content="text/html">
+    <meta name="DC.type" scheme="DCTERMS.DCMIType" content="Text">
+    <meta name="DC.coverage" content="2017-2018">
+    <meta name="DC.rights" content="Creative Commons Attribution-ShareAlike 4.0 International License">
+    <meta name="DC.publisher" content="C&amp;B|Books">
+    <meta name="DCTERMS.audience" content="Developers, Space Enthusiasts, Systems Engineers">
 
     <link href="/assets/css/toolkit-inverse.css" rel="stylesheet">
     <link href="/assets/css/application.css" rel="stylesheet">
@@ -23,8 +42,6 @@
     <link href="/assets/css/theme-default.css" rel="stylesheet">
     
 
-    
-    
     
     
     
@@ -45,6 +62,19 @@
         enable_page_level_ads: true
       });
     </script>
+    
+    
+    
+  <script type="text/javascript">
+    $(document).on('scroll', function() {
+      if ($(document).scrollTop() > 0) {
+        $('header').addClass('home-tiny');
+      } else {
+        $('header').removeClass('home-tiny');
+      }
+    });
+  </script>
+
   
   </head>
 
@@ -71,45 +101,38 @@
     </a>
 
     <div class="collapse navbar-collapse mr-auto" id="navbarResponsive">
-      <ul class="nav navbar-nav">
-        <li class="nav-item ">
-          <a class="nav-link" href="/archives.html">Archives</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="/categories.html">Categories</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="/tags.html">Tags</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="/authors.html">Authors</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="/pages.html">Pages</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="/about.html">About</a>
-        </li>
-<!--
-        <li class="nav-item ">
-          <a class="nav-link" href="/design.html">Design</a>
-        </li>
--->
-      </ul>
+      <ul class="nav nav-pills navbar-nav navbar-right">
 
-<!--
-      <form class="form-inline hidden-sm-down ml-auto" action="/search.html">
-        <input class="form-control"
-               type="text"
-               data-action="grow"
-               placeholder="Search"
-               name="q"
-               id="tipue_search_input"
-               pattern=".{3,}"
-               title="At least 3 characters"
-               required>
-      </form>
- -->
+        <li class="">
+          <a href="/">Home</a>
+        </li>
+        <li class="">
+          <a href="/archives/">Archives</a>
+        </li>
+        <li class="">
+          <a href="/categories/">Categories</a>
+        </li>
+        <li class="">
+          <a href="/tags/">Tags</a>
+        </li>
+        <li class="">
+          <a href="/authors/">Authors</a>
+        </li>
+        <li class="dropdown ">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/about/index.html">Starship Tools</a></li>
+            <li><a href="/about/contact.html">Contact Us</a></li>
+            <li><a href="/about/powered-by.html">Powered By</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/about/license.html">Content License</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/about/privacy.html">Privacy Policy</a></li>
+            <li><a href="/about/disclosure.html">Disclosure Policy</a></li>
+          </ul>
+        </li>
+
+      </ul>
     </div>
 
     </nav>
@@ -122,263 +145,14 @@
         <div class="container">
           <h1>Starship Tools</h1>
           <p>
-            A blog for sharing the open source code, tools, and
-                     ideas that will allow us to traverse interstellar
-                     distances. Focus is on control systems, fault-tolerance,
-                     high-concurrency, and soft real-time operations.
+            A blog for sharing the open source code, tools, and ideas that will allow us to traverse interstellar distances. Focus is on control systems, fault-tolerance, high-concurrency, and soft real-time operations.
           </p>
         </div>
       </div>
     </div>
 
       
-    <div class="container docs-content">
-
-          
-          <div id="sidebar" class="blog-sidebar">
-
-            
-            
-
-            
-            
-            <div class="sidebar-module">
-              <p class="social">
-                <a href="/atom.xml">
-                  <span class="icon icon-rss first"></span>
-                </a>
-                <a href="https://twitter.com/starshiptools">
-                  <span class="icon icon-twitter"></span>
-                </a>
-                <a href="https://twitter.com/StarshipTools/lists/starship-initiatives">
-                  <span class="icon icon-twitter-with-circle"></span>
-                </a>
-                <a href="http://github.com/starship-hackers">
-                  <span class="icon icon-github"></span>
-                </a>
-                <a href="http://starship-hackers.slack.com">
-                  <span class="icon text">#</span>
-                </a>
-                <a href="https://groups.google.com/forum/#!forum/starship-hackers">
-                  <span class="icon icon-mail last"></span>
-                </a>
-              </p>
-            </div>
-            
-
-            
-            <div class="sidebar-module">
-              <h4>Featured</h4>
-              <p>
-                <a href="/archives/2017-03/19-230216/blog-infrastructure-update.html">Blog Infrastructure Update</a>
-              </p>
-            </div>
-            
-
-            
-            <div class="sidebar-module">
-              <h4>Categories</h4>
-              <p>
-                
-                <a href="/categories.html#Art">Art</a>
-                
-                <a href="/categories.html#Ideas">Ideas</a>
-                
-                <a href="/categories.html#Site">Site</a>
-                
-              </p>
-            </div>
-            
-
-            
-            <div class="sidebar-module">
-              <h4>Tags</h4>
-              <p>
-                
-                <a href="/tags.html#ascii">ascii</a>
-                
-                <a href="/tags.html#community">community</a>
-                
-                <a href="/tags.html#fun">fun</a>
-                
-                <a href="/tags.html#news">news</a>
-                
-                <a href="/tags.html#social">social</a>
-                
-                <a href="/tags.html#text">text</a>
-                
-                <a href="/tags.html#updates">updates</a>
-                
-              </p>
-            </div>
-            
-
-            
-            
-          
-
-        </div>
-        
-
-        <div class="content">
-        
-  <div class="row">
-    <div class="col-sm-12">
-
-      <div class="headliner card bg-faded">
-        <div class="card-block">
-
-          <h2>
-            <a href="/archives/2017-04/02-133153/rocket-ascii-art.html">Rocket ASCII Art</a>
-          </h2>
-          
-            <h4>Sometimes plain text just says it best ...</h4>
-          
-          
-          <div class="row metadata">
-            <div class="col-sm-4">
-              <p><span class="key">Posted:</span>
-                 <span class="value">2017-04-02</span>
-               </p>
-            </div>
-            <div class="col-sm-4">
-              <p><span class="key">Author:</span>
-                 <span class="value">oubiwann</span>
-               </p>
-            </div>
-            <div class="col-sm-4">
-              <p><span class="key">Category:</span>
-                 <span class="value">Art</span>
-               </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-        
-        <div class="row row-full-height">
-
-          
-          <div class="col-sm-6">
-
-            <div class="card bg-faded subheadliner">
-              <div class="card-block">
-
-                <h2>
-                  <a href="archives/2017-04/02-122328/starship-tools-blog-goes-beta.html">Starship Tools Blog Goes Beta</a>
-                </h2>
-                
-                  <h4>Ready for use after a month of hacking</h4>
-                
-                
-                <div class="metadata">
-                  <p><span class="key">Date:</span>
-                      <span class="value">2017-04-02</span></p>
-                  <p><span class="key">Author:</span>
-                      <span class="value">oubiwann</span></p>
-                  <p><span class="key">Category:</span>
-                      <span class="value">Site</span></p>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-          
-          <div class="col-sm-6">
-
-            <div class="card bg-faded subheadliner">
-              <div class="card-block">
-
-                <h2>
-                  <a href="archives/2017-03/19-230216/blog-infrastructure-update.html">Blog Infrastructure Update</a>
-                </h2>
-                
-                  <h4>Slow, Steady Progress</h4>
-                
-                
-                <div class="metadata">
-                  <p><span class="key">Date:</span>
-                      <span class="value">2017-03-19</span></p>
-                  <p><span class="key">Author:</span>
-                      <span class="value">oubiwann</span></p>
-                  <p><span class="key">Category:</span>
-                      <span class="value">Site</span></p>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-          
-
-        </div>
-        
-        <div class="row row-full-height">
-
-          
-          <div class="col-sm-6">
-
-            <div class="card bg-faded subheadliner">
-              <div class="card-block">
-
-                <h2>
-                  <a href="archives/2017-02/26-234242/domains-registered-.html">Domains Registered ...</a>
-                </h2>
-                
-                
-                <div class="metadata">
-                  <p><span class="key">Date:</span>
-                      <span class="value">2017-02-26</span></p>
-                  <p><span class="key">Author:</span>
-                      <span class="value">oubiwann</span></p>
-                  <p><span class="key">Category:</span>
-                      <span class="value">Site</span></p>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-          
-          <div class="col-sm-6">
-
-            <div class="card bg-faded subheadliner">
-              <div class="card-block">
-
-                <h2>
-                  <a href="archives/2017-02/25-130800/we-ll-need-a-starship-programming-lanauge.html">We&#039;ll Need a Starship Programming Lanauge</a>
-                </h2>
-                
-                  <h4>If we ever want to survive in space, our ships will have to be programmable</h4>
-                
-                
-                <div class="metadata">
-                  <p><span class="key">Date:</span>
-                      <span class="value">2017-02-25</span></p>
-                  <p><span class="key">Author:</span>
-                      <span class="value">oubiwann</span></p>
-                  <p><span class="key">Category:</span>
-                      <span class="value">Ideas</span></p>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-          
-
-        </div>
-        
-
-    </div>
-  </div>
-
-        </div>
-
-  </div>
-
+      
     </main>
     
     
@@ -503,8 +277,8 @@
           <div class="col-lg-2"></div>
           <div class="col-lg-8 center-block text-center footer-buffer">
             <div class="copyright">
-              <p>Design &copy; 2011-2016 Boostrap |
-                 Design &amp; Content &copy; 2017 Starship Tools Team
+              <p>Design &copy; 2011-2016 Bootstrap |
+                 Design &amp; Content &copy; 2017-2018 Starship Tools Team
               </p>
             </div>
             <div class="col-lg-2"></div>

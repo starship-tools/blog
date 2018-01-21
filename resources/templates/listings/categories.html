@@ -1,0 +1,18 @@
+{% extends "templates/base-1-col.html" %}
+
+{% block content-body %}
+  <p class="lead">All posts presented by their major classification.</p>
+  {% for cat-data in posts-data %}
+  <a name="{{ cat-data.category }}"></a><br />
+  <h2>{{ cat-data.category }}</h2>
+  <ul>
+    {% for post-data in cat-data.posts %}
+    <li>{{ post-data.month }}
+        {{ post-data.date.day }},
+        {{ post-data.date.year }} -
+        {{ post-data.link|safe }}{% if post-data.subtitle %}:
+        {{ post-data.subtitle|safe }}{% endif %}</li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+{% endblock %}

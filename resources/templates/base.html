@@ -1,0 +1,188 @@
+{% extends "templates/structure.html" %}
+
+{% block top-nav-content %}
+    <button
+      class="navbar-toggler navbar-toggler-right hidden-md-up"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarResponsive"
+      aria-controls="navbarResponsive"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" href="/">
+      <span class="icon icon-rocket navbar-brand-icon"></span>
+      Starship Tools
+    </a>
+
+    <div class="collapse navbar-collapse mr-auto" id="navbarResponsive">
+      <ul class="nav nav-pills navbar-nav navbar-right">
+
+        <li class="{% ifequal page-data.active page-data.index %}active{% endifequal %}">
+          <a href="/">Home</a>
+        </li>
+        <li class="{% ifequal page-data.active page-data.archives %}active{% endifequal %}">
+          <a href="/archives/">Archives</a>
+        </li>
+        <li class="{% ifequal page-data.active page-data.categories %}active{% endifequal %}">
+          <a href="/categories/">Categories</a>
+        </li>
+        <li class="{% ifequal page-data.active page-data.tags %}active{% endifequal %}">
+          <a href="/tags/">Tags</a>
+        </li>
+        <li class="{% ifequal page-data.active page-data.authors %}active{% endifequal %}">
+          <a href="/authors/">Authors</a>
+        </li>
+        <li class="dropdown {% ifequal page-data.active page-data.about %}active{% endifequal %}">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/about/index.html">Starship Tools</a></li>
+            <li><a href="/about/contact.html">Contact Us</a></li>
+            <li><a href="/about/powered-by.html">Powered By</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/about/license.html">Content License</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/about/privacy.html">Privacy Policy</a></li>
+            <li><a href="/about/disclosure.html">Disclosure Policy</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+{% endblock %}
+
+{% block main-header %}
+    <div id="content" class="docs-header">
+      <div class="docs-header-inner">
+        <div class="container">
+          <h1>{{ category-title }}</h1>
+          <p>
+            {{ category-description }}
+          </p>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+
+{% block footer-content %}
+        <div class="row">
+          <div class="col-lg-12 center-block text-center footer-buffer">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 text-center footer-buffer4x">
+            <p></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+
+            <div class="card bg-faded">
+              <div class="card-block">
+
+                <div class="container">
+                  <div class="row">
+
+                    <div class="col-lg-5 text-center left-section">
+                      <ul class="nav justify-content-center">
+                        <li class="nav-item"><a href="/archives/">Archives</a></li>
+                        <li class="nav-item"><a href="/categories/">Categories</a></li>
+                        <li class="nav-item"><a href="/tags/">Tags</a></li>
+                        <li class="nav-item"><a href="/authors/">Authors</a></li>
+                        <li class="nav-item"><a href="/about/">About</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-lg-2 text-center">
+                      <span class="icon icon-rocket"></span>
+                    </div>
+                    <div class="col-lg-5 text-center right-section">
+                      <ul class="nav justify-content-center">
+                        <li class="nav-item"><a href="http://nasa.gov/">NASA</a></li>
+                        <li class="nav-item"><a href="http://esa.int/">ESA</a></li>
+                        <li class="nav-item"><a href="https://www.gov.uk/government/organisations/uk-space-agency/">UK Space Agency</a></li>
+                        <li class="nav-item"><a href="http://www.spacex.com/">SpaceX</a></li>
+
+                      </ul>
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-12"><hr/></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <ul class="nav justify-content-center">
+                        <li class="nav-item"><a href="/starship-timeline.html">A Timeline of Starship Programs</a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-12"><hr/></div>
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col-lg-2">
+                      <ul class="nav justify-content-center">
+                        <li class="nav-item"><a href="http://bis-space.com/">The British Interplanetary Society</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="col-lg-2">
+                      <ul class="nav justify-content-center">
+                        <li class="nav-item"><a href="http://breakthroughinitiatives.org/">Breakthrough Initiatives</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="col-lg-2">
+                      <ul class="nav justify-content-center">
+                        <li class="nav-item"><a href="https://100yss.org/">100 Year Starship</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="col-lg-2">
+                      <ul class="nav justify-content-center">
+                        <li class="nav-item"><a href="http://icarusinterstellar.org/">Icarus Interstellar</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="col-lg-2">
+                      <ul class="nav justify-content-center">
+                        <li class="nav-item"><a href="https://i4is.org/">Initiative for Interstellar Studies</a></li>
+                      </ul>
+                    </div>
+
+                    <div class="col-lg-2">
+                      <ul class="nav justify-content-center">
+                        <li class="nav-item"><a href="https://tauzero.aero/">Tau Zero Foundation</a></li>
+                      </ul>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+{% endblock %}
+
+{% block subfooter-content %}
+        <div class="row">
+          <div class="col-lg-2"></div>
+          <div class="col-lg-8 center-block text-center footer-buffer">
+            <div class="copyright">
+              <p>Design &copy; 2011-2016 Bootstrap |
+                 Design &amp; Content &copy; 2017-2018 Starship Tools Team
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+          </div>
+        </div>
+{% endblock %}

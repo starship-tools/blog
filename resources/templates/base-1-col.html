@@ -1,0 +1,14 @@
+{% extends "templates/base.html" %}
+
+{% block main-content %}
+    <div class="container docs-content">
+      <div class="page-header" id="banner">
+        <div class="row">
+          <div class="col-sm-12 content blog-main {{ page-data.active }}">
+            {% block content-body %}
+            {% endblock %}
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

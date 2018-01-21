@@ -1,0 +1,30 @@
+<h2>New</h2>
+
+The next Starship Tools blog post is now available ...<br /><br />
+
+{% if post-data.header-image %}
+<div style="width: 100%">
+  <img style="max-width: 600px; height: auto"
+       src="http://starship.tools/{{ post-data.header-image }}" />
+</div><br/><br/>
+{% endif %}
+<b style="font-size: 120%">{{ post-data.title }}</b> - <i style="font-size: 120%">{{ post-data.subtitle }}</i><br />
+by {{ post-data.author }}<br />
+
+{% if post-data.excerpt-50 %}
+<h3>Excerpt</h3>
+<blockquote>
+  {{ post-data.excerpt-50|safe }}
+</blockquote>
+Read the rest of
+{% else %}
+Read
+{% endif %}
+the post <b><a href="http://starship.tools{{ post-data.url }}?email=1&subscriber=1">here</a></b>.
+<br/><br/>
+
+<h3>Preferences</h3>
+
+If you no longer wish to receive email notifications for new FRMX blog posts,
+please see the links at the bottom of this email for instructions on how to
+unsubscribe.
