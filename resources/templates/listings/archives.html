@@ -1,7 +1,6 @@
 {% extends "templates/base-1-col.html" %}
 
-{% block content-body %}
-  <p class="lead">All previous posts are listed here by year and month.</p>
+{% block main-column %}
   {% for year-data in posts-data %}
   <h2>{{ year-data.year }}</h2>
     {% for month-data in year-data.months %}

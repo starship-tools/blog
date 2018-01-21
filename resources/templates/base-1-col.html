@@ -3,12 +3,16 @@
 {% block main-content %}
     <div class="container docs-content">
       <div class="page-header" id="banner">
+
+        {% block main-column-wrapper %}
         <div class="row">
-          <div class="col-sm-12 content blog-main {{ page-data.active }}">
-            {% block content-body %}
+          <div class="col-sm-12 content blog-main">
+            {% block main-column %}
             {% endblock %}
           </div>
         </div>
+        {% endblock %}
+
       </div>
     </div>
 {% endblock %}
