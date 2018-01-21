@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block head %}
+  {% block head-prepends %}
+  {% endblock %}
+  {% block head-content %}
+  <head profile="http://dublincore.org/documents/dcq-html/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>
+    {% block page-title %}
+    {{ site-title }}{% if page-title %}{% ifunequal page-title site-title %} 🚀 {{ page-title }}{% endifunequal %}{% endif %}
+    {% endblock %}
+    </title>
+
+    <meta name="description" content="{{ page-data.site-description }}">
+    <meta name="generator" content="Dragon (Clojure) 0.5.0-SNAPSHOT">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="en-us" />
+    <meta http-equiv="imagetoolbar" content="false" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/assets/icons/favicon.ico?" type="image/x-icon">
+
+    <!-- Dublic Core Metadata (site-wide) -->
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+    <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/">
+    <meta name="DC.format" scheme="DCTERMS.IMT" content="text/html">
+    <meta name="DC.type" scheme="DCTERMS.DCMIType" content="Text">
+    <meta name="DC.coverage" content="2017-2018">
+    <meta name="DC.rights" content="Creative Commons Attribution-ShareAlike 4.0 International License">
+    <meta name="DC.publisher" content="C&amp;B|Books">
+    <meta name="DCTERMS.audience" content="Developers, Space Enthusiasts, Systems Engineers">
+
+    <link href="/assets/css/toolkit-inverse.css" rel="stylesheet">
+    <link href="/assets/css/application.css" rel="stylesheet">
+    {% block page-theme %}
+    <link href="/assets/css/theme-{{ category-theme }}.css" rel="stylesheet">
+    {% endblock %}
+
+    {% block pre-head-scripts %}
+    {% endblock %}
+    {% block head-scripts %}
+    {% endblock %}
+    <style>
+      /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+      /* this chunk of css is not part of the toolkit :) */
+      body {
+        width: 1px;
+        min-width: 100%;
+        *width: 100%;
+      }
+    </style>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2944002548280965",
+        enable_page_level_ads: true
+      });
+    </script>
+    {% block post-head-scripts %}
+    {% endblock %}
+    {% block head-postpends %}
+    {% endblock %}
+  {% endblock %}
+  </head>
+{% endblock %}
+{% block body %}
+  <body class="with-top-navbar">
+  {% block body-content %}
+    {% block top-nav %}
+    <nav class="navbar navbar-toggleable-sm fixed-top navbar-inverse bg-inverse app-navbar">
+      {% block top-nav-content %}
+      {% endblock %}
+    </nav>
+    {% endblock %}
+    {% block main %}
+    <main>
+      {% block main-header %}
+      {% endblock %}
+      {% block main-content %}
+      {% endblock %}
+    </main>
+    {% endblock %}
+    {% block footer-wrapper %}
+    <div class="footer-wrapper">
+      <div class="container">
+        {% block footer %}
+        <footer class="footer">
+          {% block footer-content %}
+          {% endblock %}
+        </footer>
+        {% endblock %}
+      </div>
+    </div>
+    <div class="subfooter-wrapper">
+      <div class="container">
+        {% block subfooter-content %}
+        {% endblock %}
+      </div>
+    </div>
+    {% endblock %}
+    {% block pre-end-scripts %}
+    {% endblock %}
+    {% block end-scripts %}
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/tether.min.js"></script>
+    <script src="/assets/js/chart.js"></script>
+    <script src="/assets/js/tablesorter.min.js"></script>
+    <script src="/assets/js/toolkit.min.js"></script>
+    <script src="/assets/js/application.js"></script>
+    <script>
+      // execute/clear BS loaders for docs
+      $(function(){while(window.BS&&window.BS.loader&&window.BS.loader.length){(window.BS.loader.pop())()}})
+    </script>
+    {% endblock %}
+    {% block post-end-scripts %}
+    {% endblock %}
+  {% endblock %}
+  </body>
+{% endblock %}
+</html>

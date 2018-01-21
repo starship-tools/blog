@@ -536,7 +536,6 @@ mark,
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 0.25rem;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   max-width: 100%;
   height: auto; }
@@ -1637,7 +1636,6 @@ pre {
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
-  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
   .form-control::-ms-expand {
     background-color: transparent;
@@ -1648,9 +1646,6 @@ pre {
     border-color: #464A69;
     outline: none; }
   .form-control::-webkit-input-placeholder {
-    color: #aaa;
-    opacity: 1; }
-  .form-control::-moz-placeholder {
     color: #aaa;
     opacity: 1; }
   .form-control:-ms-input-placeholder {
@@ -1940,7 +1935,6 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
   border-radius: 0.25rem;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
   .btn:focus, .btn:hover {
     text-decoration: none; }
@@ -2240,7 +2234,6 @@ input[type="button"].btn-block {
 
 .fade {
   opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear; }
   .fade.show {
     opacity: 1; }
@@ -2260,7 +2253,6 @@ tbody.collapse.show {
   position: relative;
   height: 0;
   overflow: hidden;
-  -webkit-transition: height 0.35s ease;
   transition: height 0.35s ease; }
 
 .dropup,
@@ -3445,10 +3437,8 @@ tbody.collapse.show {
 @media (min-width: 576px) {
   .card-columns {
     -webkit-column-count: 3;
-       -moz-column-count: 3;
             column-count: 3;
     -webkit-column-gap: 1.25rem;
-       -moz-column-gap: 1.25rem;
             column-gap: 1.25rem; }
     .card-columns .card {
       display: inline-block;
@@ -3709,7 +3699,6 @@ a.badge:focus, a.badge:hover {
   background-color: #464A69; }
 
 .progress-bar-striped {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-size: 1rem 1rem; }
 
@@ -3964,7 +3953,6 @@ button.close {
   overflow: hidden;
   outline: 0; }
   .modal.fade .modal-dialog {
-    -webkit-transition: -webkit-transform 0.3s ease-out;
     transition: -webkit-transform 0.3s ease-out;
     transition: transform 0.3s ease-out;
     transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
@@ -4283,7 +4271,6 @@ button.close {
   width: 100%; }
   @media (-webkit-transform-3d) {
     .carousel-item {
-      -webkit-transition: -webkit-transform 0.6s ease-in-out;
       transition: -webkit-transform 0.6s ease-in-out;
       transition: transform 0.6s ease-in-out;
       transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
@@ -4293,7 +4280,6 @@ button.close {
               perspective: 1000px; } }
   @supports ((-webkit-transform: translate3d(0, 0, 0)) or (transform: translate3d(0, 0, 0))) {
     .carousel-item {
-      -webkit-transition: -webkit-transform 0.6s ease-in-out;
       transition: -webkit-transform 0.6s ease-in-out;
       transition: transform 0.6s ease-in-out;
       transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+sudo apt-get install nodejs nodejs-legacy npm
+cd resources/sass && \
+    npm install gulp && \
+    npm install

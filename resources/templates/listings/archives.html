@@ -1,0 +1,20 @@
+{% extends "templates/base-1-col.html" %}
+
+{% block content-body %}
+  <p class="lead">All previous posts are listed here by year and month.</p>
+  {% for year-data in posts-data %}
+  <h2>{{ year-data.year }}</h2>
+    {% for month-data in year-data.months %}
+    <h3>{{ month-data.month }}</h3>
+      <ul>
+        {% for post-data in month-data.posts %}
+        <li>{{ post-data.month }}
+            {{ post-data.date.day }},
+            {{ post-data.date.year }} -
+            {{ post-data.link|safe }}{% if post-data.subtitle %}:
+            {{ post-data.subtitle|safe }}{% endif %}</li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  {% endfor %}
+{% endblock %}

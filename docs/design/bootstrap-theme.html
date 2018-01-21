@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
   
+  
+  
+  <head profile="http://dublincore.org/documents/dcq-html/">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>
+    
+    Starship Tools Blog
+    
+    </title>
+
+    <meta name="description" content="A Blog to Explore Really, Really Cool Stuff. Code Suff. In Space.">
+    <meta name="generator" content="Dragon (Clojure) 0.5.0-SNAPSHOT">
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="Content-Language" content="en-us" />
     <meta http-equiv="imagetoolbar" content="false" />
@@ -15,16 +26,22 @@
     <meta name="author" content="">
     <link rel="icon" href="/assets/icons/favicon.ico?" type="image/x-icon">
 
-    <title>Starship Tools 🚀 Design | Theme Demo</title>
+    <!-- Dublic Core Metadata (site-wide) -->
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+    <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/">
+    <meta name="DC.format" scheme="DCTERMS.IMT" content="text/html">
+    <meta name="DC.type" scheme="DCTERMS.DCMIType" content="Text">
+    <meta name="DC.coverage" content="2017-2018">
+    <meta name="DC.rights" content="Creative Commons Attribution-ShareAlike 4.0 International License">
+    <meta name="DC.publisher" content="C&amp;B|Books">
+    <meta name="DCTERMS.audience" content="Developers, Space Enthusiasts, Systems Engineers">
 
     <link href="/assets/css/toolkit-inverse.css" rel="stylesheet">
     <link href="/assets/css/application.css" rel="stylesheet">
     
-    <link href="/assets/css/theme-default.css" rel="stylesheet">
+    <link href="/assets/css/theme-design.css" rel="stylesheet">
     
 
-    
-    
     
     
     
@@ -45,6 +62,10 @@
         enable_page_level_ads: true
       });
     </script>
+    
+    
+    
+    
   
   </head>
 
@@ -71,45 +92,38 @@
     </a>
 
     <div class="collapse navbar-collapse mr-auto" id="navbarResponsive">
-      <ul class="nav navbar-nav">
-        <li class="nav-item ">
-          <a class="nav-link" href="/archives.html">Archives</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="/categories.html">Categories</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="/tags.html">Tags</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="/authors.html">Authors</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="/pages.html">Pages</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="/about.html">About</a>
-        </li>
-<!--
-        <li class="nav-item active">
-          <a class="nav-link" href="/design.html">Design</a>
-        </li>
--->
-      </ul>
+      <ul class="nav nav-pills navbar-nav navbar-right">
 
-<!--
-      <form class="form-inline hidden-sm-down ml-auto" action="/search.html">
-        <input class="form-control"
-               type="text"
-               data-action="grow"
-               placeholder="Search"
-               name="q"
-               id="tipue_search_input"
-               pattern=".{3,}"
-               title="At least 3 characters"
-               required>
-      </form>
- -->
+        <li class="">
+          <a href="/">Home</a>
+        </li>
+        <li class="">
+          <a href="/archives/">Archives</a>
+        </li>
+        <li class="">
+          <a href="/categories/">Categories</a>
+        </li>
+        <li class="">
+          <a href="/tags/">Tags</a>
+        </li>
+        <li class="">
+          <a href="/authors/">Authors</a>
+        </li>
+        <li class="dropdown ">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/about/index.html">Starship Tools</a></li>
+            <li><a href="/about/contact.html">Contact Us</a></li>
+            <li><a href="/about/powered-by.html">Powered By</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/about/license.html">Content License</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/about/privacy.html">Privacy Policy</a></li>
+            <li><a href="/about/disclosure.html">Disclosure Policy</a></li>
+          </ul>
+        </li>
+
+      </ul>
     </div>
 
     </nav>
@@ -120,7 +134,7 @@
     <div id="content" class="docs-header">
       <div class="docs-header-inner">
         <div class="container">
-          <h1>Design | Theme Demo</h1>
+          <h1>Design</h1>
           <p>
             
           </p>
@@ -129,1535 +143,1202 @@
     </div>
 
       
-<div class="container docs-content">
-
-<h1 id="contents">Contents</h1>
-
-<ul id="markdown-toc">
-  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
-  <li><a href="#intro" id="markdown-toc-intro">Intro</a></li>
-  <li><a href="#whats-included" id="markdown-toc-whats-included">What’s included</a>    <ul>
-      <li><a href="#getting-started" id="markdown-toc-getting-started">Getting started</a></li>
-      <li><a href="#gulpfilejs" id="markdown-toc-gulpfilejs">Gulpfile.js</a></li>
-      <li><a href="#theme-source-code" id="markdown-toc-theme-source-code">Theme source code</a></li>
-    </ul>
-  </li>
-  <li><a href="#custom-builds" id="markdown-toc-custom-builds">Custom builds</a></li>
-  <li><a href="#basic-template" id="markdown-toc-basic-template">Basic template</a></li>
-  <li><a href="#components" id="markdown-toc-components">Components</a>    <ul>
-      <li><a href="#entypo" id="markdown-toc-entypo">Entypo</a>        <ul>
-          <li><a href="#available-icons" id="markdown-toc-available-icons">Available icons</a></li>
-          <li><a href="#examples" id="markdown-toc-examples">Examples</a></li>
-        </ul>
-      </li>
-      <li><a href="#pill-buttons" id="markdown-toc-pill-buttons">Pill buttons</a></li>
-      <li><a href="#flex-table" id="markdown-toc-flex-table">Flex table</a></li>
-      <li><a href="#stat-cards" id="markdown-toc-stat-cards">Stat cards</a></li>
-      <li><a href="#divided-heading" id="markdown-toc-divided-heading">Divided heading</a></li>
-      <li><a href="#icon-input" id="markdown-toc-icon-input">Icon input</a></li>
-      <li><a href="#nav-bordered" id="markdown-toc-nav-bordered">Nav bordered</a></li>
-      <li><a href="#icon-nav" id="markdown-toc-icon-nav">Icon nav</a></li>
-      <li><a href="#dashhead" id="markdown-toc-dashhead">Dashhead</a></li>
-      <li><a href="#list-group" id="markdown-toc-list-group">List group</a>        <ul>
-          <li><a href="#list-group-header" id="markdown-toc-list-group-header">List group header</a></li>
-          <li><a href="#list-group-progress" id="markdown-toc-list-group-progress">List group progress</a></li>
-        </ul>
-      </li>
-      <li><a href="#custom-modals" id="markdown-toc-custom-modals">Custom Modals</a></li>
-    </ul>
-  </li>
-  <li><a href="#plugins" id="markdown-toc-plugins">Plugins</a>    <ul>
-      <li><a href="#tablesorter" id="markdown-toc-tablesorter">Tablesorter</a></li>
-      <li><a href="#datepicker" id="markdown-toc-datepicker">Datepicker</a></li>
-      <li><a href="#chartjs" id="markdown-toc-chartjs">Chart.js</a></li>
-    </ul>
-  </li>
-</ul>
-
-<h1 id="intro">Intro</h1>
-
-<p>Hey there! You’re looking at the docs for an Official Bootstrap Theme—thanks for your purchase! This theme has been lovingly crafted by Bootstrap’s founders and friends to help you build awesome projects on the web. Let’s dive in.</p>
-
-<p>Each theme is designed as it’s own toolkit—a series of well designed, intuitive, and cohesive components—built on top of Bootstrap. If you’ve used Bootstrap itself, you’ll find this all super familiar, but with new aesthetics, new components, beautiful and extensive examples, and easy-to-use build tools and documentation.</p>
-
-<p>Since this theme is based on Bootstrap, and includes nearly everything Bootstrap itself does, you’ll want to give the <a href="http://getbootstrap.com">official project documentation</a> a once over before continuing. There’s also <a href="../bootstrap/index.html">the kitchen sink</a>—a one-page view of all Bootstrap’s components restyled by this theme.</p>
-
-<p>For everything else, including compiling and using this Bootstrap theme, read through the docs below.</p>
-
-<p>Thanks, and enjoy!</p>
-
-<h1 id="whats-included">What’s included</h1>
-
-<p>Within your Bootstrap theme you’ll find the following directories and files, grouping common resources and providing both compiled and minified distribution files, as well as raw source files.</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">theme/
-  ├── v3
-  └── v4
-      ├── gulpfile.js
-      ├── package.json
-      ├── README.md
-      ├── docs/
-      ├── scss/
-      │   ├── bootstrap/
-      │   ├── custom/
-      │   ├── variables.scss
-      │   └── toolkit.scss
-      ├── js/
-      │   ├── bootstrap/
-      │   └── custom/
-      ├── fonts/
-      │   ├── bootstrap-entypo.eot
-      │   ├── bootstrap-entypo.svg
-      │   ├── bootstrap-entypo.ttf
-      │   ├── bootstrap-entypo.woff
-      │   └── bootstrap-entypo.woff2
-      └── dist/
-          ├── toolkit.css
-          ├── toolkit.css.map
-          ├── toolkit.min.css
-          ├── toolkit.min.css.map
-          ├── toolkit.js
-          └── toolkit.min.js</code></pre></figure>
-
-<h2 id="getting-started">Getting started</h2>
-
-<p>At the top level of your bootstrap theme you’ll find a directory for each major Bootstrap version that’s supported (currently both <code class="highlighter-rouge">v3</code> and <code class="highlighter-rouge">v4</code>). Within each directory you have all the relevant files for that version.</p>
-
-<p>To view your Bootstrap Theme documentation, simply find the docs directory and open index.html in your favorite browser.</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>open docs/index.html</code></pre></figure>
-
-<h2 id="gulpfilejs">Gulpfile.js</h2>
-
-<p>If you’re after more customization we’ve also included a custom <a href="http://gulpjs.com">Gulp</a> file, which can be used to quickly re-compile a theme’s CSS and JS. You’ll need to install both <a href="https://nodejs.org/en/download/">Node</a> and Gulp before using our included <code class="highlighter-rouge">gulpfile.js</code>.</p>
-
-<p>Once node is installed, run the following npm command to install Gulp.</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>npm install gulp -g</code></pre></figure>
-
-<p>When you’re done, make sure you’ve installed the rest of the theme’s dependencies:</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>npm install</code></pre></figure>
-
-<p>Now, modify your source files and run <code class="highlighter-rouge">gulp</code> to generate new local <code class="highlighter-rouge">dist/</code> files automatically. <strong>Be aware that this replaces existing <code class="highlighter-rouge">dist/</code> files</strong>, so proceed with caution.</p>
-
-<h2 id="theme-source-code">Theme source code</h2>
-
-<p>The <code class="highlighter-rouge">scss/</code>, <code class="highlighter-rouge">js/</code>, and <code class="highlighter-rouge">fonts/</code> directories contain the source code for our CSS, JS, and icon fonts (respectively). Within the <code class="highlighter-rouge">scss/</code> and <code class="highlighter-rouge">js/</code> directories you’ll find two subdirectories:</p>
-
-<ul>
-  <li><code class="highlighter-rouge">bootstrap/</code>, which contains the most recently released version of Bootstrap (v4.0.0-alpha.6).</li>
-  <li><code class="highlighter-rouge">custom/</code>, which contains all of the custom components and overrides authored specifically for this theme.</li>
-</ul>
-
-<p>The <code class="highlighter-rouge">dist/</code> folder includes everything above, built into single CSS and JS files that can easily be integrated into your project.</p>
-
-<p>The <code class="highlighter-rouge">docs/</code> folder includes the source code for our documentation, as well as a handful of live examples.</p>
-
-<p>The remaining files not specifically mentioned above provide support for packages, license information, and development.</p>
-
-<h1 id="custom-builds">Custom builds</h1>
-
-<p>Leverage the included source files and <code class="highlighter-rouge">gulpfile.js</code> to customize your Bootstrap Theme for your exact needs. Change variables, exclude components, and more.</p>
-
-<ul>
-  <li><code class="highlighter-rouge">toolkit-*.scss</code> is the entry point for Sass files - to build your own custom build, simply modify your local custom files or edit the includes listed here. Note: some themes also rely on a shared <code class="highlighter-rouge">components.scss</code> file, which you can find imported in your <code class="highlighter-rouge">toolkit-*.scss</code>.</li>
-  <li><code class="highlighter-rouge">variables.scss</code> is home to your theme’s variables. Note that your theme’s <code class="highlighter-rouge">variables</code> file depends on and overrides an existing Bootstrap variable file (found in <code class="highlighter-rouge">/scss/bootstrap/_variables.scss</code>).</li>
-</ul>
-
-<h1 id="basic-template">Basic template</h1>
-
-<p>The basic template is a guideline for how to structure your pages when building with a Bootstrap Theme. Included below are all the necessary bits for using the theme’s CSS and JS, as well as some friendly reminders.</p>
-
-<p>Copy the example below into a new HTML file to get started with it.</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="c">&lt;!-- These meta tags come first. --&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=edge"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
-
-    <span class="nt">&lt;title&gt;</span>Bootstrap Theme Example<span class="nt">&lt;/title&gt;</span>
-
-    <span class="c">&lt;!-- Include the CSS --&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"dist/toolkit.min.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
-
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
-
-    <span class="c">&lt;!-- Include jQuery (required) and the JS --&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"dist/toolkit.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span></code></pre></figure>
-
-<h1 id="components">Components</h1>
-
-<h2 id="entypo">Entypo</h2>
-
-<p><a href="http://entypo.com">Entypo</a> is an awesome, high quality set of icon glyphs made by <a href="http://www.danielbruce.se">Daniel Bruce</a>. We’ve replaced Bootstrap’s default icon font, <a href="http://glyphicons.com">Glyhpicons</a>, with the complete Entypo set and Entypo social extension.</p>
-
-<p>Simply use the new <code class="highlighter-rouge">icon</code> class and an <code class="highlighter-rouge">icon-{modifier}</code> on an inline element. See the examples below for more details.</p>
-
-<h3 id="available-icons">Available icons</h3>
-
-<p>Below are all the original and social icons from Entypo that you can choose from:</p>
-
-<div class="docs-icons">
-  <span class="icon icon-add-to-list"></span>
-  <span class="icon icon-add-user"></span>
-  <span class="icon icon-address"></span>
-  <span class="icon icon-adjust"></span>
-  <span class="icon icon-air"></span>
-  <span class="icon icon-aircraft"></span>
-  <span class="icon icon-aircraft-landing"></span>
-  <span class="icon icon-aircraft-take-off"></span>
-  <span class="icon icon-align-bottom"></span>
-  <span class="icon icon-align-horizontal-middle"></span>
-  <span class="icon icon-align-left"></span>
-  <span class="icon icon-align-right"></span>
-  <span class="icon icon-align-top"></span>
-  <span class="icon icon-align-vertical-middle"></span>
-  <span class="icon icon-archive"></span>
-  <span class="icon icon-area-graph"></span>
-  <span class="icon icon-arrow-bold-down"></span>
-  <span class="icon icon-arrow-bold-left"></span>
-  <span class="icon icon-arrow-bold-right"></span>
-  <span class="icon icon-arrow-bold-up"></span>
-  <span class="icon icon-arrow-down"></span>
-  <span class="icon icon-arrow-left"></span>
-  <span class="icon icon-arrow-right"></span>
-  <span class="icon icon-arrow-up"></span>
-  <span class="icon icon-arrow-long-down"></span>
-  <span class="icon icon-arrow-long-left"></span>
-  <span class="icon icon-arrow-long-right"></span>
-  <span class="icon icon-arrow-long-up"></span>
-  <span class="icon icon-arrow-with-circle-down"></span>
-  <span class="icon icon-arrow-with-circle-left"></span>
-  <span class="icon icon-arrow-with-circle-right"></span>
-  <span class="icon icon-arrow-with-circle-up"></span>
-  <span class="icon icon-attachment"></span>
-  <span class="icon icon-awareness-ribbon"></span>
-  <span class="icon icon-back-in-time"></span>
-  <span class="icon icon-back"></span>
-  <span class="icon icon-bar-graph"></span>
-  <span class="icon icon-battery"></span>
-  <span class="icon icon-beamed-note"></span>
-  <span class="icon icon-bell"></span>
-  <span class="icon icon-blackboard"></span>
-  <span class="icon icon-block"></span>
-  <span class="icon icon-book"></span>
-  <span class="icon icon-bookmark"></span>
-  <span class="icon icon-bookmarks"></span>
-  <span class="icon icon-bowl"></span>
-  <span class="icon icon-box"></span>
-  <span class="icon icon-briefcase"></span>
-  <span class="icon icon-browser"></span>
-  <span class="icon icon-brush"></span>
-  <span class="icon icon-bucket"></span>
-  <span class="icon icon-bug"></span>
-  <span class="icon icon-cake"></span>
-  <span class="icon icon-calculator"></span>
-  <span class="icon icon-calendar"></span>
-  <span class="icon icon-camera"></span>
-  <span class="icon icon-ccw"></span>
-  <span class="icon icon-cw"></span>
-  <span class="icon icon-chat"></span>
-  <span class="icon icon-check"></span>
-  <span class="icon icon-chevron-down"></span>
-  <span class="icon icon-chevron-left"></span>
-  <span class="icon icon-chevron-right"></span>
-  <span class="icon icon-chevron-up"></span>
-  <span class="icon icon-chevron-small-down"></span>
-  <span class="icon icon-chevron-small-left"></span>
-  <span class="icon icon-chevron-small-right"></span>
-  <span class="icon icon-chevron-small-up"></span>
-  <span class="icon icon-chevron-thin-down"></span>
-  <span class="icon icon-chevron-thin-left"></span>
-  <span class="icon icon-chevron-thin-right"></span>
-  <span class="icon icon-chevron-thin-up"></span>
-  <span class="icon icon-chevron-with-circle-down"></span>
-  <span class="icon icon-chevron-with-circle-left"></span>
-  <span class="icon icon-chevron-with-circle-right"></span>
-  <span class="icon icon-chevron-with-circle-up"></span>
-  <span class="icon icon-circle-with-cross"></span>
-  <span class="icon icon-circle-with-minus"></span>
-  <span class="icon icon-circle-with-plus"></span>
-  <span class="icon icon-circle"></span>
-  <span class="icon icon-circular-graph"></span>
-  <span class="icon icon-clapperboard"></span>
-  <span class="icon icon-classic-computer"></span>
-  <span class="icon icon-clipboard"></span>
-  <span class="icon icon-clock"></span>
-  <span class="icon icon-cloud"></span>
-  <span class="icon icon-code"></span>
-  <span class="icon icon-cog"></span>
-  <span class="icon icon-colours"></span>
-  <span class="icon icon-compass"></span>
-  <span class="icon icon-controller-fast-backward"></span>
-  <span class="icon icon-controller-fast-forward"></span>
-  <span class="icon icon-controller-jump-to-start"></span>
-  <span class="icon icon-controller-next"></span>
-  <span class="icon icon-controller-paus"></span>
-  <span class="icon icon-controller-play"></span>
-  <span class="icon icon-controller-record"></span>
-  <span class="icon icon-controller-stop"></span>
-  <span class="icon icon-controller-volume"></span>
-  <span class="icon icon-copy"></span>
-  <span class="icon icon-creative-commons"></span>
-  <span class="icon icon-creative-commons-attribution"></span>
-  <span class="icon icon-creative-commons-noderivs"></span>
-  <span class="icon icon-creative-commons-noncommercial-eu"></span>
-  <span class="icon icon-creative-commons-noncommercial-us"></span>
-  <span class="icon icon-creative-commons-public-domain"></span>
-  <span class="icon icon-creative-commons-remix"></span>
-  <span class="icon icon-creative-commons-share"></span>
-  <span class="icon icon-creative-commons-sharealike"></span>
-  <span class="icon icon-credit-card"></span>
-  <span class="icon icon-credit"></span>
-  <span class="icon icon-crop"></span>
-  <span class="icon icon-cross"></span>
-  <span class="icon icon-cup"></span>
-  <span class="icon icon-cycle"></span>
-  <span class="icon icon-database"></span>
-  <span class="icon icon-dial-pad"></span>
-  <span class="icon icon-direction"></span>
-  <span class="icon icon-document"></span>
-  <span class="icon icon-document-landscape"></span>
-  <span class="icon icon-documents"></span>
-  <span class="icon icon-dot-single"></span>
-  <span class="icon icon-dots-two-horizontal"></span>
-  <span class="icon icon-dots-three-horizontal"></span>
-  <span class="icon icon-dots-two-vertical"></span>
-  <span class="icon icon-dots-three-vertical"></span>
-  <span class="icon icon-download"></span>
-  <span class="icon icon-drink"></span>
-  <span class="icon icon-drive"></span>
-  <span class="icon icon-drop"></span>
-  <span class="icon icon-edit"></span>
-  <span class="icon icon-email"></span>
-  <span class="icon icon-emoji-flirt"></span>
-  <span class="icon icon-emoji-happy"></span>
-  <span class="icon icon-emoji-neutral"></span>
-  <span class="icon icon-emoji-sad"></span>
-  <span class="icon icon-erase"></span>
-  <span class="icon icon-eraser"></span>
-  <span class="icon icon-export"></span>
-  <span class="icon icon-eye"></span>
-  <span class="icon icon-eye-with-line"></span>
-  <span class="icon icon-feather"></span>
-  <span class="icon icon-fingerprint"></span>
-  <span class="icon icon-flag"></span>
-  <span class="icon icon-flash"></span>
-  <span class="icon icon-flashlight"></span>
-  <span class="icon icon-flat-brush"></span>
-  <span class="icon icon-flow-branch"></span>
-  <span class="icon icon-flow-cascade"></span>
-  <span class="icon icon-flow-line"></span>
-  <span class="icon icon-flow-parallel"></span>
-  <span class="icon icon-flow-tree"></span>
-  <span class="icon icon-flower"></span>
-  <span class="icon icon-folder"></span>
-  <span class="icon icon-folder-images"></span>
-  <span class="icon icon-folder-music"></span>
-  <span class="icon icon-folder-video"></span>
-  <span class="icon icon-forward"></span>
-  <span class="icon icon-funnel"></span>
-  <span class="icon icon-game-controller"></span>
-  <span class="icon icon-gauge"></span>
-  <span class="icon icon-globe"></span>
-  <span class="icon icon-graduation-cap"></span>
-  <span class="icon icon-grid"></span>
-  <span class="icon icon-hair-cross"></span>
-  <span class="icon icon-hand"></span>
-  <span class="icon icon-heart"></span>
-  <span class="icon icon-heart-outlined"></span>
-  <span class="icon icon-help"></span>
-  <span class="icon icon-help-with-circle"></span>
-  <span class="icon icon-home"></span>
-  <span class="icon icon-hour-glass"></span>
-  <span class="icon icon-image"></span>
-  <span class="icon icon-image-inverted"></span>
-  <span class="icon icon-images"></span>
-  <span class="icon icon-inbox"></span>
-  <span class="icon icon-infinity"></span>
-  <span class="icon icon-info"></span>
-  <span class="icon icon-info-with-circle"></span>
-  <span class="icon icon-install"></span>
-  <span class="icon icon-key"></span>
-  <span class="icon icon-keyboard"></span>
-  <span class="icon icon-lab-flask"></span>
-  <span class="icon icon-landline"></span>
-  <span class="icon icon-language"></span>
-  <span class="icon icon-laptop"></span>
-  <span class="icon icon-layers"></span>
-  <span class="icon icon-leaf"></span>
-  <span class="icon icon-level-down"></span>
-  <span class="icon icon-level-up"></span>
-  <span class="icon icon-lifebuoy"></span>
-  <span class="icon icon-light-bulb"></span>
-  <span class="icon icon-light-down"></span>
-  <span class="icon icon-light-up"></span>
-  <span class="icon icon-line-graph"></span>
-  <span class="icon icon-link"></span>
-  <span class="icon icon-list"></span>
-  <span class="icon icon-location-pin"></span>
-  <span class="icon icon-location"></span>
-  <span class="icon icon-lock"></span>
-  <span class="icon icon-lock-open"></span>
-  <span class="icon icon-login"></span>
-  <span class="icon icon-log-out"></span>
-  <span class="icon icon-loop"></span>
-  <span class="icon icon-magnet"></span>
-  <span class="icon icon-magnifying-glass"></span>
-  <span class="icon icon-mail"></span>
-  <span class="icon icon-man"></span>
-  <span class="icon icon-map"></span>
-  <span class="icon icon-mask"></span>
-  <span class="icon icon-medal"></span>
-  <span class="icon icon-megaphone"></span>
-  <span class="icon icon-menu"></span>
-  <span class="icon icon-merge"></span>
-  <span class="icon icon-message"></span>
-  <span class="icon icon-mic"></span>
-  <span class="icon icon-minus"></span>
-  <span class="icon icon-mobile"></span>
-  <span class="icon icon-modern-mic"></span>
-  <span class="icon icon-moon"></span>
-  <span class="icon icon-mouse-pointer"></span>
-  <span class="icon icon-mouse"></span>
-  <span class="icon icon-music"></span>
-  <span class="icon icon-network"></span>
-  <span class="icon icon-new-message"></span>
-  <span class="icon icon-new"></span>
-  <span class="icon icon-news"></span>
-  <span class="icon icon-newsletter"></span>
-  <span class="icon icon-note"></span>
-  <span class="icon icon-notification"></span>
-  <span class="icon icon-notifications-off"></span>
-  <span class="icon icon-old-mobile"></span>
-  <span class="icon icon-old-phone"></span>
-  <span class="icon icon-open-book"></span>
-  <span class="icon icon-palette"></span>
-  <span class="icon icon-paper-plane"></span>
-  <span class="icon icon-pencil"></span>
-  <span class="icon icon-phone"></span>
-  <span class="icon icon-pie-chart"></span>
-  <span class="icon icon-pin"></span>
-  <span class="icon icon-plus"></span>
-  <span class="icon icon-popup"></span>
-  <span class="icon icon-power-plug"></span>
-  <span class="icon icon-price-ribbon"></span>
-  <span class="icon icon-price-tag"></span>
-  <span class="icon icon-print"></span>
-  <span class="icon icon-progress-empty"></span>
-  <span class="icon icon-progress-one"></span>
-  <span class="icon icon-progress-two"></span>
-  <span class="icon icon-progress-full"></span>
-  <span class="icon icon-publish"></span>
-  <span class="icon icon-quote"></span>
-  <span class="icon icon-radio"></span>
-  <span class="icon icon-rainbow"></span>
-  <span class="icon icon-remove-user"></span>
-  <span class="icon icon-reply-all"></span>
-  <span class="icon icon-reply"></span>
-  <span class="icon icon-resize-100"></span>
-  <span class="icon icon-resize-full-screen"></span>
-  <span class="icon icon-retweet"></span>
-  <span class="icon icon-rocket"></span>
-  <span class="icon icon-round-brush"></span>
-  <span class="icon icon-rss"></span>
-  <span class="icon icon-ruler"></span>
-  <span class="icon icon-save"></span>
-  <span class="icon icon-scissors"></span>
-  <span class="icon icon-select-arrows"></span>
-  <span class="icon icon-share-alternative"></span>
-  <span class="icon icon-share"></span>
-  <span class="icon icon-shareable"></span>
-  <span class="icon icon-shield"></span>
-  <span class="icon icon-shop"></span>
-  <span class="icon icon-shopping-bag"></span>
-  <span class="icon icon-shopping-basket"></span>
-  <span class="icon icon-shopping-cart"></span>
-  <span class="icon icon-shuffle"></span>
-  <span class="icon icon-signal"></span>
-  <span class="icon icon-sound-mix"></span>
-  <span class="icon icon-sound"></span>
-  <span class="icon icon-sound-mute"></span>
-  <span class="icon icon-sports-club"></span>
-  <span class="icon icon-spreadsheet"></span>
-  <span class="icon icon-squared-cross"></span>
-  <span class="icon icon-squared-minus"></span>
-  <span class="icon icon-squared-plus"></span>
-  <span class="icon icon-star"></span>
-  <span class="icon icon-star-outlined"></span>
-  <span class="icon icon-stopwatch"></span>
-  <span class="icon icon-suitcase"></span>
-  <span class="icon icon-swap"></span>
-  <span class="icon icon-sweden"></span>
-  <span class="icon icon-switch"></span>
-  <span class="icon icon-tablet"></span>
-  <span class="icon icon-tablet-mobile-combo"></span>
-  <span class="icon icon-tag"></span>
-  <span class="icon icon-untag"></span>
-  <span class="icon icon-text-document"></span>
-  <span class="icon icon-text-document-inverted"></span>
-  <span class="icon icon-text"></span>
-  <span class="icon icon-thermometer"></span>
-  <span class="icon icon-thumbs-up"></span>
-  <span class="icon icon-thumbs-down"></span>
-  <span class="icon icon-thunder-cloud"></span>
-  <span class="icon icon-ticket"></span>
-  <span class="icon icon-time-slot"></span>
-  <span class="icon icon-tools"></span>
-  <span class="icon icon-traffic-cone"></span>
-  <span class="icon icon-trash"></span>
-  <span class="icon icon-tree"></span>
-  <span class="icon icon-triangle-down"></span>
-  <span class="icon icon-triangle-left"></span>
-  <span class="icon icon-triangle-right"></span>
-  <span class="icon icon-triangle-up"></span>
-  <span class="icon icon-trophy"></span>
-  <span class="icon icon-tv"></span>
-  <span class="icon icon-typing"></span>
-  <span class="icon icon-uninstall"></span>
-  <span class="icon icon-unread"></span>
-  <span class="icon icon-upload-to-cloud"></span>
-  <span class="icon icon-upload"></span>
-  <span class="icon icon-user"></span>
-  <span class="icon icon-users"></span>
-  <span class="icon icon-v-card"></span>
-  <span class="icon icon-video-camera"></span>
-  <span class="icon icon-video"></span>
-  <span class="icon icon-vinyl"></span>
-  <span class="icon icon-voicemail"></span>
-  <span class="icon icon-wallet"></span>
-  <span class="icon icon-warning"></span>
-  <span class="icon icon-water"></span>
-</div>
-
-<div class="docs-icons">
-  <span class="icon icon-500px"></span>
-  <span class="icon icon-500px-with-circle"></span>
-  <span class="icon icon-app-store"></span>
-  <span class="icon icon-baidu"></span>
-  <span class="icon icon-basecamp"></span>
-  <span class="icon icon-behance"></span>
-  <span class="icon icon-creative-cloud"></span>
-  <span class="icon icon-dribbble"></span>
-  <span class="icon icon-dribbble-with-circle"></span>
-  <span class="icon icon-dropbox"></span>
-  <span class="icon icon-evernote"></span>
-  <span class="icon icon-facebook"></span>
-  <span class="icon icon-facebook-with-circle"></span>
-  <span class="icon icon-flattr"></span>
-  <span class="icon icon-flickr"></span>
-  <span class="icon icon-flickr-with-circle"></span>
-  <span class="icon icon-foursquare"></span>
-  <span class="icon icon-github"></span>
-  <span class="icon icon-github-with-circle"></span>
-  <span class="icon icon-google-drive"></span>
-  <span class="icon icon-google-hangouts"></span>
-  <span class="icon icon-google-play"></span>
-  <span class="icon icon-google-plus"></span>
-  <span class="icon icon-google-plus-with-circle"></span>
-  <span class="icon icon-grooveshark"></span>
-  <span class="icon icon-houzz"></span>
-  <span class="icon icon-icloud"></span>
-  <span class="icon icon-instagram"></span>
-  <span class="icon icon-instagram-with-circle"></span>
-  <span class="icon icon-lastfm"></span>
-  <span class="icon icon-lastfm-with-circle"></span>
-  <span class="icon icon-linkedin"></span>
-  <span class="icon icon-linkedin-with-circle"></span>
-  <span class="icon icon-mail-with-circle"></span>
-  <span class="icon icon-medium"></span>
-  <span class="icon icon-medium-with-circle"></span>
-  <span class="icon icon-mixi"></span>
-  <span class="icon icon-onedrive"></span>
-  <span class="icon icon-paypal"></span>
-  <span class="icon icon-picasa"></span>
-  <span class="icon icon-pinterest"></span>
-  <span class="icon icon-pinterest-with-circle"></span>
-  <span class="icon icon-qq"></span>
-  <span class="icon icon-qq-with-circle"></span>
-  <span class="icon icon-raft"></span>
-  <span class="icon icon-raft-with-circle"></span>
-  <span class="icon icon-rdio"></span>
-  <span class="icon icon-rdio-with-circle"></span>
-  <span class="icon icon-renren"></span>
-  <span class="icon icon-scribd"></span>
-  <span class="icon icon-sina-weibo"></span>
-  <span class="icon icon-skype"></span>
-  <span class="icon icon-skype-with-circle"></span>
-  <span class="icon icon-slideshare"></span>
-  <span class="icon icon-smashing"></span>
-  <span class="icon icon-soundcloud"></span>
-  <span class="icon icon-spotify"></span>
-  <span class="icon icon-spotify-with-circle"></span>
-  <span class="icon icon-stumbleupon"></span>
-  <span class="icon icon-stumbleupon-with-circle"></span>
-  <span class="icon icon-swarm"></span>
-  <span class="icon icon-tripadvisor"></span>
-  <span class="icon icon-tumblr"></span>
-  <span class="icon icon-tumblr-with-circle"></span>
-  <span class="icon icon-twitter"></span>
-  <span class="icon icon-twitter-with-circle"></span>
-  <span class="icon icon-vimeo"></span>
-  <span class="icon icon-vimeo-with-circle"></span>
-  <span class="icon icon-vine"></span>
-  <span class="icon icon-vine-with-circle"></span>
-  <span class="icon icon-vk"></span>
-  <span class="icon icon-vk-with-circle"></span>
-  <span class="icon icon-vk-alternitive"></span>
-  <span class="icon icon-windows-store"></span>
-  <span class="icon icon-xing"></span>
-  <span class="icon icon-xing-with-circle"></span>
-  <span class="icon icon-yelp"></span>
-  <span class="icon icon-youko"></span>
-  <span class="icon icon-youko-with-circle"></span>
-  <span class="icon icon-youtube"></span>
-  <span class="icon icon-youtube-with-circle"></span>
-</div>
-
-<h3 id="examples">Examples</h3>
-
-<p>Entypo icons can be placed in just about any other element, so long as they are a separate HTML element (e.g., a <code class="highlighter-rouge">&lt;span&gt;</code>). See the examples below for how to put them to use.</p>
-
-<div class="docs-example" data-example-id="">
-<button class="btn btn-secondary" type="button">
-  <span class="icon icon-thumbs-up"></span>
-  Like
-</button>
-<button class="btn btn-primary" type="button">
-  <span class="icon icon-thumbs-up"></span>
-  Liked!
-</button>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-thumbs-up"</span><span class="nt">&gt;&lt;/span&gt;</span>
-  Like
-<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-thumbs-up"</span><span class="nt">&gt;&lt;/span&gt;</span>
-  Liked!
-<span class="nt">&lt;/button&gt;</span></code></pre></div>
-
-<div class="docs-example" data-example-id="">
-<ul class="nav nav-pills">
-  <li class="nav-item active">
-    <a class="nav-link" href="#">
-      <span class="icon icon-chat"></span>
-      Discussions
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">
-      <span class="icon icon-bell"></span>
-      Notifications
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">
-      <span class="icon icon-users"></span>
-      Members
-    </a>
-  </li>
-</ul>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-pills"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item active"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-chat"</span><span class="nt">&gt;&lt;/span&gt;</span>
-      Discussions
-    <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-bell"</span><span class="nt">&gt;&lt;/span&gt;</span>
-      Notifications
-    <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-users"</span><span class="nt">&gt;&lt;/span&gt;</span>
-      Members
-    <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span></code></pre></div>
-
-<h2 id="pill-buttons">Pill buttons</h2>
-
-<p>Add <code class="highlighter-rouge">.btn-pill</code> to any button to make them more rounded.</p>
-
-<div class="docs-example" data-example-id="">
-<button type="button" class="btn btn-lg btn-pill btn-primary">Primary</button>
-<button type="button" class="btn btn-lg btn-pill btn-secondary">Secondary</button>
-<button type="button" class="btn btn-lg btn-pill btn-success">Success</button>
-<button type="button" class="btn btn-lg btn-pill btn-info">Info</button>
-<button type="button" class="btn btn-lg btn-pill btn-warning">Warning</button>
-<button type="button" class="btn btn-lg btn-pill btn-danger">Danger</button>
-<button type="button" class="btn btn-lg btn-pill btn-link">Link</button>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-pill btn-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-pill btn-secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-pill btn-success"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-pill btn-info"</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-pill btn-warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-pill btn-danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-pill btn-link"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span></code></pre></div>
-
-<div class="docs-example" data-example-id="">
-<button type="button" class="btn btn-pill btn-primary">Primary</button>
-<button type="button" class="btn btn-pill btn-secondary">Secondary</button>
-<button type="button" class="btn btn-pill btn-success">Success</button>
-<button type="button" class="btn btn-pill btn-info">Info</button>
-<button type="button" class="btn btn-pill btn-warning">Warning</button>
-<button type="button" class="btn btn-pill btn-danger">Danger</button>
-<button type="button" class="btn btn-pill btn-link">Link</button>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-pill btn-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-pill btn-secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-pill btn-success"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-pill btn-info"</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-pill btn-warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-pill btn-danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-pill btn-link"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span></code></pre></div>
-
-<div class="docs-example" data-example-id="">
-<button type="button" class="btn btn-sm btn-pill btn-primary">Primary</button>
-<button type="button" class="btn btn-sm btn-pill btn-secondary">Secondary</button>
-<button type="button" class="btn btn-sm btn-pill btn-success">Success</button>
-<button type="button" class="btn btn-sm btn-pill btn-info">Info</button>
-<button type="button" class="btn btn-sm btn-pill btn-warning">Warning</button>
-<button type="button" class="btn btn-sm btn-pill btn-danger">Danger</button>
-<button type="button" class="btn btn-sm btn-pill btn-link">Link</button>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-pill btn-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-pill btn-secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-pill btn-success"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-pill btn-info"</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-pill btn-warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-pill btn-danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-pill btn-link"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span></code></pre></div>
-
-<div class="docs-example" data-example-id="">
-<button type="button" class="btn btn-xs btn-pill btn-primary">Primary</button>
-<button type="button" class="btn btn-xs btn-pill btn-secondary">Default</button>
-<button type="button" class="btn btn-xs btn-pill btn-success">Success</button>
-<button type="button" class="btn btn-xs btn-pill btn-info">Info</button>
-<button type="button" class="btn btn-xs btn-pill btn-warning">Warning</button>
-<button type="button" class="btn btn-xs btn-pill btn-danger">Danger</button>
-<button type="button" class="btn btn-xs btn-pill btn-link">Link</button>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-xs btn-pill btn-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-xs btn-pill btn-secondary"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-xs btn-pill btn-success"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-xs btn-pill btn-info"</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-xs btn-pill btn-warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-xs btn-pill btn-danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-xs btn-pill btn-link"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span></code></pre></div>
-
-<h2 id="flex-table">Flex table</h2>
-
-<p>Use the flex table classes when you need to keep related elements on the same row, but with flexible individual widths.</p>
-
-<div class="docs-example" data-example-id="">
-<div class="flextable">
-  <div class="flextable-item flextable-primary">
-    <input type="text" class="form-control" placeholder="Search orders" />
-  </div>
-  <div class="flextable-item">
-    <div class="btn-group">
-      <button type="button" class="btn btn-outline-primary">
-        <span class="icon icon-pencil"></span>
-      </button>
-      <button type="button" class="btn btn-outline-primary">
-        <span class="icon icon-erase"></span>
-      </button>
-    </div>
-  </div>
-</div>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flextable"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flextable-item flextable-primary"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Search orders"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flextable-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-pencil"</span><span class="nt">&gt;&lt;/span&gt;</span>
-      <span class="nt">&lt;/button&gt;</span>
-      <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-erase"</span><span class="nt">&gt;&lt;/span&gt;</span>
-      <span class="nt">&lt;/button&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-<h2 id="stat-cards">Stat cards</h2>
-
-<p>Use stat cards to easily display large numbers, great for any kind of simple metrics and dashboard content.</p>
-
-<div class="docs-example" data-example-id="">
-<div class="statcard p-3">
-  <h3 class="statcard-number">12,938</h3>
-  <span class="statcard-desc">Page views</span>
-</div>
-<div class="statcard p-3 text-xs-center">
-  <h3 class="statcard-number">758</h3>
-  <span class="statcard-desc">Downloads</span>
-</div>
-<div class="statcard p-3 text-xs-right">
-  <h3 class="statcard-number">1,293</h3>
-  <span class="statcard-desc">Sign-ups</span>
-</div>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"statcard p-3"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"statcard-number"</span><span class="nt">&gt;</span>12,938<span class="nt">&lt;/h3&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"statcard-desc"</span><span class="nt">&gt;</span>Page views<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"statcard p-3 text-xs-center"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"statcard-number"</span><span class="nt">&gt;</span>758<span class="nt">&lt;/h3&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"statcard-desc"</span><span class="nt">&gt;</span>Downloads<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"statcard p-3 text-xs-right"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"statcard-number"</span><span class="nt">&gt;</span>1,293<span class="nt">&lt;/h3&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"statcard-desc"</span><span class="nt">&gt;</span>Sign-ups<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-<p>With optional carets:</p>
-
-<div class="docs-example" data-example-id="">
-<div class="statcard p-3">
-  <h3 class="statcard-number">
-    12,938
-    <small class="delta-indicator delta-positive">5%</small>
-  </h3>
-  <span class="statcard-desc">Page views</span>
-</div>
-<div class="statcard p-3">
-  <h3 class="statcard-number">
-    758
-    <small class="delta-indicator delta-negative">1.3%</small>
-  </h3>
-  <span class="statcard-desc">Downloads</span>
-</div>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"statcard p-3"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"statcard-number"</span><span class="nt">&gt;</span>
-    12,938
-    <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"delta-indicator delta-positive"</span><span class="nt">&gt;</span>5%<span class="nt">&lt;/small&gt;</span>
-  <span class="nt">&lt;/h3&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"statcard-desc"</span><span class="nt">&gt;</span>Page views<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"statcard p-3"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"statcard-number"</span><span class="nt">&gt;</span>
-    758
-    <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"delta-indicator delta-negative"</span><span class="nt">&gt;</span>1.3%<span class="nt">&lt;/small&gt;</span>
-  <span class="nt">&lt;/h3&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"statcard-desc"</span><span class="nt">&gt;</span>Downloads<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-<p>With background variations:</p>
-
-<div class="docs-example" data-example-id="">
-<div class="statcard statcard-primary p-4 mb-2">
-  <h3 class="statcard-number">
-    12,938
-    <small class="delta-indicator delta-positive">5%</small>
-  </h3>
-  <span class="statcard-desc">Page views</span>
-</div>
-<div class="statcard statcard-success p-4 mb-2">
-  <h3 class="statcard-number">
-    758
-    <small class="delta-indicator delta-negative">1.3%</small>
-  </h3>
-  <span class="statcard-desc">Downloads</span>
-</div>
-<div class="statcard statcard-info p-4 mb-2">
-  <h3 class="statcard-number">
-    758
-    <small class="delta-indicator delta-negative">1.3%</small>
-  </h3>
-  <span class="statcard-desc">Downloads</span>
-</div>
-<div class="statcard statcard-danger p-4 mb-2">
-  <h3 class="statcard-number">
-    1,293
-    <small class="delta-indicator delta-positive">6.75%</small>
-  </h3>
-  <span class="statcard-desc">Sign-ups</span>
-</div>
-<div class="statcard statcard-warning p-4 mb-2">
-  <h3 class="statcard-number">
-    1,293
-    <small class="delta-indicator delta-positive">6.75%</small>
-  </h3>
-  <span class="statcard-desc">Sign-ups</span>
-</div>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"statcard statcard-primary p-4 mb-2"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"statcard-number"</span><span class="nt">&gt;</span>
-    12,938
-    <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"delta-indicator delta-positive"</span><span class="nt">&gt;</span>5%<span class="nt">&lt;/small&gt;</span>
-  <span class="nt">&lt;/h3&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"statcard-desc"</span><span class="nt">&gt;</span>Page views<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"statcard statcard-success p-4 mb-2"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"statcard-number"</span><span class="nt">&gt;</span>
-    758
-    <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"delta-indicator delta-negative"</span><span class="nt">&gt;</span>1.3%<span class="nt">&lt;/small&gt;</span>
-  <span class="nt">&lt;/h3&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"statcard-desc"</span><span class="nt">&gt;</span>Downloads<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"statcard statcard-info p-4 mb-2"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"statcard-number"</span><span class="nt">&gt;</span>
-    758
-    <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"delta-indicator delta-negative"</span><span class="nt">&gt;</span>1.3%<span class="nt">&lt;/small&gt;</span>
-  <span class="nt">&lt;/h3&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"statcard-desc"</span><span class="nt">&gt;</span>Downloads<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"statcard statcard-danger p-4 mb-2"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"statcard-number"</span><span class="nt">&gt;</span>
-    1,293
-    <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"delta-indicator delta-positive"</span><span class="nt">&gt;</span>6.75%<span class="nt">&lt;/small&gt;</span>
-  <span class="nt">&lt;/h3&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"statcard-desc"</span><span class="nt">&gt;</span>Sign-ups<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"statcard statcard-warning p-4 mb-2"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"statcard-number"</span><span class="nt">&gt;</span>
-    1,293
-    <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"delta-indicator delta-positive"</span><span class="nt">&gt;</span>6.75%<span class="nt">&lt;/small&gt;</span>
-  <span class="nt">&lt;/h3&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"statcard-desc"</span><span class="nt">&gt;</span>Sign-ups<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-<p>And use the grid system to size and align them:</p>
-
-<div class="docs-example" data-example-id="">
-<div class="row">
-  <div class="col-sm-6">
-    <div class="statcard statcard-primary p-4">
-      <h3 class="statcard-number">
-        12,938
-        <small class="delta-indicator delta-positive">5%</small>
-      </h3>
-      <span class="statcard-desc">Page views</span>
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="statcard statcard-success p-4">
-      <h3 class="statcard-number">
-        758
-        <small class="delta-indicator delta-negative">1.3%</small>
-      </h3>
-      <span class="statcard-desc">Downloads</span>
-    </div>
-  </div>
-</div>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-6"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"statcard statcard-primary p-4"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"statcard-number"</span><span class="nt">&gt;</span>
-        12,938
-        <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"delta-indicator delta-positive"</span><span class="nt">&gt;</span>5%<span class="nt">&lt;/small&gt;</span>
-      <span class="nt">&lt;/h3&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"statcard-desc"</span><span class="nt">&gt;</span>Page views<span class="nt">&lt;/span&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-6"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"statcard statcard-success p-4"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"statcard-number"</span><span class="nt">&gt;</span>
-        758
-        <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"delta-indicator delta-negative"</span><span class="nt">&gt;</span>1.3%<span class="nt">&lt;/small&gt;</span>
-      <span class="nt">&lt;/h3&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"statcard-desc"</span><span class="nt">&gt;</span>Downloads<span class="nt">&lt;/span&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-<h2 id="divided-heading">Divided heading</h2>
-
-<p>Use a divided heading to call special attention to a separation of content in your pages.</p>
-
-<div class="docs-example" data-example-id="">
-<div class="hr-divider">
-  <h3 class="hr-divider-content hr-divider-heading">
-    Divider heading
-  </h3>
-</div>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hr-divider"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"hr-divider-content hr-divider-heading"</span><span class="nt">&gt;</span>
-    Divider heading
-  <span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-<p>You can also use it with pill navigation:</p>
-
-<div class="docs-example" data-example-id="">
-<div class="hr-divider">
-  <ul class="nav nav-pills hr-divider-content hr-divider-nav">
-    <li class="nav-item">
-      <a class="nav-link active" href="#">Active tab</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Tab</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Tab</a>
-    </li>
-  </ul>
-</div>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hr-divider"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-pills hr-divider-content hr-divider-nav"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Active tab<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Tab<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Tab<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;/ul&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-<h2 id="icon-input">Icon input</h2>
-
-<p>Easily overlay an icon on an input.</p>
-
-<div class="docs-example" data-example-id="">
-<div class="input-with-icon">
-  <input type="text" value="Example input" class="form-control" />
-  <span class="icon icon-calendar"></span>
-</div>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-with-icon"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">value=</span><span class="s">"Example input"</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-calendar"</span><span class="nt">&gt;&lt;/span&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-<h2 id="nav-bordered">Nav bordered</h2>
-
-<p>The bordered nav builds on Bootstrap’s <code class="highlighter-rouge">.nav</code> base styles with a new, bolder variation to nav links.</p>
-
-<div class="docs-example" data-example-id="">
-<ul class="nav nav-bordered">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Bold</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Minimal</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Components</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Docs</a>
-  </li>
-</ul>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-bordered"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Bold<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Minimal<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Components<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Docs<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span></code></pre></div>
-
-<p>Bordered nav links can also be stacked:</p>
-
-<div class="docs-example" data-example-id="">
-<ul class="nav nav-bordered nav-stacked flex-md-column">
-  <li class="nav-header">Examples</li>
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Bold</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Minimal</a>
-  </li>
-
-  <li class="nav-header">Sections</li>
-
-  <li class="nav-item">
-    <a class="nav-link" href="#">Grid</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Pricing</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">About</a>
-  </li>
-</ul>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-bordered nav-stacked flex-md-column"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-header"</span><span class="nt">&gt;</span>Examples<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Bold<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Minimal<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/li&gt;</span>
-
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-header"</span><span class="nt">&gt;</span>Sections<span class="nt">&lt;/li&gt;</span>
-
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Grid<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Pricing<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span></code></pre></div>
-
-<h2 id="icon-nav">Icon nav</h2>
-
-<p>The icon nav is a special sidebar navigation for this toolkit. In mobile viewports, the icon nav is horizontal with icons and textual labels. On larger devices the icon nav changes and becomes affixed to the side of the viewport with tooltips instead of textual labels.</p>
-
-<div class="docs-example" data-example-id="">
-<nav class="iconav">
-    <a class="iconav-brand" href="#">
-      <span class="icon icon-leaf iconav-brand-icon"></span>
-    </a>
-    <div class="iconav-slider">
-      <ul class="nav nav-pills iconav-nav flex-md-column">
-        <li class="nav-item">
-          <a class="nav-link" href="#" title="Overview" data-toggle="tooltip" data-placement="right" data-container="body">
-            <span class="icon icon-home"></span>
-            <small class="iconav-nav-label hidden-md-up">Overview</small>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" title="Order history" data-toggle="tooltip" data-placement="right" data-container="body">
-            <span class="icon icon-text-document"></span>
-            <small class="iconav-nav-label hidden-md-up">History</small>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" title="Fluid layout" data-toggle="tooltip" data-placement="right" data-container="body">
-            <span class="icon icon-globe"></span>
-            <small class="iconav-nav-label hidden-md-up">Fluid layout</small>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" title="Icon-nav layout" data-toggle="tooltip" data-placement="right" data-container="body">
-            <span class="icon icon-area-graph"></span>
-            <small class="iconav-nav-label hidden-md-up">Icon nav</small>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#" title="Docs" data-toggle="tooltip" data-placement="right" data-container="body">
-            <span class="icon icon-list"></span>
-            <small class="iconav-nav-label hidden-md-up">Docs</small>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" title="Light UI" data-toggle="tooltip" data-placement="right" data-container="body">
-            <span class="icon icon-flash"></span>
-            <small class="iconav-nav-label hidden-md-up">Light UI</small>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" title="Signed in as mdo" data-toggle="tooltip" data-placement="right" data-container="body">
-            <img src="../assets/img/avatar-mdo.png" alt="" class="img-circle img-responsive" />
-            <small class="iconav-nav-label hidden-md-up">@mdo</small>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"iconav"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"iconav-brand"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-leaf iconav-brand-icon"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"iconav-slider"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-pills iconav-nav flex-md-column"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">title=</span><span class="s">"Overview"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-placement=</span><span class="s">"right"</span> <span class="na">data-container=</span><span class="s">"body"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-home"</span><span class="nt">&gt;&lt;/span&gt;</span>
-            <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"iconav-nav-label hidden-md-up"</span><span class="nt">&gt;</span>Overview<span class="nt">&lt;/small&gt;</span>
-          <span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">title=</span><span class="s">"Order history"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-placement=</span><span class="s">"right"</span> <span class="na">data-container=</span><span class="s">"body"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-text-document"</span><span class="nt">&gt;&lt;/span&gt;</span>
-            <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"iconav-nav-label hidden-md-up"</span><span class="nt">&gt;</span>History<span class="nt">&lt;/small&gt;</span>
-          <span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">title=</span><span class="s">"Fluid layout"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-placement=</span><span class="s">"right"</span> <span class="na">data-container=</span><span class="s">"body"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-globe"</span><span class="nt">&gt;&lt;/span&gt;</span>
-            <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"iconav-nav-label hidden-md-up"</span><span class="nt">&gt;</span>Fluid layout<span class="nt">&lt;/small&gt;</span>
-          <span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">title=</span><span class="s">"Icon-nav layout"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-placement=</span><span class="s">"right"</span> <span class="na">data-container=</span><span class="s">"body"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-area-graph"</span><span class="nt">&gt;&lt;/span&gt;</span>
-            <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"iconav-nav-label hidden-md-up"</span><span class="nt">&gt;</span>Icon nav<span class="nt">&lt;/small&gt;</span>
-          <span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">title=</span><span class="s">"Docs"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-placement=</span><span class="s">"right"</span> <span class="na">data-container=</span><span class="s">"body"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-list"</span><span class="nt">&gt;&lt;/span&gt;</span>
-            <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"iconav-nav-label hidden-md-up"</span><span class="nt">&gt;</span>Docs<span class="nt">&lt;/small&gt;</span>
-          <span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">title=</span><span class="s">"Light UI"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-placement=</span><span class="s">"right"</span> <span class="na">data-container=</span><span class="s">"body"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-flash"</span><span class="nt">&gt;&lt;/span&gt;</span>
-            <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"iconav-nav-label hidden-md-up"</span><span class="nt">&gt;</span>Light UI<span class="nt">&lt;/small&gt;</span>
-          <span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">title=</span><span class="s">"Signed in as mdo"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-placement=</span><span class="s">"right"</span> <span class="na">data-container=</span><span class="s">"body"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"../assets/img/avatar-mdo.png"</span> <span class="na">alt=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"img-circle img-responsive"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"iconav-nav-label hidden-md-up"</span><span class="nt">&gt;</span>@mdo<span class="nt">&lt;/small&gt;</span>
-          <span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-      <span class="nt">&lt;/ul&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/nav&gt;</span></code></pre></div>
-
-<h2 id="dashhead">Dashhead</h2>
-
-<p>The dashhead is a custom component built to house all the textual headings, form controls, buttons, and more that are common for the top of dashboard page.</p>
-
-<div class="docs-example" data-example-id="">
-<div class="dashhead">
-  <div class="dashhead-titles">
-    <h6 class="dashhead-subtitle">Dashboards</h6>
-    <h3 class="dashhead-title">Overview</h3>
-  </div>
-
-  <div class="dashhead-toolbar">
-    <div class="input-with-icon dashhead-toolbar-item">
-      <input type="text" value="01/01/15 - 01/08/15" class="form-control" data-provide="datepicker" />
-      <span class="icon icon-calendar"></span>
-    </div>
-    <span class="dashhead-toolbar-divider hidden-xs"></span>
-    <div class="btn-group dashhead-toolbar-item btn-group-thirds">
-      <button type="button" class="btn btn-outline-primary">Day</button>
-      <button type="button" class="btn btn-outline-primary active">Week</button>
-      <button type="button" class="btn btn-outline-primary">Month</button>
-    </div>
-  </div>
-</div>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dashhead"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dashhead-titles"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h6</span> <span class="na">class=</span><span class="s">"dashhead-subtitle"</span><span class="nt">&gt;</span>Dashboards<span class="nt">&lt;/h6&gt;</span>
-    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"dashhead-title"</span><span class="nt">&gt;</span>Overview<span class="nt">&lt;/h3&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dashhead-toolbar"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-with-icon dashhead-toolbar-item"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">value=</span><span class="s">"01/01/15 - 01/08/15"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">data-provide=</span><span class="s">"datepicker"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-calendar"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"dashhead-toolbar-divider hidden-xs"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group dashhead-toolbar-item btn-group-thirds"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary"</span><span class="nt">&gt;</span>Day<span class="nt">&lt;/button&gt;</span>
-      <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary active"</span><span class="nt">&gt;</span>Week<span class="nt">&lt;/button&gt;</span>
-      <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary"</span><span class="nt">&gt;</span>Month<span class="nt">&lt;/button&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-<h2 id="list-group">List group</h2>
-
-<p>Bootstrap’s default list group component is extended with a few additional features.</p>
-
-<h3 id="list-group-header">List group header</h3>
-
-<p>New to the theme is a header for list groups, similar to panels. use it for standalone lists as needed. This should not be used with panels.</p>
-
-<div class="docs-example" data-example-id="">
-<ul class="list-group">
-  <li class="list-group-header">List group header</li>
-  <li class="list-group-item">Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
-</ul>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-group"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-header"</span><span class="nt">&gt;</span>List group header<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>Cras justo odio<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>Dapibus ac facilisis in<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>Morbi leo risus<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>Porta ac consectetur ac<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>Vestibulum at eros<span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span></code></pre></div>
-
-<h3 id="list-group-progress">List group progress</h3>
-
-<p>Similar to stat lists, add a background progress indicator to any list group item.</p>
-
-<div class="docs-example" data-example-id="">
-<ul class="list-group">
-  <li class="list-group-item">
-    Cras justo odio
-    <span class="list-group-progress" style="width: 75%;"></span>
-  </li>
-  <li class="list-group-item">
-    Porta ac consectetur ac
-    <span class="list-group-progress" style="width: 50%;"></span>
-  </li>
-  <li class="list-group-item">
-    Vestibulum at eros
-    <span class="list-group-progress" style="width: 25%;"></span>
-  </li>
-</ul>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-group"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>
-    Cras justo odio
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-group-progress"</span> <span class="na">style=</span><span class="s">"width: 75%;"</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>
-    Porta ac consectetur ac
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-group-progress"</span> <span class="na">style=</span><span class="s">"width: 50%;"</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>
-    Vestibulum at eros
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-group-progress"</span> <span class="na">style=</span><span class="s">"width: 25%;"</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span></code></pre></div>
-
-<h2 id="custom-modals">Custom Modals</h2>
-
-<p>Support for multiple, stackable modal bodies and scrolling bodies using the new <code class="highlighter-rouge">.modal-body-scroller</code> modifier.</p>
-
-<div class="docs-example" data-example-id="">
-<div class="modal">
-  <div class="modal-dialog modal-md">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Medium Modal</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      </div>
-      <div class="modal-body modal-body-scroller">
-        <p>Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-
-        <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-
-        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui.</p>
-
-        <p>Sed posuere consectetur est at lobortis. Maecenas faucibus mollis interdum. Donec sed odio dui. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-
-        <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-
-        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-
-        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-
-        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.</p>
+    <div class="container">
+      <div class="page-header" id="banner">
+        <div class="row">
+          <div class="col-lg-8 col-md-7 col-sm-6">
+            <h1>Generic Bootstrap Theme</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-4">
+            <div class="list-group table-of-contents">
+              <a class="list-group-item" href="#navbar">Navbar</a>
+              <a class="list-group-item" href="#buttons">Buttons</a>
+              <a class="list-group-item" href="#typography">Typography</a>
+              <a class="list-group-item" href="#tables">Tables</a>
+              <a class="list-group-item" href="#forms">Forms</a>
+              <a class="list-group-item" href="#navs">Navs</a>
+              <a class="list-group-item" href="#indicators">Indicators</a>
+              <a class="list-group-item" href="#progress-bars">Progress bars</a>
+              <a class="list-group-item" href="#containers">Containers</a>
+              <a class="list-group-item" href="#dialogs">Dialogs</a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="modal-body">
-        <input type="text" class="form-control" placeholder="Message" />
+      <!-- Navbar
+      ================================================== -->
+      <div class="bs-docs-section clearfix">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="navbar">Navbar</h1>
+            </div>
+
+            <div class="bs-component">
+              <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"></a>
+                  </div>
+
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                      <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                      <li><a href="#">Link</a></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">One more separated link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <form class="navbar-form navbar-left" role="search">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                      </div>
+                      <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                      <li><a href="#">Link</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+
+            <div class="bs-component">
+              <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"></a>
+                  </div>
+
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                    <ul class="nav navbar-nav">
+                      <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                      <li><a href="#">Link</a></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">One more separated link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <form class="navbar-form navbar-left" role="search">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                      </div>
+                      <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                      <li><a href="#">Link</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div><!-- /example -->
+
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-md"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>Medium Modal<span class="nt">&lt;/h4&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;&lt;/button&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body modal-body-scroller"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;p&gt;</span>Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.<span class="nt">&lt;/p&gt;</span>
 
-        <span class="nt">&lt;p&gt;</span>Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod. Nullam quis risus eget urna mollis ornare vel eu leo.<span class="nt">&lt;/p&gt;</span>
 
-        <span class="nt">&lt;p&gt;</span>Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui.<span class="nt">&lt;/p&gt;</span>
+      <!-- Buttons
+      ================================================== -->
+      <div class="bs-docs-section">
+        <div class="page-header">
+          <div class="row">
+            <div class="col-lg-12">
+              <h1 id="buttons">Buttons</h1>
+            </div>
+          </div>
+        </div>
 
-        <span class="nt">&lt;p&gt;</span>Sed posuere consectetur est at lobortis. Maecenas faucibus mollis interdum. Donec sed odio dui. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.<span class="nt">&lt;/p&gt;</span>
+        <div class="row">
+          <div class="col-lg-7">
 
-        <span class="nt">&lt;p&gt;</span>Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.<span class="nt">&lt;/p&gt;</span>
+            <p class="bs-component">
+              <a href="#" class="btn btn-default">Default</a>
+              <a href="#" class="btn btn-primary">Primary</a>
+              <a href="#" class="btn btn-success">Success</a>
+              <a href="#" class="btn btn-info">Info</a>
+              <a href="#" class="btn btn-warning">Warning</a>
+              <a href="#" class="btn btn-danger">Danger</a>
+              <a href="#" class="btn btn-link">Link</a>
+            </p>
 
-        <span class="nt">&lt;p&gt;</span>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo.<span class="nt">&lt;/p&gt;</span>
+            <p class="bs-component">
+              <a href="#" class="btn btn-default disabled">Default</a>
+              <a href="#" class="btn btn-primary disabled">Primary</a>
+              <a href="#" class="btn btn-success disabled">Success</a>
+              <a href="#" class="btn btn-info disabled">Info</a>
+              <a href="#" class="btn btn-warning disabled">Warning</a>
+              <a href="#" class="btn btn-danger disabled">Danger</a>
+              <a href="#" class="btn btn-link disabled">Link</a>
+            </p>
 
-        <span class="nt">&lt;p&gt;</span>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna mollis ornare vel eu leo.<span class="nt">&lt;/p&gt;</span>
 
-        <span class="nt">&lt;p&gt;</span>Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
+            <div style="margin-bottom: 15px;">
+              <div class="btn-toolbar bs-component" style="margin: 0;">
+                <div class="btn-group">
+                  <a href="#" class="btn btn-default">Default</a>
+                  <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
 
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">placeholder=</span><span class="s">"Message"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+                <div class="btn-group">
+                  <a href="#" class="btn btn-primary">Primary</a>
+                  <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
 
-<p>Also, drop the regular footer for a new two-up set of actions using the <code class="highlighter-rouge">.modal-actions</code> component.</p>
+                <div class="btn-group">
+                  <a href="#" class="btn btn-success">Success</a>
+                  <a href="#" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
 
-<div class="docs-example" data-example-id="">
-<div class="modal">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Small modal</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="btn-group">
+                  <a href="#" class="btn btn-info">Info</a>
+                  <a href="#" class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+
+                <div class="btn-group">
+                  <a href="#" class="btn btn-warning">Warning</a>
+                  <a href="#" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <p class="bs-component">
+              <a href="#" class="btn btn-primary btn-lg">Large button</a>
+              <a href="#" class="btn btn-primary">Default button</a>
+              <a href="#" class="btn btn-primary btn-sm">Small button</a>
+              <a href="#" class="btn btn-primary btn-xs">Mini button</a>
+            </p>
+
+          </div>
+          <div class="col-lg-5">
+
+            <p class="bs-component">
+              <a href="#" class="btn btn-default btn-lg btn-block">Block level button</a>
+            </p>
+
+
+            <div class="bs-component" style="margin-bottom: 15px;">
+              <div class="btn-group btn-group-justified">
+                <a href="#" class="btn btn-default">Left</a>
+                <a href="#" class="btn btn-default">Middle</a>
+                <a href="#" class="btn btn-default">Right</a>
+              </div>
+            </div>
+
+            <div class="bs-component" style="margin-bottom: 15px;">
+              <div class="btn-toolbar">
+                <div class="btn-group">
+                  <a href="#" class="btn btn-default">1</a>
+                  <a href="#" class="btn btn-default">2</a>
+                  <a href="#" class="btn btn-default">3</a>
+                  <a href="#" class="btn btn-default">4</a>
+                </div>
+
+                <div class="btn-group">
+                  <a href="#" class="btn btn-default">5</a>
+                  <a href="#" class="btn btn-default">6</a>
+                  <a href="#" class="btn btn-default">7</a>
+                </div>
+
+                <div class="btn-group">
+                  <a href="#" class="btn btn-default">8</a>
+                  <div class="btn-group">
+                    <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                      Dropdown
+                      <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Dropdown link</a></li>
+                      <li><a href="#">Dropdown link</a></li>
+                      <li><a href="#">Dropdown link</a></li>
+                     </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bs-component">
+              <div class="btn-group-vertical">
+                  <a href="#" class="btn btn-default">Button</a>
+                  <a href="#" class="btn btn-default">Button</a>
+                  <a href="#" class="btn btn-default">Button</a>
+                  <a href="#" class="btn btn-default">Button</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
-        <p>Modal body text...</p>
+
+      <!-- Typography
+      ================================================== -->
+      <div class="bs-docs-section">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="typography">Typography</h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Headings -->
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <h1>Heading 1</h1>
+              <h2>Heading 2</h2>
+              <h3>Heading 3</h3>
+              <h4>Heading 4</h4>
+              <h5>Heading 5</h5>
+              <h6>Heading 6</h6>
+              <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <h2>Example body text</h2>
+              <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+              <p><small>This line of text is meant to be treated as fine print.</small></p>
+              <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+              <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+              <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+            </div>
+
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <h2>Emphasis classes</h2>
+              <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+              <p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+              <p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+              <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+              <p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Blockquotes -->
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 id="type-blockquotes">Blockquotes</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="bs-component">
+              <blockquote>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+              </blockquote>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="bs-component">
+              <blockquote class="blockquote-reverse">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+              </blockquote>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="modal-actions">
-        <button type="button" class="btn-link modal-action" data-dismiss="modal">
-          <strong>Continue</strong>
-        </button>
-        <button type="button" class="btn-link modal-action" data-dismiss="modal">Cancel</button>
+
+      <!-- Tables
+      ================================================== -->
+      <div class="bs-docs-section">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="tables">Tables</h1>
+            </div>
+
+            <div class="bs-component">
+              <table class="table table-striped table-hover ">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Column heading</th>
+                    <th>Column heading</th>
+                    <th>Column heading</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                  </tr>
+                  <tr class="info">
+                    <td>3</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                  </tr>
+                  <tr class="success">
+                    <td>4</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                  </tr>
+                  <tr class="danger">
+                    <td>5</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                  </tr>
+                  <tr class="warning">
+                    <td>6</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                  </tr>
+                  <tr class="active">
+                    <td>7</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- /example -->
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog modal-sm"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>Small modal<span class="nt">&lt;/h4&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;&lt;/button&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;p&gt;</span>Modal body text...<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-actions"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn-link modal-action"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;strong&gt;</span>Continue<span class="nt">&lt;/strong&gt;</span>
-        <span class="nt">&lt;/button&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn-link modal-action"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/button&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h1 id="plugins">Plugins</h1>
+      <!-- Forms
+      ================================================== -->
+      <div class="bs-docs-section">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="forms">Forms</h1>
+            </div>
+          </div>
+        </div>
 
-<h2 id="tablesorter">Tablesorter</h2>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="well bs-component">
+              <form class="form-horizontal">
+                <fieldset>
+                  <legend>Legend</legend>
+                  <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                    <div class="col-lg-10">
+                      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> Checkbox
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="textArea" class="col-lg-2 control-label">Textarea</label>
+                    <div class="col-lg-10">
+                      <textarea class="form-control" rows="3" id="textArea"></textarea>
+                      <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-lg-2 control-label">Radios</label>
+                    <div class="col-lg-10">
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                          Option one is this
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                          Option two can be something else
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="select" class="col-lg-2 control-label">Selects</label>
+                    <div class="col-lg-10">
+                      <select class="form-control" id="select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                      <br>
+                      <select multiple="" class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                      <button type="reset" class="btn btn-default">Cancel</button>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-4 col-lg-offset-1">
 
-<p>Including in this theme is <a href="http://tablesorter.com/">Tablesorter</a>, a jQuery plugin for easy column sorting on tables. Basic styles for the directional arrows when sorting are included here for ease. Consult the Tablesorter docs for usage and additional customizations.</p>
+              <form class="bs-component">
+                <div class="form-group">
+                  <label class="control-label" for="focusedInput">Focused input</label>
+                  <input class="form-control" id="focusedInput" type="text" value="This is focused...">
+                </div>
 
-<div class="docs-example">
-  <div class="table-responsive">
-    <table class="table" data-sort="table">
-      <thead>
-        <tr>
-          <th><input type="checkbox" class="select-all" id="selectAll" /></th>
-          <th>Order</th>
-          <th>Customer name</th>
-          <th>Description</th>
-          <th>Date</th>
-          <th>Total</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><input type="checkbox" class="select-row" /></td>
-          <td><a href="#">#10001</a></td>
-          <td>First Last</td>
-          <td>Admin theme, marketing theme</td>
-          <td>01/01/2015</td>
-          <td>$200.00</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="select-row" /></td>
-          <td><a href="#">#10002</a></td>
-          <td>Firstname Last</td>
-          <td>Admin theme</td>
-          <td>01/01/2015</td>
-          <td>$100.00</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="select-row" /></td>
-          <td><a href="#">#10003</a></td>
-          <td>Name Another</td>
-          <td>Personal blog theme</td>
-          <td>01/01/2015</td>
-          <td>$100.00</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="select-row" /></td>
-          <td><a href="#">#10004</a></td>
-          <td>One More</td>
-          <td>Marketing theme, personal blog theme, admin theme</td>
-          <td>01/01/2015</td>
-          <td>$300.00</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="select-row" /></td>
-          <td><a href="#">#10005</a></td>
-          <td>Name Right Here</td>
-          <td>Personal blog theme, admin theme</td>
-          <td>01/02/2015</td>
-          <td>$200.00</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+                <div class="form-group">
+                  <label class="control-label" for="disabledInput">Disabled input</label>
+                  <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled="">
+                </div>
 
-<p>Enabling Tablesorter is easy with jQuery:</p>
+                <div class="form-group has-warning">
+                  <label class="control-label" for="inputWarning">Input warning</label>
+                  <input type="text" class="form-control" id="inputWarning">
+                </div>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// call the tablesorter plugin</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s2">"[data-sort=table]"</span><span class="p">).</span><span class="nx">tablesorter</span><span class="p">({</span>
-    <span class="c1">// Sort on the second column, in ascending order</span>
-    <span class="na">sortList</span><span class="p">:</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span>
-  <span class="p">});</span>
-<span class="p">});</span></code></pre></figure>
+                <div class="form-group has-error">
+                  <label class="control-label" for="inputError">Input error</label>
+                  <input type="text" class="form-control" id="inputError">
+                </div>
 
-<h2 id="datepicker">Datepicker</h2>
+                <div class="form-group has-success">
+                  <label class="control-label" for="inputSuccess">Input success</label>
+                  <input type="text" class="form-control" id="inputSuccess">
+                </div>
 
-<p>We’ve integrated the excellent <a href="https://bootstrap-datepicker.readthedocs.org/en/latest/">Bootstrap Datepicker</a> plugin for your convenience. You can initiate this simply with data-attributes or for more advanced applications use the javascript API. Refer to <a href="https://bootstrap-datepicker.readthedocs.org/en/latest/">their docs for more information</a>.</p>
+                <div class="form-group">
+                  <label class="control-label" for="inputLarge">Large input</label>
+                  <input class="form-control input-lg" type="text" id="inputLarge">
+                </div>
 
-<div class="docs-example" data-example-id="">
-<div class="input-group">
-  <span class="input-group-addon">
-    <span class="icon icon-calendar"></span>
-  </span>
-  <input type="text" value="01/01/2015" class="form-control" data-provide="datepicker" style="width: 200px;" />
-</div>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"input-group-addon"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-calendar"</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">value=</span><span class="s">"01/01/2015"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">data-provide=</span><span class="s">"datepicker"</span> <span class="na">style=</span><span class="s">"width: 200px;"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+                <div class="form-group">
+                  <label class="control-label" for="inputDefault">Default input</label>
+                  <input type="text" class="form-control" id="inputDefault">
+                </div>
 
-<h2 id="chartjs">Chart.js</h2>
+                <div class="form-group">
+                  <label class="control-label" for="inputSmall">Small input</label>
+                  <input class="form-control input-sm" type="text" id="inputSmall">
+                </div>
 
-<p>Charts and graphs are available through <a href="http://www.chartjs.org">Chart.js</a>, a clean and responsive canvas-based chart rendering JavaScript library.</p>
+                <div class="form-group">
+                  <label class="control-label">Input addons</label>
+                  <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Button</button>
+                    </span>
+                  </div>
+                </div>
+              </form>
 
-<p>We recommend reviewing the full <a href="http://www.chartjs.org/docs/">Chart.js documentation</a> as you implement or modify any charts here.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navs
+      ================================================== -->
+      <div class="bs-docs-section">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="navs">Navs</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <h2 id="nav-tabs">Tabs</h2>
+            <div class="bs-component">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+                <li><a href="#profile" data-toggle="tab">Profile</a></li>
+                <li class="disabled"><a>Disabled</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Dropdown <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#dropdown1" data-toggle="tab">Action</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#dropdown2" data-toggle="tab">Another action</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade active in" id="home">
+                  <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                </div>
+                <div class="tab-pane fade" id="profile">
+                  <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+                </div>
+                <div class="tab-pane fade" id="dropdown1">
+                  <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</p>
+                </div>
+                <div class="tab-pane fade" id="dropdown2">
+                  <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <h2 id="nav-pills">Pills</h2>
+            <div class="bs-component">
+              <ul class="nav nav-pills">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li class="disabled"><a href="#">Disabled</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Dropdown <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <br>
+            <div class="bs-component">
+              <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li class="disabled"><a href="#">Disabled</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Dropdown <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <h2 id="nav-breadcrumbs">Breadcrumbs</h2>
+            <div class="bs-component">
+              <ul class="breadcrumb">
+                <li class="active">Home</li>
+              </ul>
+
+              <ul class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li class="active">Library</li>
+              </ul>
+
+              <ul class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Library</a></li>
+                <li class="active">Data</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
 
 
+        <div class="row">
+          <div class="col-lg-4">
+            <h2 id="pagination">Pagination</h2>
+            <div class="bs-component">
+              <ul class="pagination">
+                <li class="disabled"><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
 
-      <a class="docs-top" style="display: none" href="#">Back to top</a>
+              <ul class="pagination pagination-lg">
+                <li class="disabled"><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+
+              <ul class="pagination pagination-sm">
+                <li class="disabled"><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <h2 id="pager">Pager</h2>
+            <div class="bs-component">
+              <ul class="pager">
+                <li><a href="#">Previous</a></li>
+                <li><a href="#">Next</a></li>
+              </ul>
+
+              <ul class="pager">
+                <li class="previous disabled"><a href="#">&larr; Older</a></li>
+                <li class="next"><a href="#">Newer &rarr;</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Indicators
+      ================================================== -->
+      <div class="bs-docs-section">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="indicators">Indicators</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>Alerts</h2>
+            <div class="bs-component">
+              <div class="alert alert-dismissible alert-warning">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <h4>Warning!</h4>
+                <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, <a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <div class="alert alert-dismissible alert-danger">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <div class="alert alert-dismissible alert-success">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <div class="alert alert-dismissible alert-info">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <h2>Labels</h2>
+            <div class="bs-component" style="margin-bottom: 40px;">
+              <span class="label label-default">Default</span>
+              <span class="label label-primary">Primary</span>
+              <span class="label label-success">Success</span>
+              <span class="label label-warning">Warning</span>
+              <span class="label label-danger">Danger</span>
+              <span class="label label-info">Info</span>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <h2>Badges</h2>
+            <div class="bs-component">
+              <ul class="nav nav-pills">
+                <li class="active"><a href="#">Home <span class="badge">42</span></a></li>
+                <li><a href="#">Profile <span class="badge"></span></a></li>
+                <li><a href="#">Messages <span class="badge">3</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Progress bars
+      ================================================== -->
+      <div class="bs-docs-section">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="progress-bars">Progress bars</h1>
+            </div>
+
+            <h3 id="progress-basic">Basic</h3>
+            <div class="bs-component">
+              <div class="progress">
+                <div class="progress-bar" style="width: 60%;"></div>
+              </div>
+            </div>
+
+            <h3 id="progress-alternatives">Contextual alternatives</h3>
+            <div class="bs-component">
+              <div class="progress">
+                <div class="progress-bar progress-bar-info" style="width: 20%"></div>
+              </div>
+
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" style="width: 40%"></div>
+              </div>
+
+              <div class="progress">
+                <div class="progress-bar progress-bar-warning" style="width: 60%"></div>
+              </div>
+
+              <div class="progress">
+                <div class="progress-bar progress-bar-danger" style="width: 80%"></div>
+              </div>
+            </div>
+
+            <h3 id="progress-striped">Striped</h3>
+            <div class="bs-component">
+              <div class="progress progress-striped">
+                <div class="progress-bar progress-bar-info" style="width: 20%"></div>
+              </div>
+
+              <div class="progress progress-striped">
+                <div class="progress-bar progress-bar-success" style="width: 40%"></div>
+              </div>
+
+              <div class="progress progress-striped">
+                <div class="progress-bar progress-bar-warning" style="width: 60%"></div>
+              </div>
+
+              <div class="progress progress-striped">
+                <div class="progress-bar progress-bar-danger" style="width: 80%"></div>
+              </div>
+            </div>
+
+            <h3 id="progress-animated">Animated</h3>
+            <div class="bs-component">
+              <div class="progress progress-striped active">
+                <div class="progress-bar" style="width: 45%"></div>
+              </div>
+            </div>
+
+            <h3 id="progress-stacked">Stacked</h3>
+            <div class="bs-component">
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" style="width: 35%"></div>
+                <div class="progress-bar progress-bar-warning" style="width: 20%"></div>
+                <div class="progress-bar progress-bar-danger" style="width: 10%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Containers
+      ================================================== -->
+      <div class="bs-docs-section">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="containers">Containers</h1>
+            </div>
+            <div class="bs-component">
+              <div class="jumbotron">
+                <h1>Jumbotron</h1>
+                <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <p><a class="btn btn-primary btn-lg">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>List groups</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <span class="badge">14</span>
+                  Cras justo odio
+                </li>
+                <li class="list-group-item">
+                  <span class="badge">2</span>
+                  Dapibus ac facilisis in
+                </li>
+                <li class="list-group-item">
+                  <span class="badge">1</span>
+                  Morbi leo risus
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <div class="list-group">
+                <a href="#" class="list-group-item active">
+                  Cras justo odio
+                </a>
+                <a href="#" class="list-group-item">Dapibus ac facilisis in
+                </a>
+                <a href="#" class="list-group-item">Morbi leo risus
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <div class="list-group">
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading">List group item heading</h4>
+                  <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                </a>
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading">List group item heading</h4>
+                  <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>Panels</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  Basic panel
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">Panel heading</div>
+                <div class="panel-body">
+                  Panel content
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  Panel content
+                </div>
+                <div class="panel-footer">Panel footer</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Panel primary</h3>
+                </div>
+                <div class="panel-body">
+                  Panel content
+                </div>
+              </div>
+
+              <div class="panel panel-success">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Panel success</h3>
+                </div>
+                <div class="panel-body">
+                  Panel content
+                </div>
+              </div>
+
+              <div class="panel panel-warning">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Panel warning</h3>
+                </div>
+                <div class="panel-body">
+                  Panel content
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <div class="panel panel-danger">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Panel danger</h3>
+                </div>
+                <div class="panel-body">
+                  Panel content
+                </div>
+              </div>
+
+              <div class="panel panel-info">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Panel info</h3>
+                </div>
+                <div class="panel-body">
+                  Panel content
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>Dark Wells</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <div class="well">
+                Look, I'm in a well!
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <div class="well well-sm">
+                Look, I'm in a small well!
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <div class="well well-lg">
+                Look, I'm in a large well!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>Light Wells</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <div class="well light-well">
+                Look, I'm in a well!
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <div class="well light-well well-sm">
+                Look, I'm in a small well!
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bs-component">
+              <div class="well light-well well-lg">
+                Look, I'm in a large well!
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Dialogs
+      ================================================== -->
+      <div class="bs-docs-section">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="dialogs">Dialogs</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>Modals</h2>
+            <div class="bs-component">
+              <div class="modal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="false">×</button>
+                      <h4 class="modal-title">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>One fine body…</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h2>Popovers</h2>
+            <div class="bs-component">
+              <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Left</button>
+
+              <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Top</button>
+
+              <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+              sagittis lacus vel augue laoreet rutrum faucibus.">Bottom</button>
+
+              <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Right</button>
+            </div>
+            <h2>Tooltips</h2>
+            <div class="bs-component">
+              <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="" data-original-title="Tooltip on left">Left</button>
+
+              <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top">Top</button>
+
+              <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tooltip on bottom">Bottom</button>
+
+              <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="" data-original-title="Tooltip on right">Right</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="source-modal" class="modal fade">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">Source Code</h4>
+            </div>
+            <div class="modal-body">
+              <pre></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <br />
+      <br />
+
     </div>
 
     </main>
@@ -1784,8 +1465,8 @@
           <div class="col-lg-2"></div>
           <div class="col-lg-8 center-block text-center footer-buffer">
             <div class="copyright">
-              <p>Design &copy; 2011-2016 Boostrap |
-                 Design &amp; Content &copy; 2017 Starship Tools Team
+              <p>Design &copy; 2011-2016 Bootstrap |
+                 Design &amp; Content &copy; 2017-2018 Starship Tools Team
               </p>
             </div>
             <div class="col-lg-2"></div>

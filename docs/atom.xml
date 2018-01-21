@@ -1,200 +1,74 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Starship Tools</title>
-  <subtitle>A blog for sharing the open source code, tools, and
-                     ideas that will allow us to traverse interstellar
-                     distances. Focus is on control systems, fault-tolerance,
-                     high-concurrency, and soft real-time operations.</subtitle>
-  <link href="http://starship.tools/atom.xml" rel="self" />
-  <link href="http://starship.tools" />
-  <id>urn:uuid:starship-tools:atom:feed</id>
+<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
+  <id>urn:starship-tools:feed</id>
   <updated>2017-04-02 13:31:53</updated>
-  
+  <title type="text">Starship Tools Blog</title>
+  <link rel="self" href="http://starship.tools/atom.xml"/>
   <entry>
     <title>Rocket ASCII Art</title>
-    <link type="text/html" href="http://starship.tools/archives/2017-04/02-133153/rocket-ascii-art.html" />
-    <id>urn:uuid:starship-tools:atom:feed:post:rocket-ascii-art</id>
     <updated>2017-04-02 13:31:53</updated>
-    <summary></summary>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>&lt;p&gt;A quick internet search for &quot;ascii rocket&quot; turned up the following little gem:&lt;/p&gt;
-
-&lt;pre&gt;
-
-                           *     .--.
-                                / /  `
-               +               | |
-                      &#039;         \ \__,
-                  *          +   &#039;--&#039;  *
-                      +   /\
-         +              .&#039;  &#039;.   *
-                *      /======\      +
-                      ;:.  _   ;
-                      |:. (_)  |
-                      |:.  _   |
-            +         |:. (_)  |          *
-                      ;:.      ;
-                    .&#039; \:.    / `.
-                   / .-&#039;&#039;:._.&#039;`-. \
-                   |/    /||\    \|
-             jgs _..--&quot;&quot;&quot;````&quot;&quot;&quot;--.._
-           _.-&#039;``                    ``&#039;-._
-         -&#039;                                &#039;-
-&lt;/pre&gt;
-&lt;p&gt;JGS, whoever you are, that&#039;s one of the most delightful bits of ASCII art I&#039;ve
-seen. This makes me want to write a children&#039;s space adventure book,
-illustrated only with ASCII art ...&lt;/p&gt;
-
-&lt;p&gt;More availble here:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://textart.io/art/tag/spaceship/1&quot;&gt;http://textart.io/art/tag/spaceship/1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Don&#039;t be surprised if these start showing up in code samples ;-)&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Update&lt;/em&gt;: A &lt;a href=&quot;https://twitter.com/thatgrrl/status/855476643929968641&quot;&gt;message on Twitter&lt;/a&gt;
-indicated that JGS is &lt;a href=&quot;https://en.wikipedia.org/wiki/Joan_Stark&quot;&gt;Joan Stark&lt;/a&gt;.
-Thanks, &lt;a href=&quot;https://twitter.com/thatgrrl&quot;&gt;@thatgrrl&lt;/a&gt;!&lt;/p&gt;</p>
-      </div>
-    </content>
     <author>
-      <name>Joubiwann</name>
-      
+      <name>oubiwann</name>
     </author>
+    <link href="http://starship.tools//archives2017-04/02-133153/rocket-ascii-art.html"/>
+    <id>urn:starship-tools:feed:post:Rocket ASCII Art</id>
+    <content type="html">&lt;p&gt;A quick internet search for "ascii rocket" turned up the following little gem:&lt;/p&gt;&lt;p&gt;&lt;pre&gt;&lt;/p&gt;&lt;pre&gt;&lt;code&gt;                       &amp;#42;     .--.
+                            / /  `
+           +               | |
+                  '         \ \&amp;#95;&amp;#95;,
+              &amp;#42;          +   '--'  &amp;#42;
+                  +   /\
+     +              .'  '.   &amp;#42;
+            &amp;#42;      /======\      +
+                  ;:.  &amp;#95;   ;
+                  |:. &amp;#40;&amp;#95;&amp;#41;  |
+                  |:.  &amp;#95;   |
+        +         |:. &amp;#40;&amp;#95;&amp;#41;  |          &amp;#42;
+                  ;:.      ;
+                .' \:.    / `.
+               / .-'':.&amp;#95;.'`-. \
+               |/    /||\    \|
+         jgs &amp;#95;..--&amp;quot;&amp;quot;&amp;quot;````&amp;quot;&amp;quot;&amp;quot;--..&amp;#95;
+       &amp;#95;.-'``                    ``'-.&amp;#95;
+     -'                                '-&lt;/code&gt;&lt;/pre&gt;&lt;/pre&gt;&lt;p&gt;JGS, whoever you are, that's one of the most delightful bits of ASCII art I've seen. This makes me want to write a children's space adventure book, illustrated only with ASCII art ...&lt;/p&gt;&lt;p&gt;More availble here:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='http://textart.io/art/tag/spaceship/1'&gt;http://textart.io/art/tag/spaceship/1&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Don't be surprised if these start showing up in code samples ;-)&lt;/p&gt;&lt;p&gt;&lt;em&gt;Update&lt;/em&gt;: A &lt;a href='https://twitter.com/thatgrrl/status/855476643929968641'&gt;message on Twitter&lt;/a&gt; indicated that JGS is &lt;a href='https://en.wikipedia.org/wiki/Joan_Stark'&gt;Joan Stark&lt;/a&gt;. Thanks, &lt;a href='https://twitter.com/thatgrrl'&gt;@thatgrrl&lt;/a&gt;!&lt;/p&gt;&lt;p&gt;&amp;#x1F680;&lt;/p&gt;</content>
   </entry>
-  
   <entry>
     <title>Starship Tools Blog Goes Beta</title>
-    <link type="text/html" href="http://starship.tools/archives/2017-04/02-122328/starship-tools-blog-goes-beta.html" />
-    <id>urn:uuid:starship-tools:atom:feed:post:starship-tools-blog-goes-beta</id>
     <updated>2017-04-02 12:23:28</updated>
-    <summary></summary>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>&lt;p&gt;The Starship Tools blog is now live and ready for use :-) The final touches
-have been put upon the following styles:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Front page (headlines)&lt;/li&gt;
-&lt;li&gt;Custom header images for some sections of the site&lt;/li&gt;
-&lt;li&gt;Posts and post sidebars&lt;/li&gt;
-&lt;li&gt;Archives listing&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Additionally, the following functionality was required before beta:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Posts with context data (in order to support next/previous posts)&lt;/li&gt;
-&lt;li&gt;Site-wide categories and tags listing&lt;/li&gt;
-&lt;li&gt;Anchors for sections on categories, tags, and authors pages&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;These were the content-related tweaks:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;A few more posts&lt;/li&gt;
-&lt;li&gt;Adding a page for a timeline of starship programs&lt;/li&gt;
-&lt;li&gt;Text on the &quot;About Page&quot;&lt;/li&gt;
-&lt;li&gt;Removing the &quot;Design&quot; pages from the top-nav&lt;/li&gt;
-&lt;/ul&gt;</p>
-      </div>
-    </content>
     <author>
-      <name>Joubiwann</name>
-      
+      <name>oubiwann</name>
     </author>
+    <link href="http://starship.tools//archives2017-04/02-122328/starship-tools-blog-goes-beta.html"/>
+    <id>urn:starship-tools:feed:post:Starship Tools Blog Goes Beta</id>
+    <content type="html">&lt;p&gt;The Starship Tools blog is now live and ready for use :-) The final touches have been put upon the following styles:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Front page (headlines)&lt;/li&gt;&lt;li&gt;Custom header images for some sections of the site&lt;/li&gt;&lt;li&gt;Posts and post sidebars&lt;/li&gt;&lt;li&gt;Archives listing&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Additionally, the following functionality was required before beta:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Posts with context data (in order to support next/previous posts)&lt;/li&gt;&lt;li&gt;Site-wide categories and tags listing&lt;/li&gt;&lt;li&gt;Anchors for sections on categories, tags, and authors pages&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;These were the content-related tweaks:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;A few more posts&lt;/li&gt;&lt;li&gt;Adding a page for a timeline of starship programs&lt;/li&gt;&lt;li&gt;Text on the "About Page"&lt;/li&gt;&lt;li&gt;Removing the "Design" pages from the top-nav&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&amp;#x1F680;&lt;/p&gt;</content>
   </entry>
-  
   <entry>
     <title>Blog Infrastructure Update</title>
-    <link type="text/html" href="http://starship.tools/archives/2017-03/19-230216/blog-infrastructure-update.html" />
-    <id>urn:uuid:starship-tools:atom:feed:post:blog-infrastructure-update</id>
     <updated>2017-03-19 23:02:16</updated>
-    <summary></summary>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>&lt;p&gt;I&#039;ve been hacking on a new site for a while (content stored in Internet Message
-format, on disk; generated by LFE). Making some gradual progress, having
-finished the early site design a few days ago. Starting to get excited -- will
-be fun to see this site live :-)&lt;/p&gt;</p>
-      </div>
-    </content>
     <author>
-      <name>Joubiwann</name>
-      
+      <name>oubiwann</name>
     </author>
+    <link href="http://starship.tools//archives2017-03/19-230216/blog-infrastructure-update.html"/>
+    <id>urn:starship-tools:feed:post:Blog Infrastructure Update</id>
+    <content type="html">&lt;p&gt;I've been hacking on a new site for a while (content stored in Internet Message format, on disk; generated by LFE). Making some gradual progress, having finished the early site design a few days ago. Starting to get excited &amp;ndash; will be fun to see this site live :-)&lt;/p&gt;&lt;p&gt;&amp;#x1F680;&lt;/p&gt;</content>
   </entry>
-  
   <entry>
     <title>Domains Registered ...</title>
-    <link type="text/html" href="http://starship.tools/archives/2017-02/26-234242/domains-registered-.html" />
-    <id>urn:uuid:starship-tools:atom:feed:post:domains-registered-</id>
     <updated>2017-02-26 23:42:42</updated>
-    <summary></summary>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>&lt;p&gt;Continuing from yesterday&#039;s brainstorm, today I registered starship.tools and
-starship.engineer. Still not sure &lt;em&gt;exactly&lt;/em&gt; how content will be separated
-across the two.&lt;/p&gt;
-
-&lt;p&gt;Need to think about site design now. And getting a blog up.&lt;/p&gt;</p>
-      </div>
-    </content>
     <author>
-      <name>Joubiwann</name>
-      
+      <name>oubiwann</name>
     </author>
+    <link href="http://starship.tools//archives2017-02/26-234242/domains-registered-.html"/>
+    <id>urn:starship-tools:feed:post:Domains Registered ...</id>
+    <content type="html">&lt;p&gt;Continuing from yesterday's brainstorm, today I registered starship.tools and starship.engineer. Still not sure &lt;em&gt;exactly&lt;/em&gt; how content will be separated across the two.&lt;/p&gt;&lt;p&gt;Need to think about site design now. And getting a blog up.&lt;/p&gt;&lt;p&gt;&amp;#x1F680;&lt;/p&gt;</content>
   </entry>
-  
   <entry>
-    <title>We&#039;ll Need a Starship Programming Lanauge</title>
-    <link type="text/html" href="http://starship.tools/archives/2017-02/25-130800/we-ll-need-a-starship-programming-lanauge.html" />
-    <id>urn:uuid:starship-tools:atom:feed:post:we-ll-need-a-starship-programming-lanauge</id>
+    <title>We'll Need a Starship Programming Lanauge</title>
     <updated>2017-02-25 13:08:00</updated>
-    <summary></summary>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>&lt;p&gt;When programming, one of the sources of most viceral joy is watching large
-systems come up: all the dependent parts having life breathed into them,
-configuration and runtime decisions being made, communications being
-established -- and then that final thrill, &quot;Success: System is Live.&quot;&lt;/p&gt;
-
-&lt;p&gt;For a number of reasons, recently I have been giving space travel more thought
-than I have since I was a kid (despite the steady, uninterrupted diet of
-science fiction). Maybe it was all the work with developing large systems just
-adding up. Maybe its because in all the hard science fiction I read, no one
-ever goes deep enough -- for my taste -- into the engineering of spaceflight
-(in particular, software engineering).&lt;/p&gt;
-
-&lt;p&gt;Or maybe it&#039;s because I write code on a daily basis using a language ideally
-suited for a programmable starship system: LFE/Erlang.&lt;/p&gt;
-
-&lt;p&gt;Erlang evolved out of the punishing uptime, concurrency, and fault-tolerance
-requirements of the telecommunicatoins industry. It&#039;s Lisp dialect, LFE,
-provides Erlang programmers with the long-respected power of Lisp languages
-while maintaining 100% Core Erlang compatibility. Part of that power rests in
-features like Lisp macros, but a greater portion lies with the ease with which
-a program can program itself.&lt;/p&gt;
-
-&lt;p&gt;Human-supportable, lifetime-long journeys between the stars will require the
-creation of and maintenance of ultra-large, complex systems -- all of that
-driven be software. These systems, above all else, will need to be fault-
-tolerant. Furthermore, since in all crises time will be of the essence, these
-systems will need to be self-maintaining and self-modifying to some degree, due
-to the limited workforce and extensive responsibilities all will have.&lt;/p&gt;
-
-&lt;p&gt;With the big picture framed, the next thoughts involved actual examples of
-modeling starship systems, dependenices, component interactions, and the like.
-All using the key capabilities of LFE/Erlang.&lt;/p&gt;
-
-&lt;p&gt;Time to do some reading and catch up on the latest research on space systems
-...&lt;/p&gt;</p>
-      </div>
-    </content>
     <author>
-      <name>Joubiwann</name>
-      
+      <name>oubiwann</name>
     </author>
+    <link href="http://starship.tools//archives2017-02/25-130800/we-ll-need-a-starship-programming-lanauge.html"/>
+    <id>urn:starship-tools:feed:post:We'll Need a Starship Programming Lanauge</id>
+    <content type="html">&lt;p&gt;When programming, one of the sources of most viceral joy is watching large systems come up: all the dependent parts having life breathed into them, configuration and runtime decisions being made, communications being established &amp;ndash; and then that final thrill, "Success: System is Live."&lt;/p&gt;&lt;p&gt;For a number of reasons, recently I have been giving space travel more thought than I have since I was a kid (despite the steady, uninterrupted diet of science fiction). Maybe it was all the work with developing large systems just adding up. Maybe its because in all the hard science fiction I read, no one ever goes deep enough &amp;ndash; for my taste &amp;ndash; into the engineering of spaceflight (in particular, software engineering).&lt;/p&gt;&lt;p&gt;Or maybe it's because I write code on a daily basis using a language ideally suited for a programmable starship system: LFE/Erlang.&lt;/p&gt;&lt;p&gt;Erlang evolved out of the punishing uptime, concurrency, and fault-tolerance requirements of the telecommunicatoins industry. It's Lisp dialect, LFE, provides Erlang programmers with the long-respected power of Lisp languages while maintaining 100% Core Erlang compatibility. Part of that power rests in features like Lisp macros, but a greater portion lies with the ease with which a program can program itself.&lt;/p&gt;&lt;p&gt;Human-supportable, lifetime-long journeys between the stars will require the creation of and maintenance of ultra-large, complex systems &amp;ndash; all of that driven be software. These systems, above all else, will need to be fault- tolerant. Furthermore, since in all crises time will be of the essence, these systems will need to be self-maintaining and self-modifying to some degree, due to the limited workforce and extensive responsibilities all will have.&lt;/p&gt;&lt;p&gt;With the big picture framed, the next thoughts involved actual examples of modeling starship systems, dependenices, component interactions, and the like. All using the key capabilities of LFE/Erlang.&lt;/p&gt;&lt;p&gt;Time to do some reading and catch up on the latest research on space systems ...&lt;/p&gt;&lt;p&gt;&amp;#x1F680;&lt;/p&gt;</content>
   </entry>
-  
 </feed>

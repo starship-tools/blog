@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+rm -rf docs/assets/*
+cp -r resources/assets/* docs/assets/
+cp resources/sass/dist/*.css docs/assets/css/
+cp resources/sass/dist/*.js docs/assets/js/
