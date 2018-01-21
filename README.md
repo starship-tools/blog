@@ -1,8 +1,8 @@
-# Starship Hackers Blog
+# Starship Tools Blog
 
 [![][lfe-tiny]][lfe-large]
 
-*A Blog to Explore Really, Really Cool Stuff*
+*A Blog to Explore Really, Really Cool Stuff. Code Suff. In Space.*
 
 
 #### Contents
