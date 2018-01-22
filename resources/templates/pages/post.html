@@ -56,7 +56,10 @@
   <meta name="twitter:creator:id" content="@{{ post-data.twitter }}">
   <meta name="twitter:title" content="{{ post-data.title }}">
   <meta name="twitter:url" content="http://starship.tools{{ post-data.url }}">
+  <!-- XXX This can be disabled when the following feature is added to Dragon:
+           https://github.com/clojusc/dragon/issues/41
   <meta name="twitter:description" content="{{ post-data.excerpt-25|safe }}">
+  -->
   <meta name="twitter:image" content="http://starship.tools/{{ post-data.header-image }}">
   {% endblock %}
 </folding-group>
