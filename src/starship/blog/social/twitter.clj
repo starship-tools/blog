@@ -10,7 +10,7 @@
     [twitter.api.restful :as twitter]
     [twitter.oauth :as oath]))
 
-(def screen-name "ForgottenRdsMX")
+(def screen-name "StarshipTools")
 
 (defn get-creds
   [system]

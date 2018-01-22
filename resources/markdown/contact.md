@@ -8,7 +8,7 @@ what content they'd like to see published which we aren't covering.
 
 ### Physical Mail
 
-The Forgotten Roads MX blog is published by Cowboys 'N Beans Books. If you'd
+The Starship Tools blog is published by Cowboys 'N Beans Books. If you'd
 like to send us correspondance, you may do so at the following address:
 
 ```
