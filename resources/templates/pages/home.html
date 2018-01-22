@@ -138,7 +138,7 @@
 
 {% block sidebar-featured-articles %}
 <div class="sidebar-module">
-  <h4>Featured</h4>
+  <h3>Featured</h3>
   <p>
     <a href="/archives/2017-03/19-230216/blog-infrastructure-update.html">Blog Infrastructure Update</a>
   </p>
@@ -146,13 +146,19 @@
 {% endblock %}
 
 {% block sidebar-site-categories %}
-<div class="sidebar-module">
-  <h4>Categories</h4>
-  <p>
-    {% for cat in cats %}
-    <a href="/categories.html#{{ cat }}">{{ cat }}</a>
-    {% endfor %}
-  </p>
+<div class="sidebar-module categories-module">
+  <header>
+    <h3>Categories</h3>
+  </header>
+  <div class="body">
+    <ul>
+      {% for category in categories %}
+      <li>
+        <a href="/tags/#{{category.name}}" class="tag-5star-{{ category.five-star }}">{{ category.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
 {% endblock %}
 

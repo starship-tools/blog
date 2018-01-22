@@ -2,6 +2,7 @@
   (:require
     [clojure.java.io :as io]
     [clojure.string :as string]
+    [dragon.blog.categories :as blog-categories]
     [dragon.blog.content.block :as block]
     [dragon.blog.content.data :as page-data]
     [dragon.blog.core :as blog]
@@ -176,6 +177,7 @@
                                         "high-concurrency, and soft "
                                         "real-time operations.")
              :tags (blog-tags/get-stats all-posts)
+             :categories (blog-categories/get-stats all-posts)
              :headliner headliner
              :posts-data grouped-posts
              :posts-count (count top-posts)
