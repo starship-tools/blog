@@ -109,11 +109,11 @@
   <div class="col-xs-6">
     {% if post-data.prev-post %}
     <a href="{{ post-data.prev-post }}">
-      <i class="fa fa-arrow-circle-o-left fa-2x"
+      <i class="fa fa-chevron-circle-left fa-2x"
          aria-hidden="true"></i>
     </a>
     {% else %}
-      <i class="fa fa-arrow-circle-o-left fa-2x nav-arrow-disabled"
+      <i class="fa fa-chevron-circle-left fa-2x disabled"
          aria-hidden="true"></i>
     {% endif %}
   </div>
@@ -121,11 +121,11 @@
   <div class="col-xs-6 text-right">
     {% if post-data.next-post %}
     <a href="{{ post-data.next-post }}">
-      <i class="fa fa-arrow-circle-o-right fa-2x"
+      <i class="fa fa-chevron-circle-right fa-2x"
          aria-hidden="true"></i>
     </a>
     {% else %}
-      <i class="fa fa-arrow-circle-o-right fa-2x nav-arrow-disabled"
+      <i class="fa fa-chevron-circle-right fa-2x disabled"
          aria-hidden="true"></i>
     {% endif %}
   </div>
@@ -191,7 +191,7 @@
   <header>
     <h3>Post Data</h3>
   </header>
-  <div class="body">
+  <div class="body post-data">
     <p>Lines: {{ post-data.line-count }}</p>
     <p>Words: {{ post-data.word-count }}</p>
     <p>Characters: {{ post-data.char-count }}</p>
@@ -207,29 +207,29 @@
   </header>
   <div class="body">
     <div class="row">
-      <div class="col-xs-6">Previous</div>
-      <div class="col-xs-6">Next</div>
+      <div class="col-xs-6 post-nav">Previous</div>
+      <div class="col-xs-6 post-nav">Next</div>
     </div>
     <div class="row">
-      <div class="col-xs-6">
+      <div class="col-xs-6 post-nav">
         {% if post-data.prev-post %}
         <a href="{{ post-data.prev-post }}">
-          <i class="fa fa-arrow-circle-o-left fa-2x"
+          <i class="fa fa-chevron-circle-left fa-2x"
              aria-hidden="true"></i>
         </a>
         {% else %}
-          <i class="fa fa-arrow-circle-o-left fa-2x nav-arrow-disabled"
+          <i class="fa fa-chevron-circle-left fa-2x disabled"
              aria-hidden="true"></i>
         {% endif %}
       </div>
-      <div class="col-xs-6">
+      <div class="col-xs-6 post-nav">
         {% if post-data.next-post %}
         <a href="{{ post-data.next-post }}">
-          <i class="fa fa-arrow-circle-o-right fa-2x"
+          <i class="fa fa-chevron-circle-right fa-2x"
              aria-hidden="true"></i>
         </a>
         {% else %}
-          <i class="fa fa-arrow-circle-o-right fa-2x nav-arrow-disabled"
+          <i class="fa fa-chevron-circle-right fa-2x disabled"
              aria-hidden="true"></i>
         {% endif %}
       </div>

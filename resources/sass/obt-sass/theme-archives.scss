@@ -1,3 +1,7 @@
 @import "./theme/default-vars.scss";
 @import "./theme/archives-vars.scss";
 @import "./theme/header.scss";
+
+.sidebar-module .post-data p {
+  line-height: 0.5em;
+}
