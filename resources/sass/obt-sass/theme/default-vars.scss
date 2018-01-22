@@ -9,3 +9,20 @@ $header-background-repeat: no-repeat;
 $header-border: 1px solid black;
 
 $header-inner-background-image: linear-gradient(to bottom, darken($brand-primary, 15%), $brand-primary);
+
+.inverse-dropdown {
+  background-color: $navbar-inverse-bg;
+  border-color: $navbar-inverse-border;
+
+  &>a {
+    color: darken(#fff, 30%);
+    &:hover {
+      color: darken(#fff, 20%);
+      background-color: darken($brand-primary, 15%);
+    }
+  }
+
+  &>.dropdown-divider {
+    background-color: darken($brand-primary, 10%);
+  }
+}
