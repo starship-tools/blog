@@ -4,10 +4,10 @@ store any information about users, their visits to this blog, etc.
 This blog makes use of Google Analytics to provide us with the ability to
 monitor traffic, optimize content for readers, and generally improve the
 reading experience of our users. None of that data is stored or managed by
-Forgotten Roads.
+Starship Tools.
 
 Additionally, this blog uses third-party vendors to serve ads based on users'
-prior visits to Forgotten Roads. These vendors use the
+prior visits to Starship Tools. These vendors use the
 [DART cookie](https://en.wikipedia.org/wiki/DoubleClick) stored in your
 browser.
 
