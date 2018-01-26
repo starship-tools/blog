@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+aws --profile=starship s3 cp docs/ s3://starship.tools/ --recursive

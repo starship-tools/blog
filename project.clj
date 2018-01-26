@@ -135,6 +135,19 @@
         ["gen-css"]
         ;["gen-blog"]
         ]
+    "commit-regen"
+      ["shell" "dev-resources/scripts/commit-regen"]
+    "sync-aws"
+      ["shell" "dev-resources/scripts/sync-aws"]
+    "publish-all-aws"
+      ["shell" "dev-resources/scripts/publish-all-aws"]
+    "publish-modified-aws"
+      ["shell" "dev-resources/scripts/publish-modified-aws"]
+    "publish"
+      ["do"
+        ["gen-all"]
+        ["commit-regen"]
+        ["sync-aws"]]
     "check-deps"
       ^{:doc "Check if any deps have out-of-date versions"}
       ["with-profile" "+test" "ancient" "check" ":all"]
