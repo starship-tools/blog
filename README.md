@@ -18,6 +18,7 @@
 * `lein`
 * `npm`
 * [SASS](http://sass-lang.com)
+* AWS CLI
 
 To set up the blog SASS infrastructure, run the following:
 
