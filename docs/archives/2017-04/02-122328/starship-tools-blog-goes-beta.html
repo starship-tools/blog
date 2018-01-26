@@ -42,6 +42,48 @@
     <meta name="DC.publisher" content="C&amp;B|Books">
     <meta name="DCTERMS.audience" content="Developers, Space Enthusiasts, Systems Engineers">
 
+    
+  <!-- General Metadata (per-page) -->
+  <meta name="author" content="oubiwann">
+
+  <!-- Dublic Core Metadata (per-page) -->
+  <meta name="DC.title" lang="en" content="Starship Tools Blog Goes Beta">
+  <meta name="DC.creator" content="oubiwann">
+  <meta name="DC.subject" content="Site">
+  <meta name="DC.date" content="2017-04-02">
+  <meta name="DC.identifier" scheme="DCTERMS.URI" content="http://starship.tools/archives/2017-04/02-122328/starship-tools-blog-goes-beta.html">
+  <meta name="DCTERMS.abstract" content="Ready for use after a month of hacking">
+
+  <!-- Facebook's OpenGraph Metadata -->
+  <meta property="og:site_name" content="Starship Tools Blog">
+  <meta property="og:title" content="Starship Tools Blog Goes Beta">
+  <meta property="og:url" content="http://starship.tools/archives/2017-04/02-122328/starship-tools-blog-goes-beta.html">
+  <meta property="og:type" content="blog">
+  <meta property="og:description" content="Ready for use after a month of hacking">
+  <meta property="og:image" content="http://starship.tools/assets/images/hdr-john-berkey-site-dream.jpg">
+  <meta property="article:author" content="oubiwann">
+  <meta property="article:published_time" content="2017-04-02 12:23:28">
+  <meta property="article:modified_time" content="2018-01-21 17:05:31">
+  <meta property="og:updated_time" content="2018-01-21 17:05:31">
+  <meta property="article:section" content="Site">
+  <meta property="article:tag" content="community">
+  <meta property="article:tag" content="news">
+  <meta property="article:tag" content="updates">
+  
+
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site:id" content="@StarshipTools">
+  <meta name="twitter:creator:id" content="@">
+  <meta name="twitter:title" content="Starship Tools Blog Goes Beta">
+  <meta name="twitter:url" content="http://starship.tools/archives/2017-04/02-122328/starship-tools-blog-goes-beta.html">
+  <!-- XXX This can be disabled when the following feature is added to Dragon:
+           https://github.com/clojusc/dragon/issues/41
+  <meta name="twitter:description" content="<p>The Starship Tools blog is now live and ready for use :-) The final touches have been put upon the following styles: ...</p>">
+  -->
+  <meta name="twitter:image" content="http://starship.tools/assets/images/hdr-john-berkey-site-dream.jpg">
+  
+
     <link href="/assets/css/toolkit-inverse.css" rel="stylesheet">
     <link href="/assets/css/application.css" rel="stylesheet">
     
@@ -69,8 +111,8 @@
     </script>
     
     
- 
-
+   
+  
   
   </head>
 
@@ -99,32 +141,32 @@
     <div class="collapse navbar-collapse mr-auto" id="navbarResponsive">
       <ul class="nav nav-pills navbar-nav navbar-right">
 
-        <li class="">
-          <a href="/">Home</a>
-        </li>
         <li class="active">
-          <a href="/archives/">Archives</a>
+          <a class="nav-link" href="/archives/">Archives</a>
         </li>
         <li class="">
-          <a href="/categories/">Categories</a>
+          <a class="nav-link" href="/categories/">Categories</a>
         </li>
         <li class="">
-          <a href="/tags/">Tags</a>
+          <a class="nav-link" href="/tags/">Tags</a>
         </li>
         <li class="">
-          <a href="/authors/">Authors</a>
+          <a class="nav-link" href="/authors/">Authors</a>
+        </li>
+        <li class="">
+          <a class="nav-link" href="/pages/">Pages</a>
         </li>
         <li class="dropdown ">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="/about/index.html">Starship Tools</a></li>
-            <li><a href="/about/contact.html">Contact Us</a></li>
-            <li><a href="/about/powered-by.html">Powered By</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="/about/license.html">Content License</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="/about/privacy.html">Privacy Policy</a></li>
-            <li><a href="/about/disclosure.html">Disclosure Policy</a></li>
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+          <div class="inverse-dropdown dropdown-menu">
+            <a class="dropdown-item" href="/about/index.html">Starship Tools</a>
+            <a class="dropdown-item" href="/about/contact.html">Contact Us</a>
+            <a class="dropdown-item" href="/about/powered-by.html">Powered By</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/about/license.html">Content License</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/about/privacy.html">Privacy Policy</a>
+            <a class="dropdown-item" href="/about/disclosure.html">Disclosure Policy</a>
           </ul>
         </li>
 
@@ -148,129 +190,188 @@
     </div>
 
       
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 blog-main">
+<div class="container docs-content">
 
-          <div class="blog-post">
-            <div class="page-header">
-              
-                <img src="/assets/images/hdr-john-berkey-pintura3-dream.jpg" />
-              
-              <h2 class="blog-post-title">Starship Tools Blog Goes Beta</h2>
-              
-              <h3 class="blog-post-subtitle">Ready for use after a month of hacking</h3>
-              
-              <div class="blog-post-meta">
-                <p class="date">April
-                                02,
-                                2017</p>
-                <p class="author">by <a href="/authors/#oubiwann">oubiwann</a></p>
-                
-              </div>
-            </div>
-            <p>The Starship Tools blog is now live and ready for use :-) The final touches have been put upon the following styles:</p><ul><li>Front page (headlines)</li><li>Custom header images for some sections of the site</li><li>Posts and post sidebars</li><li>Archives listing</li></ul><p>Additionally, the following functionality was required before beta:</p><ul><li>Posts with context data (in order to support next/previous posts)</li><li>Site-wide categories and tags listing</li><li>Anchors for sections on categories, tags, and authors pages</li></ul><p>These were the content-related tweaks:</p><ul><li>A few more posts</li><li>Adding a page for a timeline of starship programs</li><li>Text on the "About Page"</li><li>Removing the "Design" pages from the top-nav</li></ul><p>&#x1F680;</p>
-            
-            
+      
+      <div id="sidebar" class="blog-sidebar">
+
+        
+        
+
+        
+
+          
+          <div class="sidebar-module">
+            <p class="social">
+              <a href="/atom.xml">
+                <span class="icon icon-rss first"></span>
+              </a>
+              <a href="https://twitter.com/StarshipTools">
+                <span class="icon icon-twitter"></span>
+              </a>
+              <a href="https://twitter.com/StarshipTools/lists/starship-initiatives">
+                <span class="icon icon-twitter-with-circle"></span>
+              </a>
+              <a href="http://github.com/starship-tools">
+                <span class="icon icon-github"></span>
+              </a>
+              <a href="https://gitter.im/starship-tools/home">
+                <span class="icon text">#</span>
+              </a>
+              <a href="https://groups.google.com/forum/#!forum/starship-hackers">
+                <span class="icon icon-mail last"></span>
+              </a>
+            </p>
           </div>
+          
 
           
 
-        </div>
+            
+            
 
-        <aside class="col-sm-4 blog-aside">
+            
+            
 
-          <div class="aside-widget">
-            <header>
-              <h3>Category</h3>
-            </header>
-            <div class="body">
-              <p>
-                <a href="/categories/#Site">Site</a>
-              </p>
-            </div>
-          </div>
+            
+            
 
-          <div class="aside-widget tags-widget">
-            <header>
-              <h3>Tags</h3>
-            </header>
-            <div class="body">
-              <ul>
-                
-                <li>
-                  <a href="/tags/#community">community</a>
-                </li>
-                
-                <li>
-                  <a href="/tags/#news">news</a>
-                </li>
-                
-                <li>
-                  <a href="/tags/#updates">updates</a>
-                </li>
-                
-              </ul>
-            </div>
-          </div>
+            
+            
+
+            
+            
 
           
 
-            <div class="row">
-              <div class="col-xs-6">
+          
 
-              </div>
-            </div>
+            
+<div class="sidebar-module">
+  <header>
+    <h3>Category</h3>
+  </header>
+  <div class="body">
+    <p>
+      <a href="/categories/#Site">Site</a>
+    </p>
+  </div>
+</div>
+
+
+            
+<div class="sidebar-module tags-widget">
+  <header>
+    <h3>Tags</h3>
+  </header>
+  <div class="body">
+    <ul>
+      
+      <li>
+        <a href="/tags/#community">community</a>
+      </li>
+      
+      <li>
+        <a href="/tags/#news">news</a>
+      </li>
+      
+      <li>
+        <a href="/tags/#updates">updates</a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+            
 
 
 
-          <div class="aside-widget">
-            <header>
-              <h3>Neighboring Posts</h3>
-            </header>
-            <div class="body">
-              <div class="row">
-                <div class="col-xs-6">Previous</div>
-                <div class="col-xs-6">Next</div>
-              </div>
-              <div class="row">
-                <div class="col-xs-6">
-                  
-                  <a href="/archives/2017-03/19-230216/blog-infrastructure-update.html">
-                    <i class="fa fa-arrow-circle-o-left fa-2x"
-                       aria-hidden="true"></i>
-                  </a>
-                  
-                </div>
-                <div class="col-xs-6">
-                  
-                  <a href="/archives/2017-04/02-133153/rocket-ascii-art.html">
-                    <i class="fa fa-arrow-circle-o-right fa-2x"
-                       aria-hidden="true"></i>
-                  </a>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
+            
+<div class="sidebar-module">
+  <header>
+    <h3>Post Data</h3>
+  </header>
+  <div class="body post-data">
+    <p>Created: 12:23:28</p>
+    <p>Lines: 16</p>
+    <p>Words: 114</p>
+    <p>Characters: 656</p>
+  </div>
+</div>
 
-          <div class="aside-widget">
-            <header>
-              <h3>Post Data</h3>
-            </header>
-            <div class="body">
-              <p>Lines: 16</p>
-              <p>Words: 114</p>
-              <p>Characters: 656</p>
-              </p>
-            </div>
-          </div>
 
-        </aside>
-
+            
+<div class="sidebar-module">
+  <header>
+    <h3>Neighboring Posts</h3>
+  </header>
+  <div class="body">
+    <div class="row">
+      <div class="col-xs-6 post-nav">Previous</div>
+      <div class="col-xs-6 post-nav">Next</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 post-nav">
+        
+        <a href="/archives/2017-03/19-230216/blog-infrastructure-update.html">
+          <i class="fa fa-chevron-circle-left fa-2x"
+             aria-hidden="true"></i>
+        </a>
+        
       </div>
+      <div class="col-xs-6 post-nav">
+        
+        <a href="/archives/2017-04/02-133153/rocket-ascii-art.html">
+          <i class="fa fa-chevron-circle-right fa-2x"
+             aria-hidden="true"></i>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+          
+
+      
 
     </div>
+    
+
+    <div class="content">
+    
+      
+<div class="blog-post">
+  <div class="page-header">
+    
+      <img src="/assets/images/hdr-john-berkey-site-dream.jpg" />
+    
+    <h2 class="blog-post-title">Starship Tools Blog Goes Beta</h2>
+    
+    <h3 class="blog-post-subtitle">Ready for use after a month of hacking</h3>
+    
+    <div class="blog-post-meta">
+      <p class="date">April
+                      02,
+                      2017</p>
+      <p class="author">by <a href="/authors/#oubiwann">oubiwann</a></p>
+      
+    </div>
+  </div>
+  <p>The Starship Tools blog is now live and ready for use :-) The final touches have been put upon the following styles:</p><ul><li>Front page (headlines)</li><li>Custom header images for some sections of the site</li><li>Posts and post sidebars</li><li>Archives listing</li></ul><p>Additionally, the following functionality was required before beta:</p><ul><li>Posts with context data (in order to support next/previous posts)</li><li>Site-wide categories and tags listing</li><li>Anchors for sections on categories, tags, and authors pages</li></ul><p>These were the content-related tweaks:</p><ul><li>A few more posts</li><li>Adding a page for a timeline of starship programs</li><li>Text on the "About Page"</li><li>Removing the "Design" pages from the top-nav</li></ul><p>&#x1F680;</p>
+  
+  
+</div>
+
+
+
+    
+    </div>
+
+</div>
 
     </main>
     
@@ -329,7 +430,7 @@
                   <div class="row">
                     <div class="col-lg-12">
                       <ul class="nav justify-content-center">
-                        <li class="nav-item"><a href="/starship-timeline.html">A Timeline of Starship Programs</a></li>
+                        <li class="nav-item"><a href="/pages/timeline.html">A Timeline of Starship Programs</a></li>
                       </ul>
                     </div>
                   </div>

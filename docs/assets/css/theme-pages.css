@@ -1,3 +1,14 @@
+.inverse-dropdown {
+  background-color: #1a1c22;
+  border-color: #1a1c22; }
+  .inverse-dropdown > a {
+    color: #b3b3b3; }
+    .inverse-dropdown > a:hover {
+      color: #cccccc;
+      background-color: #272a3b; }
+  .inverse-dropdown > .dropdown-divider {
+    background-color: #32344a; }
+
 .docs-header {
   padding-top: 60px;
   padding-bottom: 60px;
