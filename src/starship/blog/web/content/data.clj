@@ -22,9 +22,11 @@
 
 (defn get-category-theme
   [opts]
-  (if-let [cat-key (:category-key opts)]
-    (name cat-key)
-    "default"))
+  (let [cat-key (:category-key opts)]
+    (case cat-key
+      :design "default"
+      cat-key (name cat-key)
+      "default")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Base Data Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -65,7 +67,8 @@
                                            "is maintained as actual pages "
                                            "rather than as posts. You will "
                                            "find links to them here, "
-                                           "below."))))
+                                           "below.")
+                :pages "pages")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Static Pages Data   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -79,46 +82,6 @@
             {:title "About"
              :content-filename "about.md"})))
 
-(defn contact
-  [system posts]
-  (common system
-          posts
-          (about-opts
-            {:title "Contact Us"
-             :content-filename "contact.md"})))
-
-(defn powered-by
-  [system posts]
-  (common system
-          posts
-          (about-opts
-            {:title "Powered By"
-             :content-filename "powered-by.md"})))
-
-(defn license
-  [system posts]
-  (common system
-          posts
-          (about-opts
-            {:title "Content License"
-             :content-filename "license.md"})))
-
-(defn privacy
-  [system posts]
-  (common system
-          posts
-          (about-opts
-            {:title "Privacy Policy"
-             :content-filename "privacy.md"})))
-
-(defn disclosure
-  [system posts]
-  (common system
-          posts
-          (about-opts
-            {:title "Disclosure Policy"
-             :content-filename "disclosure.md"})))
-
 (defn community
   [system posts]
   (let [data-content {}]
@@ -128,6 +91,30 @@
               {:title "Community"
                :category-key :community}))))
 
+(defn contact
+  [system posts]
+  (common system
+          posts
+          (about-opts
+            {:title "Contact Us"
+             :content-filename "contact.md"})))
+
+(defn disclosure
+  [system posts]
+  (common system
+          posts
+          (about-opts
+            {:title "Disclosure Policy"
+             :content-filename "disclosure.md"})))
+
+(defn license
+  [system posts]
+  (common system
+          posts
+          (about-opts
+            {:title "Content License"
+             :content-filename "license.md"})))
+
 (defn pages
   [system posts]
   (common system
@@ -135,6 +122,22 @@
           (pages-opts
             {:title "Pages"
              :content-filename "pages.md"})))
+
+(defn powered-by
+  [system posts]
+  (common system
+          posts
+          (about-opts
+            {:title "Powered By"
+             :content-filename "powered-by.md"})))
+
+(defn privacy
+  [system posts]
+  (common system
+          posts
+          (about-opts
+            {:title "Privacy Policy"
+             :content-filename "privacy.md"})))
 
 (defn timeline
   [system posts]
@@ -239,4 +242,5 @@
           posts
           (page-data/default-data-content-opts
             {:title "Design"
-             :category-key :design})))
+             :category-key :design
+             :category-description "Exploring look and feel ..."})))
