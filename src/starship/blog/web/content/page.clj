@@ -8,18 +8,6 @@
 ;;;   Static Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defn pages
-  [system posts]
-  (render
-    "templates/pages/generic.html"
-    (data/about system posts)))
-
-(defn timeline
-  [system posts]
-  (render
-    "templates/pages/generic.html"
-    (data/timeline system posts)))
-
 (defn about
   [system posts]
   (render
@@ -38,11 +26,11 @@
     "templates/pages/generic.html"
     (data/contact system posts)))
 
-(defn powered-by
+(defn disclosure
   [system posts]
   (render
     "templates/pages/generic.html"
-    (data/powered-by system posts)))
+    (data/disclosure system posts)))
 
 (defn license
   [system posts]
@@ -50,17 +38,29 @@
     "templates/pages/generic.html"
     (data/license system posts)))
 
+(defn pages
+  [system posts]
+  (render
+    "templates/pages/generic.html"
+    (data/pages system posts)))
+
+(defn powered-by
+  [system posts]
+  (render
+    "templates/pages/generic.html"
+    (data/powered-by system posts)))
+
 (defn privacy
   [system posts]
   (render
     "templates/pages/generic.html"
     (data/privacy system posts)))
 
-(defn disclosure
+(defn timeline
   [system posts]
   (render
     "templates/pages/generic.html"
-    (data/disclosure system posts)))
+    (data/timeline system posts)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Dynamic Pages   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
