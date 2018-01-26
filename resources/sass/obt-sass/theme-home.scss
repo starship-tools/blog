@@ -1,16 +1,21 @@
 @import "./theme/default-vars.scss";
 @import "./theme/header.scss";
 
-.headliner img {
-  max-width: 100%;
-  border-radius: 20px;
+div.headliner.card, 
+div.subheadliner.card {
+  border-radius: 3px;
 }
 
+.headliner img,
 .subheadliner img {
   max-width: 100%;
+  padding-bottom: 0.5em;
+}
+
+.headliner img {
   border-radius: 10px;
 }
 
-.card.bg-faded {
-  border-radius: 3px;
+.subheadliner img {
+  border-radius: 5px;
 }
