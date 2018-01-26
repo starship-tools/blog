@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-sudo apt-get install nodejs nodejs-legacy npm
+PLATFORM=`uname`
+if [[ "$PLATFORM" == 'Linux' ]]; then
+   sudo apt-get install nodejs nodejs-legacy npm
+elif [[ "$PLATFORM" == 'Darwin' ]]; then
+   brew install nodejs
+fi
 cd resources/sass && \
     npm install gulp && \
     npm install

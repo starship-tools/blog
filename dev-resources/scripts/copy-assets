@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 
-rm -rf docs/assets/*
-cp -rv resources/assets/* docs/assets/
+cp -rv resources/assets docs/
