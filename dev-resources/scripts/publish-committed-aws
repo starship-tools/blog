@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-for f in `git status|grep modified|awk '{print $$2}'|egrep '^docs/'` ; do \
+for f in `git log --numstat HEAD^.. blog|awk '{print $$3}'|egrep '^docs'` ; do \
 	aws --profile=starship s3 \
 		cp "$$f" s3://starship.tools`echo $$f|sed -e 's/^docs\///'` ; \
 done

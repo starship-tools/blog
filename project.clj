@@ -141,6 +141,8 @@
       ["shell" "dev-resources/scripts/sync-aws"]
     "publish-all-aws"
       ["shell" "dev-resources/scripts/publish-all-aws"]
+    "publish-committed-aws"
+      ["shell" "dev-resources/scripts/publish-committed-aws"]
     "publish-modified-aws"
       ["shell" "dev-resources/scripts/publish-modified-aws"]
     "publish"
