@@ -23,10 +23,9 @@
 (defn get-category-theme
   [opts]
   (let [cat-key (:category-key opts)]
-    (case cat-key
-      :design "default"
-      cat-key (name cat-key)
-      "default")))
+    (if (contains? #{:design :default nil} cat-key) 
+      "default"
+      (name cat-key))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Base Data Functions   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
