@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+for f in `git status|grep modified|awk '{print $$2}'|egrep '^docs/'` ; do \
+	aws --profile=starship s3 \
+		cp "$$f" s3://starship.tools/`echo $$f|sed -e 's/^docs\///'` ; \
+done
+aws --profile=starship s3 sync docs/ s3://starship.tools/
