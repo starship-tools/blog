@@ -26,3 +26,7 @@ $header-inner-background-image: linear-gradient(to bottom, darken($brand-primary
     background-color: darken($brand-primary, 10%);
   }
 }
+
+.headliner img, .subheadliner img {
+  max-width: 100%;
+}
