@@ -36,6 +36,35 @@
     <meta name="DC.publisher" content="C&amp;B|Books">
     <meta name="DCTERMS.audience" content="Developers, Space Enthusiasts, Systems Engineers">
 
+    
+<!-- General Metadata (per-page) -->
+<meta name="author" content="Starship Tools">
+
+<!-- Dublic Core Metadata (per-page) -->
+<meta name="DC.title" lang="en" content="Starship Tools Blog">
+<meta name="DC.creator" content="Starship Tools">
+<meta name="DC.subject" content="Site Landing Page">
+<meta name="DC.identifier" scheme="DCTERMS.URI" content="http://starship.tools/">
+<meta name="DCTERMS.abstract" content="A Blog to Explore Really, Really Cool Stuff. Code Suff. In Space.">
+
+<!-- Facebook's OpenGraph Metadata -->
+<meta property="og:site_name" content="Starship Tools Blog">
+<meta property="og:title" content="Starship Tools Blog">
+<meta property="og:url" content="http://starship.tools/">
+<meta property="og:type" content="blog">
+<meta property="og:description" content="A Blog to Explore Really, Really Cool Stuff. Code Suff. In Space.">
+<meta property="og:image" content="http://starship.tools/img/roadtrip5-narrow-with-text.jpg">
+
+<!-- Twitter Card Metadata -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@StarshipTools">
+<meta name="twitter:creator" content="@StarshipTools">
+<meta name="twitter:title" content="Starship Tools Blog">
+<meta name="twitter:url" content="http://starship.tools/">
+<meta name="twitter:description" content="A Blog to Explore Really, Really Cool Stuff. Code Suff. In Space.">
+<meta name="twitter:image" content="http://starship.tools/img/roadtrip5-narrow-with-text.jpg">
+
+
     <link href="/assets/css/toolkit-inverse.css" rel="stylesheet">
     <link href="/assets/css/application.css" rel="stylesheet">
     
@@ -104,31 +133,31 @@
       <ul class="nav nav-pills navbar-nav navbar-right">
 
         <li class="">
-          <a href="/">Home</a>
+          <a class="nav-link" href="/archives/">Archives</a>
         </li>
         <li class="">
-          <a href="/archives/">Archives</a>
+          <a class="nav-link" href="/categories/">Categories</a>
         </li>
         <li class="">
-          <a href="/categories/">Categories</a>
+          <a class="nav-link" href="/tags/">Tags</a>
         </li>
         <li class="">
-          <a href="/tags/">Tags</a>
+          <a class="nav-link" href="/authors/">Authors</a>
         </li>
         <li class="">
-          <a href="/authors/">Authors</a>
+          <a class="nav-link" href="/pages/">Pages</a>
         </li>
         <li class="dropdown ">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="/about/index.html">Starship Tools</a></li>
-            <li><a href="/about/contact.html">Contact Us</a></li>
-            <li><a href="/about/powered-by.html">Powered By</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="/about/license.html">Content License</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="/about/privacy.html">Privacy Policy</a></li>
-            <li><a href="/about/disclosure.html">Disclosure Policy</a></li>
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+          <div class="inverse-dropdown dropdown-menu">
+            <a class="dropdown-item" href="/about/index.html">Starship Tools</a>
+            <a class="dropdown-item" href="/about/contact.html">Contact Us</a>
+            <a class="dropdown-item" href="/about/powered-by.html">Powered By</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/about/license.html">Content License</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/about/privacy.html">Privacy Policy</a>
+            <a class="dropdown-item" href="/about/disclosure.html">Disclosure Policy</a>
           </ul>
         </li>
 
@@ -145,14 +174,336 @@
         <div class="container">
           <h1>Starship Tools</h1>
           <p>
-            A blog for sharing the open source code, tools, and ideas that will allow us to traverse interstellar distances. Focus is on control systems, fault-tolerance, high-concurrency, and soft real-time operations.
+            A blog for sharing the open source code, tools, and ideas that will allow us to traverse interstellar distances. Focus is on control systems, distributed fault-tolerance, high-concurrency, and soft real-time operations.
           </p>
         </div>
       </div>
     </div>
 
       
+<div class="container docs-content">
+
       
+      <div id="sidebar" class="blog-sidebar">
+
+        
+        
+
+        
+
+          
+          <div class="sidebar-module">
+            <p class="social">
+              <a href="/atom.xml">
+                <span class="icon icon-rss first"></span>
+              </a>
+              <a href="https://twitter.com/StarshipTools">
+                <span class="icon icon-twitter"></span>
+              </a>
+              <a href="https://twitter.com/StarshipTools/lists/starship-initiatives">
+                <span class="icon icon-twitter-with-circle"></span>
+              </a>
+              <a href="http://github.com/starship-tools">
+                <span class="icon icon-github"></span>
+              </a>
+              <a href="https://gitter.im/starship-tools/home">
+                <span class="icon text">#</span>
+              </a>
+              <a href="https://groups.google.com/forum/#!forum/starship-hackers">
+                <span class="icon icon-mail last"></span>
+              </a>
+            </p>
+          </div>
+          
+
+          
+
+            
+<div class="sidebar-module subscribe-module">
+  <header>
+    <h3>Subscribe</h3>
+  </header>
+  <div class="body">
+    Receive notifications when new posts are published: <a href="https://groups.google.com/forum/#!forum/frmx-new-posts">subscribe</a>.
+  </div>
+</div>
+
+
+            
+<div class="sidebar-module">
+  <h3>Featured</h3>
+  <p>
+    <a href="/archives/2017-03/19-230216/blog-infrastructure-update.html">Blog Infrastructure Update</a>
+  </p>
+</div>
+
+
+            
+<div class="sidebar-module categories-module">
+  <header>
+    <h3>Categories</h3>
+  </header>
+  <div class="body">
+    <ul>
+      
+      <li>
+        <a href="/tags/#Art" class="tag-5star-2">Art</a>
+      </li>
+      
+      <li>
+        <a href="/tags/#Ideas" class="tag-5star-2">Ideas</a>
+      </li>
+      
+      <li>
+        <a href="/tags/#Site" class="tag-5star-5">Site</a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+            
+<div class="sidebar-module tags-module">
+  <header>
+    <h3>Tags</h3>
+  </header>
+  <div class="body">
+    <ul>
+      
+      <li>
+        <a href="/tags/#ascii" class="tag-5star-1">ascii</a>
+      </li>
+      
+      <li>
+        <a href="/tags/#community" class="tag-5star-5">community</a>
+      </li>
+      
+      <li>
+        <a href="/tags/#fun" class="tag-5star-1">fun</a>
+      </li>
+      
+      <li>
+        <a href="/tags/#news" class="tag-5star-4">news</a>
+      </li>
+      
+      <li>
+        <a href="/tags/#social" class="tag-5star-1">social</a>
+      </li>
+      
+      <li>
+        <a href="/tags/#text" class="tag-5star-1">text</a>
+      </li>
+      
+      <li>
+        <a href="/tags/#updates" class="tag-5star-4">updates</a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+            
+<div class="sidebar-module">
+  <header>
+    <h3>Starship Tools on Twitter</h3>
+  </header>
+  <p>
+    <a class="twitter-timeline" data-theme="dark" data-width="350" data-height="600" data-link-color="#c68533" href="https://twitter.com/StarshipTools">Starship Tools on Twitter</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </p>
+</div>
+
+
+          
+
+          
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+          
+
+      
+
+    </div>
+    
+
+    <div class="content">
+    
+      
+<div class="headliner card bg-faded">
+  <div class="card-block">
+  
+    <img src="/assets/images/hdr-john-berkey-pintura3-dream.jpg" />
+  
+  <h2>
+    <a href="/archives/2017-04/02-133153/rocket-ascii-art.html">Rocket ASCII Art</a>
+  </h2>
+  
+    <h3>Sometimes plain text just says it best ...</h3>
+
+  <div class="row">
+    <div class="col-sm-4 metadata">
+      <p>Date: 2017-04-02</p>
+    </div>
+    <div class="col-sm-4 metadata">
+      <p>Author: <a href="/authors/#oubiwann">oubiwann</a></p>
+    </div>
+    <div class="col-sm-4 metadata">
+      <p>Category: <a href="/categories/#Art">Art</a></p>
+    </div>
+  </div>
+  
+    <p class="excerpt"><p>A quick internet search for "ascii rocket" turned up the following little gem: ...</p></p>
+    <div class="clearfix">
+      <a href="/archives/2017-04/02-133153/rocket-ascii-art.html" class="btn btn-primary">Read More</a>
+    </div>
+  
+  </div>
+</div>
+
+  
+  <div class="row row-full-height">
+    
+    <div class="col-sm-6">
+      <div class="subheadliner card bg-faded">
+        <div class="card-block">
+          
+            <img src="/assets/images/hdr-john-berkey-site-dream.jpg" />
+          
+          <h2>
+            <a href="/archives/2017-04/02-122328/starship-tools-blog-goes-beta.html">Starship Tools Blog Goes Beta</a>
+          </h2>
+          
+            <h3>Ready for use after a month of hacking</h3>
+          
+          <div class="metadata">
+            <p>Date: 2017-04-02</p>
+            <p>Author: <a href="/authors/#oubiwann">oubiwann</a></p>
+            <p>Category: <a href="/categories/#Site">Site</a></p>
+          </div>
+          
+            <p class="excerpt"><p>The Starship Tools blog is now live and ready for use :-) The final touches have been put upon the following styles: ...</p></p>
+            <div class="clearfix">
+              <a href="/archives/2017-04/02-122328/starship-tools-blog-goes-beta.html" class="btn btn-primary">Read More</a>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-sm-6">
+      <div class="subheadliner card bg-faded">
+        <div class="card-block">
+          
+            <img src="/assets/images/hdr-john-berkey-site-dream.jpg" />
+          
+          <h2>
+            <a href="/archives/2017-03/19-230216/blog-infrastructure-update.html">Blog Infrastructure Update</a>
+          </h2>
+          
+            <h3>Slow, Steady Progress</h3>
+          
+          <div class="metadata">
+            <p>Date: 2017-03-19</p>
+            <p>Author: <a href="/authors/#oubiwann">oubiwann</a></p>
+            <p>Category: <a href="/categories/#Site">Site</a></p>
+          </div>
+          
+            <p class="excerpt"><p>I've been hacking on a new site for a while (content stored in Internet Message format, on disk; generated by LFE). Making some gradual progress, having finished the early site design a few days ago. Starting to get excited &ndash; will be fun to see this site live :-) ...</p></p>
+            <div class="clearfix">
+              <a href="/archives/2017-03/19-230216/blog-infrastructure-update.html" class="btn btn-primary">Read More</a>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="row row-full-height">
+    
+    <div class="col-sm-6">
+      <div class="subheadliner card bg-faded">
+        <div class="card-block">
+          
+            <img src="/assets/images/hdr-john-berkey-site-dream.jpg" />
+          
+          <h2>
+            <a href="/archives/2017-02/26-234242/domains-registered-.html">Domains Registered ...</a>
+          </h2>
+          
+          <div class="metadata">
+            <p>Date: 2017-02-26</p>
+            <p>Author: <a href="/authors/#oubiwann">oubiwann</a></p>
+            <p>Category: <a href="/categories/#Site">Site</a></p>
+          </div>
+          
+            <p class="excerpt"><p>Continuing from yesterday's brainstorm, today I registered starship.tools and starship.engineer. Still not sure <em>exactly</em> how content will be separated across the two...</p></p>
+            <div class="clearfix">
+              <a href="/archives/2017-02/26-234242/domains-registered-.html" class="btn btn-primary">Read More</a>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-sm-6">
+      <div class="subheadliner card bg-faded">
+        <div class="card-block">
+          
+            <img src="/assets/images/hdr-john-berkey-ideas-dream.jpg" />
+          
+          <h2>
+            <a href="/archives/2017-02/25-130800/we-ll-need-a-starship-programming-lanauge.html">We&#39;ll Need a Starship Programming Lanauge</a>
+          </h2>
+          
+            <h3>If we ever want to survive in space, our ships will have to be programmable</h3>
+          
+          <div class="metadata">
+            <p>Date: 2017-02-25</p>
+            <p>Author: <a href="/authors/#oubiwann">oubiwann</a></p>
+            <p>Category: <a href="/categories/#Ideas">Ideas</a></p>
+          </div>
+          
+            <p class="excerpt"><p>When programming, one of the sources of most viceral joy is watching large systems come up: all the dependent parts having life breathed into them, configuration and runtime decisions being made, communications being established &ndash; and then that final thrill, "Success: System is Live." ...</p></p>
+            <div class="clearfix">
+              <a href="/archives/2017-02/25-130800/we-ll-need-a-starship-programming-lanauge.html" class="btn btn-primary">Read More</a>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+
+  <div class="below-fold">
+    
+  </div>
+
+  <div>
+    <a href="/archives/" class="btn btn-primary">View older posts</a>
+  </div>
+
+    
+    </div>
+
+</div>
+
     </main>
     
     
@@ -210,7 +561,7 @@
                   <div class="row">
                     <div class="col-lg-12">
                       <ul class="nav justify-content-center">
-                        <li class="nav-item"><a href="/starship-timeline.html">A Timeline of Starship Programs</a></li>
+                        <li class="nav-item"><a href="/pages/timeline.html">A Timeline of Starship Programs</a></li>
                       </ul>
                     </div>
                   </div>

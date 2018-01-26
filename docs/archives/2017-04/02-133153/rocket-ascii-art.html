@@ -42,10 +42,52 @@
     <meta name="DC.publisher" content="C&amp;B|Books">
     <meta name="DCTERMS.audience" content="Developers, Space Enthusiasts, Systems Engineers">
 
+    
+  <!-- General Metadata (per-page) -->
+  <meta name="author" content="oubiwann">
+
+  <!-- Dublic Core Metadata (per-page) -->
+  <meta name="DC.title" lang="en" content="Rocket ASCII Art">
+  <meta name="DC.creator" content="oubiwann">
+  <meta name="DC.subject" content="Art">
+  <meta name="DC.date" content="2017-04-02">
+  <meta name="DC.identifier" scheme="DCTERMS.URI" content="http://starship.tools/archives/2017-04/02-133153/rocket-ascii-art.html">
+  <meta name="DCTERMS.abstract" content="Sometimes plain text just says it best ...">
+
+  <!-- Facebook's OpenGraph Metadata -->
+  <meta property="og:site_name" content="Starship Tools Blog">
+  <meta property="og:title" content="Rocket ASCII Art">
+  <meta property="og:url" content="http://starship.tools/archives/2017-04/02-133153/rocket-ascii-art.html">
+  <meta property="og:type" content="blog">
+  <meta property="og:description" content="Sometimes plain text just says it best ...">
+  <meta property="og:image" content="http://starship.tools/assets/images/hdr-john-berkey-pintura3-dream.jpg">
+  <meta property="article:author" content="oubiwann">
+  <meta property="article:published_time" content="2017-04-02 13:31:53">
+  <meta property="article:modified_time" content="2018-01-21 12:02:10">
+  <meta property="og:updated_time" content="2018-01-21 12:02:10">
+  <meta property="article:section" content="Art">
+  <meta property="article:tag" content="ascii">
+  <meta property="article:tag" content="fun">
+  <meta property="article:tag" content="text">
+  
+
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site:id" content="@StarshipTools">
+  <meta name="twitter:creator:id" content="@">
+  <meta name="twitter:title" content="Rocket ASCII Art">
+  <meta name="twitter:url" content="http://starship.tools/archives/2017-04/02-133153/rocket-ascii-art.html">
+  <!-- XXX This can be disabled when the following feature is added to Dragon:
+           https://github.com/clojusc/dragon/issues/41
+  <meta name="twitter:description" content="<p>A quick internet search for "ascii rocket" turned up the following little gem: ...</p>">
+  -->
+  <meta name="twitter:image" content="http://starship.tools/assets/images/hdr-john-berkey-pintura3-dream.jpg">
+  
+
     <link href="/assets/css/toolkit-inverse.css" rel="stylesheet">
     <link href="/assets/css/application.css" rel="stylesheet">
     
-    <link href="/assets/css/theme-archives.css" rel="stylesheet">
+    <link href="/assets/css/theme-default.css" rel="stylesheet">
     
 
     
@@ -69,8 +111,8 @@
     </script>
     
     
- 
-
+   
+  
   
   </head>
 
@@ -99,32 +141,32 @@
     <div class="collapse navbar-collapse mr-auto" id="navbarResponsive">
       <ul class="nav nav-pills navbar-nav navbar-right">
 
-        <li class="">
-          <a href="/">Home</a>
-        </li>
         <li class="active">
-          <a href="/archives/">Archives</a>
+          <a class="nav-link" href="/archives/">Archives</a>
         </li>
         <li class="">
-          <a href="/categories/">Categories</a>
+          <a class="nav-link" href="/categories/">Categories</a>
         </li>
         <li class="">
-          <a href="/tags/">Tags</a>
+          <a class="nav-link" href="/tags/">Tags</a>
         </li>
         <li class="">
-          <a href="/authors/">Authors</a>
+          <a class="nav-link" href="/authors/">Authors</a>
+        </li>
+        <li class="">
+          <a class="nav-link" href="/pages/">Pages</a>
         </li>
         <li class="dropdown ">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="/about/index.html">Starship Tools</a></li>
-            <li><a href="/about/contact.html">Contact Us</a></li>
-            <li><a href="/about/powered-by.html">Powered By</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="/about/license.html">Content License</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="/about/privacy.html">Privacy Policy</a></li>
-            <li><a href="/about/disclosure.html">Disclosure Policy</a></li>
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+          <div class="inverse-dropdown dropdown-menu">
+            <a class="dropdown-item" href="/about/index.html">Starship Tools</a>
+            <a class="dropdown-item" href="/about/contact.html">Contact Us</a>
+            <a class="dropdown-item" href="/about/powered-by.html">Powered By</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/about/license.html">Content License</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/about/privacy.html">Privacy Policy</a>
+            <a class="dropdown-item" href="/about/disclosure.html">Disclosure Policy</a>
           </ul>
         </li>
 
@@ -148,28 +190,176 @@
     </div>
 
       
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 blog-main">
+<div class="container docs-content">
 
-          <div class="blog-post">
-            <div class="page-header">
-              
-                <img src="/assets/images/hdr-john-berkey-pintura3-dream.jpg" />
-              
-              <h2 class="blog-post-title">Rocket ASCII Art</h2>
-              
-              <h3 class="blog-post-subtitle">Sometimes plain text just says it best ...</h3>
-              
-              <div class="blog-post-meta">
-                <p class="date">April
-                                02,
-                                2017</p>
-                <p class="author">by <a href="/authors/#oubiwann">oubiwann</a></p>
-                
-              </div>
-            </div>
-            <p>A quick internet search for "ascii rocket" turned up the following little gem:</p><p><pre></p><pre><code>                       &#42;     .--.
+      
+      <div id="sidebar" class="blog-sidebar">
+
+        
+        
+
+        
+
+          
+          <div class="sidebar-module">
+            <p class="social">
+              <a href="/atom.xml">
+                <span class="icon icon-rss first"></span>
+              </a>
+              <a href="https://twitter.com/StarshipTools">
+                <span class="icon icon-twitter"></span>
+              </a>
+              <a href="https://twitter.com/StarshipTools/lists/starship-initiatives">
+                <span class="icon icon-twitter-with-circle"></span>
+              </a>
+              <a href="http://github.com/starship-tools">
+                <span class="icon icon-github"></span>
+              </a>
+              <a href="https://gitter.im/starship-tools/home">
+                <span class="icon text">#</span>
+              </a>
+              <a href="https://groups.google.com/forum/#!forum/starship-hackers">
+                <span class="icon icon-mail last"></span>
+              </a>
+            </p>
+          </div>
+          
+
+          
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+          
+
+          
+
+            
+<div class="sidebar-module">
+  <header>
+    <h3>Category</h3>
+  </header>
+  <div class="body">
+    <p>
+      <a href="/categories/#Art">Art</a>
+    </p>
+  </div>
+</div>
+
+
+            
+<div class="sidebar-module tags-widget">
+  <header>
+    <h3>Tags</h3>
+  </header>
+  <div class="body">
+    <ul>
+      
+      <li>
+        <a href="/tags/#ascii">ascii</a>
+      </li>
+      
+      <li>
+        <a href="/tags/#fun">fun</a>
+      </li>
+      
+      <li>
+        <a href="/tags/#text">text</a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+            
+
+
+
+            
+<div class="sidebar-module">
+  <header>
+    <h3>Post Data</h3>
+  </header>
+  <div class="body post-data">
+    <p>Created: 13:31:53</p>
+    <p>Lines: 32</p>
+    <p>Words: 135</p>
+    <p>Characters: 1346</p>
+  </div>
+</div>
+
+
+            
+<div class="sidebar-module">
+  <header>
+    <h3>Neighboring Posts</h3>
+  </header>
+  <div class="body">
+    <div class="row">
+      <div class="col-xs-6 post-nav">Previous</div>
+      <div class="col-xs-6 post-nav">Next</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 post-nav">
+        
+        <a href="/archives/2017-04/02-122328/starship-tools-blog-goes-beta.html">
+          <i class="fa fa-chevron-circle-left fa-2x"
+             aria-hidden="true"></i>
+        </a>
+        
+      </div>
+      <div class="col-xs-6 post-nav">
+        
+          <i class="fa fa-chevron-circle-right fa-2x disabled"
+             aria-hidden="true"></i>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+          
+
+      
+
+    </div>
+    
+
+    <div class="content">
+    
+      
+<div class="blog-post">
+  <div class="page-header">
+    
+      <img src="/assets/images/hdr-john-berkey-pintura3-dream.jpg" />
+    
+    <h2 class="blog-post-title">Rocket ASCII Art</h2>
+    
+    <h3 class="blog-post-subtitle">Sometimes plain text just says it best ...</h3>
+    
+    <div class="blog-post-meta">
+      <p class="date">April
+                      02,
+                      2017</p>
+      <p class="author">by <a href="/authors/#oubiwann">oubiwann</a></p>
+      
+    </div>
+  </div>
+  <p>A quick internet search for "ascii rocket" turned up the following little gem:</p><p><pre></p><pre><code>                       &#42;     .--.
                             / /  `
            +               | |
                   '         \ \&#95;&#95;,
@@ -187,106 +377,17 @@
                |/    /||\    \|
          jgs &#95;..--&quot;&quot;&quot;````&quot;&quot;&quot;--..&#95;
        &#95;.-'``                    ``'-.&#95;
-     -'                                '-</code></pre></pre><p>JGS, whoever you are, that's one of the most delightful bits of ASCII art I've seen. This makes me want to write a children's space adventure book, illustrated only with ASCII art ...</p><p>More availble here:</p><ul><li><a href='http://textart.io/art/tag/spaceship/1'>http://textart.io/art/tag/spaceship/1</a></li></ul><p>Don't be surprised if these start showing up in code samples ;-)</p><p><em>Update</em>: A <a href='https://twitter.com/thatgrrl/status/855476643929968641'>message on Twitter</a> indicated that JGS is <a href='https://en.wikipedia.org/wiki/Joan_Stark'>Joan Stark</a>. Thanks, <a href='https://twitter.com/thatgrrl'>@thatgrrl</a>!</p><p>&#x1F680;</p>
-            
-            
-          </div>
-
-          
-
-        </div>
-
-        <aside class="col-sm-4 blog-aside">
-
-          <div class="aside-widget">
-            <header>
-              <h3>Category</h3>
-            </header>
-            <div class="body">
-              <p>
-                <a href="/categories/#Art">Art</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="aside-widget tags-widget">
-            <header>
-              <h3>Tags</h3>
-            </header>
-            <div class="body">
-              <ul>
-                
-                <li>
-                  <a href="/tags/#ascii">ascii</a>
-                </li>
-                
-                <li>
-                  <a href="/tags/#fun">fun</a>
-                </li>
-                
-                <li>
-                  <a href="/tags/#text">text</a>
-                </li>
-                
-              </ul>
-            </div>
-          </div>
-
-          
-
-            <div class="row">
-              <div class="col-xs-6">
-
-              </div>
-            </div>
+     -'                                '-</code></pre></pre><p>JGS, whoever you are, that's one of the most delightful bits of ASCII art I've seen. This makes me want to write a children's space adventure book, illustrated only with ASCII art ...</p><p>More availble here:</p><ul><li><a href='http://textart.io/art/tag/spaceship/1'>http://textart.io/art/tag/spaceship/1</a></li></ul><p>Don't be surprised if these start showing up in code samples ;-)</p><p><strong>Update</strong>: A <a href='https://twitter.com/thatgrrl/status/855476643929968641'>message on Twitter</a> indicated that JGS is <a href='https://en.wikipedia.org/wiki/Joan_Stark'>Joan Stark</a>. Thanks, <a href='https://twitter.com/thatgrrl'>@thatgrrl</a>!</p><p>&#x1F680;</p>
+  
+  
+</div>
 
 
 
-          <div class="aside-widget">
-            <header>
-              <h3>Neighboring Posts</h3>
-            </header>
-            <div class="body">
-              <div class="row">
-                <div class="col-xs-6">Previous</div>
-                <div class="col-xs-6">Next</div>
-              </div>
-              <div class="row">
-                <div class="col-xs-6">
-                  
-                  <a href="/archives/2017-04/02-122328/starship-tools-blog-goes-beta.html">
-                    <i class="fa fa-arrow-circle-o-left fa-2x"
-                       aria-hidden="true"></i>
-                  </a>
-                  
-                </div>
-                <div class="col-xs-6">
-                  
-                    <i class="fa fa-arrow-circle-o-right fa-2x nav-arrow-disabled"
-                       aria-hidden="true"></i>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="aside-widget">
-            <header>
-              <h3>Post Data</h3>
-            </header>
-            <div class="body">
-              <p>Lines: 32</p>
-              <p>Words: 135</p>
-              <p>Characters: 1344</p>
-              </p>
-            </div>
-          </div>
-
-        </aside>
-
-      </div>
-
+    
     </div>
+
+</div>
 
     </main>
     
@@ -345,7 +446,7 @@
                   <div class="row">
                     <div class="col-lg-12">
                       <ul class="nav justify-content-center">
-                        <li class="nav-item"><a href="/starship-timeline.html">A Timeline of Starship Programs</a></li>
+                        <li class="nav-item"><a href="/pages/timeline.html">A Timeline of Starship Programs</a></li>
                       </ul>
                     </div>
                   </div>
