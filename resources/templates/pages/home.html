@@ -69,7 +69,7 @@
   {% if headliner.excerpt-100 %}
     <p class="excerpt">{{ headliner.excerpt-100|safe }}</p>
     <div class="clearfix">
-      <a href="{{ headliner.url }}" class="btn btn-tales-one">Read More</a>
+      <a href="{{ headliner.url }}" class="btn btn-primary">Read More</a>
     </div>
   {% endif %}
   </div>
@@ -98,7 +98,7 @@
           {% if column.excerpt-50 %}
             <p class="excerpt">{{ column.excerpt-50|safe }}</p>
             <div class="clearfix">
-              <a href="{{ column.url }}" class="btn btn-tales-one">Read More</a>
+              <a href="{{ column.url }}" class="btn btn-primary">Read More</a>
             </div>
           {% endif %}
         </div>
@@ -121,7 +121,7 @@
   </div>
 
   <div>
-    <a href="/archives/" class="btn btn-tales-one">View older posts</a>
+    <a href="/archives/" class="btn btn-primary">View older posts</a>
   </div>
 {% endblock %}
 
