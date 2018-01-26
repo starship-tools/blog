@@ -9,9 +9,6 @@
   .inverse-dropdown > .dropdown-divider {
     background-color: #32344a; }
 
-h3.blog-post-subtitle {
-  color: #b0b3cb; }
-
 .docs-header {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -20,7 +17,7 @@ h3.blog-post-subtitle {
   color: #fff;
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px  2px 0 #000, 2px  2px 0 #000;
   background-color: #2a292f;
-  background-image: url(/assets/images/header-back-archives.jpg);
+  background-image: url(/assets/images/header-back.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   border-bottom: 1px solid black; }
@@ -42,7 +39,4 @@ h3.blog-post-subtitle {
     .docs-header p {
       max-width: 75%; } }
 
-.sidebar-module .post-data p {
-  line-height: 0.5em; }
-
-/*# sourceMappingURL=theme-archives.css.map */
+/*# sourceMappingURL=theme-about.css.map */
