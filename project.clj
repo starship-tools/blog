@@ -119,12 +119,18 @@
       ["with-profile" "+test,+custom-repl,+cli" "repl"]
     "setup-sass"
       ["shell" "dev-resources/scripts/setup-sass"]
-    "gen-css"
-      ["shell" "dev-resources/scripts/regen-css"]
+    "clean-docs"
+      ["shell" "dev-resources/scripts/clean-docs"]
+    "gen-html"
+      ["shell" "dev-resources/scripts/copy-html"]
     "gen-assets"
       ["shell" "dev-resources/scripts/copy-assets"]
+    "gen-css"
+      ["shell" "dev-resources/scripts/regen-css"]
     "gen-all"
       ["do"
+        ["clean-docs"]
+        ["gen-html"]
         ["gen-assets"]
         ["gen-css"]
         ;["gen-blog"]
