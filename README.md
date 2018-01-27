@@ -68,7 +68,7 @@ To generate the blog:
 ## License [&#x219F;](#contents)
 
 ```
-Copyright © 2017 Starship Hackers
+Copyright © 2017-2018 Starship Hackers
 
 Distributed under the Apache License, Version 2.0.
 ```
