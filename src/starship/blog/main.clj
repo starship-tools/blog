@@ -25,6 +25,6 @@
         system (dragon/get-context-sensitive-system mode args)]
    (log/infof "Running blog application in %s mode ..." mode)
    (log/debug "Inialized with system:" system)
-   (cli/run system args)
+   (cli/run system (keyword mode) args)
    ;; Do a full shut-down upon ^c
    (trifl/add-shutdown-handler #(components/stop system))))

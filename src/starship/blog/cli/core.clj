@@ -38,7 +38,7 @@
   ```
     $ blog new help
   ```"
-  [system [cmd & args]]
+  [system cmd & args]
   (log/debug "CLI got cmd:" cmd)
   (log/debug "CLI got args:" args)
   (event/publish system tag/run-cli {:cmd cmd :args args})
@@ -47,7 +47,9 @@
     :show (show/run system args)
     :gen (do
           (core/generate system)
-          (component/stop system))
+          (component/stop system)
+          (event/publish system tag/shutdown-cli)
+          (System/exit 0))
     :share (share/run system args)
     :run (core/generate system)
     :help (docs/print-docstring #'run)

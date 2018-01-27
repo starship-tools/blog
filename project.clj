@@ -114,9 +114,14 @@
         [org.clojure/data.json "0.2.6"]
         [twitter-api "1.8.0"]]}}
   :aliases {
+    ;; Development aliases
     "repl"
       ^{:doc "A custom blog REPL that overrides the default one"}
       ["with-profile" "+test,+custom-repl,+cli" "repl"]
+    "web"
+      ^{:doc "Run a local web service for the blog"}
+      ["with-profile" "+test,+cli" "run" "-m" "starship.blog.main" ":run"]
+    ;; Content-genereated (and related) aliases
     "setup-sass"
       ["with-profile" "base" "shell" "dev-resources/scripts/setup-sass"]
     "clean-output"
@@ -127,14 +132,19 @@
       ["with-profile" "base" "shell" "dev-resources/scripts/copy-assets"]
     "gen-css"
       ["with-profile" "base" "shell" "dev-resources/scripts/regen-css"]
+    "gen-blog"
+      ^{:doc "Generate static content for the blog"}
+      ["trampoline" "with-profile" "+test,+cli" 
+       "run" "-m" "starship.blog.main" "gen"]
     "gen-all"
       ["do"
         ["clean-output"]
         ["gen-html"]
         ["gen-assets"]
         ["gen-css"]
-        ;["gen-blog"]
-        ]
+        ["clean"]
+        ["gen-blog"]]
+    ;; Content-publishing (and related) aliases
     "commit-regen"
       ["with-profile" "base" "shell" "dev-resources/scripts/commit-regen"]
     "sync-aws"
@@ -150,33 +160,30 @@
         ["gen-all"]
         ["commit-regen"]
         ["sync-aws"]]
-    "check-deps"
-      ^{:doc "Check if any deps have out-of-date versions"}
-      ["with-profile" "+test" "ancient" "check" ":all"]
-    "lint"
-      ^{:doc "Perform lint checking"}
-      ["with-profile" "+test" "kibit"]
-    "ltest"
-      ["with-profile" "+test" "ltest"]
-    "blog"
-      ^{:doc "The bog CLI; type `lein blog help` or `blog help` for commands"}
-      ["with-profile" "+cli"
-       "run" "-m" "starship.blog.main" "cli"]
-    "gen"
-      ^{:doc "Generate static content for the blog"}
-      ["run" "-m" "starship.blog.core/generate"]
-    "web"
-      ^{:doc "Run a local web service for the blog"}
-      ["run" "-m" "starship.blog.core/web"]
-    "dev"
-      ^{:doc "Generate blog content and run local web service"}
-      ["run" "-m" "starship.blog.core/log+generate+web"]
+    ;; Dependency checks, linting, and tests
+    "check-vers" ["with-profile" "+test" "ancient" "check" ":all"]
+    "check-jars" ["with-profile" "+test" "do"
+      ["deps" ":tree"]
+      ["deps" ":plugin-tree"]]
+    "check-deps" ["do"
+      ["check-jars"]
+      ["check-vers"]]
+    "kibit" ["with-profile" "+lint" "kibit"]
+    "eastwood" ["with-profile" "+lint" "eastwood" "{:namespaces [:source-paths]}"]
+    "lint" ["do"
+      ["kibit"]
+      ;["eastwood"]
+      ]
     "ubercompile" ["with-profile" "+ubercompile,+test,+cli" "compile"]
+    "ltest" ["with-profile" "+test" "ltest"]    
     "build"
       ^{:doc "Perform build tasks for CI/CD & releases\n\n Additional aliases:"}
-      ["with-profile" "+test,+cli" "do"
+      ["do"
         ;["check-deps"]
-        ;["lint"]
-        ["test"]
-        ["compile"]
-        ["uberjar"]]})
+        ["lint"]
+        ["docs"]
+        ["ubercompile"]
+        ["clean"]
+        ["uberjar"]
+        ["clean"]
+        ["test"]]})
