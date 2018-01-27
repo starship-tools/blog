@@ -22,13 +22,7 @@
   :exclusions [
     [org.clojure/clojure]
     [org.clojure/clojurescript]]
-  :dependencies [
-    [clojusc/trifl "0.3.0-SNAPSHOT"]
-    [dragon "0.5.0-SNAPSHOT"]
-    [org.clojure/clojure "1.8.0"]
-    [org.clojure/data.generators "0.1.2"]
-    [org.clojure/data.xml "0.0.8"]
-    [org.clojure/math.combinatorics "0.1.4"]]
+  :dependencies []
   :source-paths ["src"]
   :profiles {
     :dragon {
@@ -70,15 +64,21 @@
         :init-ns starship.blog.dev
         :prompt ~get-prompt
         init ~(println (get-banner))}}
+    :base {
+      :plugins [
+        [lein-shell "0.5.0"]]}
     :dev {
       :source-paths ["dev-resources/src"]
       :main starship.blog.main
-      :plugins [
-        [lein-shell "0.5.0"]
-        [lein-simpleton "1.3.0"]]
       :dependencies [
+        [clojusc/trifl "0.3.0-SNAPSHOT"]
+        [dragon "0.5.0-SNAPSHOT"]
         [http-kit "2.2.0"]
         [leiningen-core "2.7.1"]
+        [org.clojure/clojure "1.8.0"]
+        [org.clojure/data.generators "0.1.2"]
+        [org.clojure/data.xml "0.0.8"]
+        [org.clojure/math.combinatorics "0.1.4"]
         [org.clojure/tools.namespace "0.2.11"]]}
     :test {
       :dependencies [
@@ -118,15 +118,15 @@
       ^{:doc "A custom blog REPL that overrides the default one"}
       ["with-profile" "+test,+custom-repl,+cli" "repl"]
     "setup-sass"
-      ["shell" "dev-resources/scripts/setup-sass"]
+      ["with-profile" "base" "shell" "dev-resources/scripts/setup-sass"]
     "clean-docs"
-      ["shell" "dev-resources/scripts/clean-docs"]
+      ["with-profile" "base" "shell" "dev-resources/scripts/clean-docs"]
     "gen-html"
-      ["shell" "dev-resources/scripts/copy-html"]
+      ["with-profile" "base" "shell" "dev-resources/scripts/copy-html"]
     "gen-assets"
-      ["shell" "dev-resources/scripts/copy-assets"]
+      ["with-profile" "base" "shell" "dev-resources/scripts/copy-assets"]
     "gen-css"
-      ["shell" "dev-resources/scripts/regen-css"]
+      ["with-profile" "base" "shell" "dev-resources/scripts/regen-css"]
     "gen-all"
       ["do"
         ["clean-docs"]
@@ -136,17 +136,17 @@
         ;["gen-blog"]
         ]
     "commit-regen"
-      ["shell" "dev-resources/scripts/commit-regen"]
+      ["with-profile" "base" "shell" "dev-resources/scripts/commit-regen"]
     "sync-aws"
-      ["shell" "dev-resources/scripts/sync-aws"]
+      ["with-profile" "base" "shell" "dev-resources/scripts/sync-aws"]
     "publish-all-aws"
-      ["shell" "dev-resources/scripts/publish-all-aws"]
+      ["with-profile" "base" "shell" "dev-resources/scripts/publish-all-aws"]
     "publish-committed-aws"
-      ["shell" "dev-resources/scripts/publish-committed-aws"]
+      ["with-profile" "base" "shell" "dev-resources/scripts/publish-committed-aws"]
     "publish-modified-aws"
-      ["shell" "dev-resources/scripts/publish-modified-aws"]
+      ["with-profile" "base" "shell" "dev-resources/scripts/publish-modified-aws"]
     "publish"
-      ["do"
+      ["with-profile" "base" "do"
         ["gen-all"]
         ["commit-regen"]
         ["sync-aws"]]
