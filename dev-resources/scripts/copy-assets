@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-cp -rv resources/assets docs/
+echo "Copying blog assets ..."
+cp -rv resources/assets blog/

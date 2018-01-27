@@ -5,10 +5,9 @@
 /resources/sass/dist
 /resources/sass/node_modules
 /resources/sass/package-lock.json
-pom.xml
-pom.xml.asc
+pom.xml*
 *.jar
 *.class
 /.lein-*
-/.nrepl-port
+/.nrepl-*
 

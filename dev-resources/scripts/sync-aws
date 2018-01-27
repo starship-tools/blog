@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-aws --profile=starship s3 sync docs/ s3://starship.tools/
+echo "Syncing changes to AWS S3 ..."
+aws --profile=starship s3 sync blog/ s3://starship.tools/

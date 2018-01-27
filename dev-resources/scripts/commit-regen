@@ -1,2 +1,6 @@
-git commit docs -m "Regenerated site."
+#!/usr/bin/env bash
+
+echo "Committing blog content ..."
+
+git commit blog -m "Regenerated site."
 git push origin master

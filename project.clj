@@ -30,7 +30,7 @@
       :name "Starship Tools Blog"
       :description "A Blog to Explore Really, Really Cool Stuff. Code Suff. In Space."
       :port 5099
-      :output-dir "docs"
+      :output-dir "blog"
       :base-path "/"
       :posts-path "/archives"
       :posts-path-src "./posts"
@@ -119,8 +119,8 @@
       ["with-profile" "+test,+custom-repl,+cli" "repl"]
     "setup-sass"
       ["with-profile" "base" "shell" "dev-resources/scripts/setup-sass"]
-    "clean-docs"
-      ["with-profile" "base" "shell" "dev-resources/scripts/clean-docs"]
+    "clean-output"
+      ["with-profile" "base" "shell" "dev-resources/scripts/clean-output"]
     "gen-html"
       ["with-profile" "base" "shell" "dev-resources/scripts/copy-html"]
     "gen-assets"
@@ -129,7 +129,7 @@
       ["with-profile" "base" "shell" "dev-resources/scripts/regen-css"]
     "gen-all"
       ["do"
-        ["clean-docs"]
+        ["clean-output"]
         ["gen-html"]
         ["gen-assets"]
         ["gen-css"]

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "Cleaning output directory ..."
+rm -rf ./blog/*

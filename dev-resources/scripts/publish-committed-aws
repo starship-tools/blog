@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-for f in `git log --numstat HEAD^.. blog|awk '{print $$3}'|egrep '^docs'` ; do \
+echo "Publishing committed content to AWS S3 ..."
+for f in `git log --numstat HEAD^.. blog|awk '{print $$3}'|egrep '^blog'` ; do \
 	aws --profile=starship s3 \
-		cp "$$f" s3://starship.tools`echo $$f|sed -e 's/^docs\///'` ; \
+		cp "$$f" s3://starship.tools`echo $$f|sed -e 's/^blog\///'` ; \
 done

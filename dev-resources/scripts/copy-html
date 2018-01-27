@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-cp -rv resources/html/* docs/
+echo "Copying static content ..."
+cp -rv resources/html/* blog/

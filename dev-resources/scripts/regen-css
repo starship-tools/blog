@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
+echo "Regenerating SASS-based CSS files ..."
 cd resources/sass && \
     node_modules/.bin/gulp && \
     cd -
-cp -v resources/sass/dist/*.css docs/assets/css/
-cp -v resources/sass/dist/*.js docs/assets/js/
+cp -v resources/sass/dist/*.css blog/assets/css/
+cp -v resources/sass/dist/*.js blog/assets/js/

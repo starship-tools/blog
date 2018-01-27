@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-aws --profile=starship s3 cp docs/ s3://starship.tools/ --recursive
+echo "Publishing all content to AWS S3 ..."
+aws --profile=starship s3 cp blog/ s3://starship.tools/ --recursive
