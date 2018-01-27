@@ -1,5 +1,6 @@
 (ns starship.blog.cli.core
   (:require
+    [com.stuartsierra.component :as component]
     [dragon.config.core :as config]
     [dragon.event.system.core :as event]
     [dragon.event.tag :as tag]
@@ -44,7 +45,9 @@
   (case cmd
     :new (new/run system args)
     :show (show/run system args)
-    :gen (core/generate system)
+    :gen (do
+          (core/generate system)
+          (component/stop system))
     :share (share/run system args)
     :run (core/generate system)
     :help (docs/print-docstring #'run)
