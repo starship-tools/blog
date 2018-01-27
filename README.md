@@ -7,8 +7,6 @@
 
 * [Dependencies](#dependencies-)
 * [Building](#building-)
-   * [With make](#with-make-)
-   * [In the REPL](#in-the-repl-)
 * [License](#license-)
 
 
@@ -26,7 +24,8 @@ To set up the blog SASS infrastructure, run the following:
 $ lein setup-sass
 ```
 
-## Building
+
+## Building [&#x219F;](#contents)
 
 To setup non-content resources (e.g., css, images, a few static pages):
 
@@ -45,9 +44,6 @@ Updates to images, `.js` files, etc., will need this:
 ```
 $ lein gen-assets
 ```
-
-
-### In the REPL [&#x219F;](#contents)
 
 To (re)generate the content files, start up a Clojure REPL:
 
