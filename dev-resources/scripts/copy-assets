@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 echo "Copying blog assets ..."
-cp -rv resources/assets blog/
+cp -rv resources/assets/* blog/

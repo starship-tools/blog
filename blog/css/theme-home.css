@@ -17,7 +17,7 @@
   color: #fff;
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px  2px 0 #000, 2px  2px 0 #000;
   background-color: #2a292f;
-  background-image: url(/assets/images/header-back-pages.jpg);
+  background-image: url(/images/header-back.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   border-bottom: 1px solid black; }
@@ -39,4 +39,19 @@
     .docs-header p {
       max-width: 75%; } }
 
-/*# sourceMappingURL=theme-pages.css.map */
+div.headliner.card,
+div.subheadliner.card {
+  border-radius: 3px; }
+
+.headliner img,
+.subheadliner img {
+  max-width: 100%;
+  padding-bottom: 0.5em; }
+
+.headliner img {
+  border-radius: 10px; }
+
+.subheadliner img {
+  border-radius: 5px; }
+
+/*# sourceMappingURL=theme-home.css.map */

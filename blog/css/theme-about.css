@@ -17,7 +17,7 @@
   color: #fff;
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px  2px 0 #000, 2px  2px 0 #000;
   background-color: #2a292f;
-  background-image: url(/assets/images/header-back.jpg);
+  background-image: url(/images/header-back.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   border-bottom: 1px solid black; }

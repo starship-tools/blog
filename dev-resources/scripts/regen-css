@@ -4,5 +4,5 @@ echo "Regenerating SASS-based CSS files ..."
 cd resources/sass && \
     node_modules/.bin/gulp && \
     cd -
-cp -v resources/sass/dist/*.css blog/assets/css/
-cp -v resources/sass/dist/*.js blog/assets/js/
+cp -v resources/sass/dist/*.css blog/css/
+cp -v resources/sass/dist/*.js blog/js/
