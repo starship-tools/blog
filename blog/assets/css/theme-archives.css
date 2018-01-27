@@ -42,6 +42,10 @@ h3.blog-post-subtitle {
     .docs-header p {
       max-width: 75%; } }
 
+.page-header img {
+  max-width: 100%;
+  padding-bottom: 0.5em; }
+
 .sidebar-module .post-data p {
   line-height: 0.5em; }
 
